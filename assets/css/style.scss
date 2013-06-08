@@ -22,21 +22,32 @@ a {
 @import "compass/css3/opacity";
 @import "compass/css3/transition";
 @import url("http://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,400italic,300");
+@import url("fontello.css");
 
 /**********************************************/
 /* Configurable Variables
 /**********************************************/
 
-$black: 	#2a2a2a;
-$blue: 		#3498db;
-$gray: 		#bdc3c7;
-$green: 	#2ecc71;
-$yellow: 	#f1c40f;
-$orange: 	#e7903c;
-$pink: 		#f657ac;
-$purple: 	#a15fd9;
-$red: 		#e83320;
-$white: 	#e8e8e8;
+$black: 	#4F4F4F;
+$black-h: 	#2A2A2A;
+$blue: 		#3498DB;
+$blue-h: 	#2980B9;
+$gray: 		#95A5A6;
+$gray-h: 	#7F8C8D;
+$green: 	#2ECC71;
+$green-h: 	#27AE60;
+$yellow: 	#F1C40F;
+$yellow-h: 	#E2B80F;
+$orange: 	#E67E22;
+$orange-h: 	#D35400;
+$pink: 		#F657AC;
+$pink-h: 	#C6468D;
+$purple: 	#9B59B6;
+$purple-h: 	#8E44AD;
+$red: 		#E74C3C;
+$red-h: 	#C0392B;
+$white: 	#DBDEE1;
+$white-h: 	#BDC3C7;
 
 /**********************************************/
 /* Headings
@@ -59,7 +70,7 @@ h1, h2, h3, h4, h5, h6 {
 /**********************************************/
 
 .btn {
-	font: normal 14px "Lato", sans-serif!important;
+	font: normal 14px "Lato", sans-serif;
 	display: inline-block;
 	color: #fff;
 	cursor: pointer;
@@ -69,13 +80,20 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 1px 0;
 	@include border-radius(3px);
 	@include transition(all 0.2s ease-in);
-	&:hover {
-		@include opacity(0.9);
-	}
 }
+/* Disable */
+.btn-disable {
+	background-color: $white;
+	color: #a1a1a1; 
+	cursor:not-allowed;
+}
+/* Sizes */
+.btn-xsmall 	{padding: 7px 15px 8px;   font-size:10px!important;}
+.btn-small 		{padding: 10px 15px 11px; font-size:12px!important;}
 .btn-medium		{padding: 12px 25px 13px;}
-.btn-large 		{padding: 12px 35px 13px;}
-
+.btn-large 		{padding: 13px 35px 14px; font-size:16px!important;}
+.btn-xlarge 	{padding: 14px 35px 15px; font-size:18px!important;}
+/* Colors */
 .btn-black 		{background-color: $black;}
 .btn-blue 		{background-color: $blue;}
 .btn-gray 		{background-color: $gray;}
@@ -86,6 +104,39 @@ h1, h2, h3, h4, h5, h6 {
 .btn-purple 	{background-color: $purple;}
 .btn-red 		{background-color: $red;}
 .btn-white 		{background-color: $white;}
+/* Rollovers */
+.btn-black-h,
+.btn-black:hover 	{background-color: $black-h;}
+.btn-blue-h,
+.btn-blue:hover		{background-color: $blue-h;}
+.btn-gray-h,
+.btn-gray:hover		{background-color: $gray-h;}
+.btn-green-h,
+.btn-green:hover	{background-color: $green-h;}
+.btn-yellow-h,
+.btn-yellow:hover 	{background-color: $yellow-h;}
+.btn-orange-h,
+.btn-orange:hover 	{background-color: $orange-h;}
+.btn-pink-h,
+.btn-pink:hover		{background-color: $pink-h;}
+.btn-purple-h,
+.btn-purple:hover	{background-color: $purple-h;}
+.btn-red-h,
+.btn-red:hover		{background-color: $red-h;}
+.btn-white-h,
+.btn-white:hover	{background-color: $white-h;}
+.btn-opacity,
+.btn-opacity:hover,
+.btn-opacity-h:hover{@include opacity(0.7);}
+/* Transforms */
+.btn-upper		{text-transform: uppercase;}
+.btn-lower 		{text-transform: lowercase;}
+.btn-cap		{text-transform: capitalize;}
+/* Styles */
+.btn-bold {font-weight: bold!important;}
+.btn-italic { font-style: italic!important;}
+.btn-under { text-decoration: underline!important;}
+.btn-strike { text-decoration: line-through!important;}
 
 /**********************************************/
 /* Global

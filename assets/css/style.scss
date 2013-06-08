@@ -6,59 +6,85 @@
             box-sizing: border-box;
 }
 
-/**********************************************/
-/* Dependences
-/**********************************************/
-
-@import "compass/css3/border-radius";
-
-/**********************************************/
-/* Configurable Variables
-/**********************************************/
-
-$blue: 		#3498db;
-$green: 	#2ecc71;
-$yellow: 	#f1c40f;
-$gray: 		#bdc3c7;
-$red: 		#e83320;
-$black: 	#2a2a2a;
-$orange: 	#e7903c;
-$pink: 		#f657ac;
-$purple: 	#a15fd9;
-$white: 	#e8e8e8;
-
 body {
+	font: normal 10px "Lato", sans-serif!important;
 	margin: 20px;
 }
 a {
 	text-decoration: none;
 }
 
+/**********************************************/
+/* Dependences
+/**********************************************/
+
+@import "compass/css3/border-radius";
+@import "compass/css3/opacity";
+@import "compass/css3/transition";
+@import url("http://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,400italic,300");
+
+/**********************************************/
+/* Configurable Variables
+/**********************************************/
+
+$black: 	#2a2a2a;
+$blue: 		#3498db;
+$gray: 		#bdc3c7;
+$green: 	#2ecc71;
+$yellow: 	#f1c40f;
+$orange: 	#e7903c;
+$pink: 		#f657ac;
+$purple: 	#a15fd9;
+$red: 		#e83320;
+$white: 	#e8e8e8;
+
+/**********************************************/
+/* Headings
+/**********************************************/
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	margin: 5px 0;
+	padding: 5px 0;
+	h1 {}
+	h2 {}
+	h3 {}
+	h4 {}
+	h5 {}
+	h6 {}
+}
 
 /**********************************************/
 /* Buttons
 /**********************************************/
 
 .btn {
+	font: normal 14px "Lato", sans-serif!important;
 	display: inline-block;
 	color: #fff;
+	cursor: pointer;
 	background-color: $white;
+	border: none;
 	padding: 12px 15px 13px;
-	margin: 3px 0;
+	margin: 1px 0;
 	@include border-radius(3px);
+	@include transition(all 0.2s ease-in);
+	&:hover {
+		@include opacity(0.9);
+	}
 }
 .btn-medium		{padding: 12px 25px 13px;}
 .btn-large 		{padding: 12px 35px 13px;}
 
+.btn-black 		{background-color: $black;}
 .btn-blue 		{background-color: $blue;}
+.btn-gray 		{background-color: $gray;}
 .btn-green 		{background-color: $green;}
 .btn-yellow 	{background-color: $yellow;}
-.btn-gray 		{background-color: $gray;}
-.btn-red 		{background-color: $red;}
-.btn-black 		{background-color: $black;}
 .btn-orange 	{background-color: $orange;}
 .btn-pink 		{background-color: $pink;}
 .btn-purple 	{background-color: $purple;}
+.btn-red 		{background-color: $red;}
 .btn-white 		{background-color: $white;}
 
 /**********************************************/

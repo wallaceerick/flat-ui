@@ -1,2 +1,6 @@
 .DS_Store
 .sass-cache
+assets/.DS_Store
+assets/css/.DS_Store
+assets/js/.DS_Store
+assets/images/.DS_Store

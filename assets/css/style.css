@@ -1,0 +1,109 @@
+/* line 1, style.scss */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/**********************************************/
+/* Dependences
+/**********************************************/
+/**********************************************/
+/* Configurable Variables
+/**********************************************/
+/* line 30, style.scss */
+body {
+  margin: 20px;
+}
+
+/* line 33, style.scss */
+a {
+  text-decoration: none;
+}
+
+/**********************************************/
+/* Buttons
+/**********************************************/
+/* line 42, style.scss */
+.btn {
+  display: inline-block;
+  color: #fff;
+  background-color: #e8e8e8;
+  padding: 12px 15px 13px;
+  margin: 3px 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* line 50, style.scss */
+.btn-medium {
+  padding: 12px 25px 13px;
+}
+
+/* line 51, style.scss */
+.btn-large {
+  padding: 12px 35px 13px;
+}
+
+/* line 53, style.scss */
+.btn-blue {
+  background-color: #3498db;
+}
+
+/* line 54, style.scss */
+.btn-green {
+  background-color: #2ecc71;
+}
+
+/* line 55, style.scss */
+.btn-yellow {
+  background-color: #f1c40f;
+}
+
+/* line 56, style.scss */
+.btn-gray {
+  background-color: #bdc3c7;
+}
+
+/* line 57, style.scss */
+.btn-red {
+  background-color: #e83320;
+}
+
+/* line 58, style.scss */
+.btn-black {
+  background-color: #2a2a2a;
+}
+
+/* line 59, style.scss */
+.btn-orange {
+  background-color: #e7903c;
+}
+
+/* line 60, style.scss */
+.btn-pink {
+  background-color: #f657ac;
+}
+
+/* line 61, style.scss */
+.btn-purple {
+  background-color: #a15fd9;
+}
+
+/* line 62, style.scss */
+.btn-white {
+  background-color: #e8e8e8;
+}
+
+/**********************************************/
+/* Global
+/**********************************************/
+/* line 67, style.scss */
+.clear {
+  clear: both;
+}

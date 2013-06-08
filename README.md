@@ -1,4 +1,4 @@
-flat-ui
+Flat UI
 =======
 
-UI Elements with Flat Design
+UI Elements with Flat Design! :)

@@ -240,7 +240,7 @@
 					<i class="icon-block"></i>
 				</div> <!-- /icons -->
 				
-				<h1>Checkboxes</h1> 
+				<h1>Checkboxes &amp; Radios</h1> 
 					<input type="checkbox" id="checkbox-1">
 					<label for="checkbox-1">Normal</label>
 						
@@ -253,25 +253,8 @@
 					<input type="checkbox" id="checkbox-disabled-checked" checked disabled>
 					<label for="checkbox-disabled-checked">Disabled &amp; Checked</label>
 					
-					<br />
+					<br /><br />
 					
-					<div class="colors checkboxes">
-						<span>Color Schemes:</span>
-						<ul>
-							<li class="black active" title="Black"></li>
-							<li class="blue" title="Blue"></li>
-							<li class="grey" title="Grey"></li>
-							<li class="green" title="Green"></li>
-							<li class="yellow" title="Yellow"></li>
-							<li class="orange" title="Orange"></li>
-							<li class="pink" title="Pink"></li>
-							<li class="purple" title="Purple"></li>
-							<li class="red" title="Red"></li>
-							<li class="white" title="White"></li>
-						</ul>
-					</div> <!-- /colors -->
-					
-				<h1>Radio Buttons</h1> 
 					<input type="radio" id="radio-1" name="radio" >
 					<label for="radio-1">Normal</label>
 						
@@ -286,8 +269,8 @@
 					
 					<br />
 					
-					<div class="colors radios">
-						<span>Color Schemes:</span>
+					<div class="colors checkboxes">
+						<span>Themes:</span>
 						<ul>
 							<li class="black active" title="Black"></li>
 							<li class="blue" title="Blue"></li>
@@ -301,6 +284,41 @@
 							<li class="white" title="White"></li>
 						</ul>
 					</div> <!-- /colors -->
+					
+				<h1>Forms</h1>
+				<input type="text" name="" class="" />
+					
+				<h1>Tabs</h1>
+					
+					<div class="tabs">
+        			
+						<ul class="nav">
+							<li><a href="#tab-1" class="btn btn-large btn-red current">Tab 1 <span>4</span></a></li>
+							<li><a href="#tab-2" class="btn btn-large btn-red">Tab 2 <span>20</span></a></li>
+							<li><a href="#tab-3" class="btn btn-large btn-red">Tab 3 <span>8</span></a></li>
+						</ul>
+						
+						<div class="tabs-content">
+							
+							<div id="tab-1">
+								<h3>Tab 1 Header</h3>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+								<br />
+							</div> <!-- /tab-1 -->
+							
+							<div id="tab-2" class="hide">
+								<h3>Tab 2 Header</h3>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+							</div> <!-- /tab-1 -->
+							
+							<div id="tab-3" class="hide">
+								<h3>Tab 3 Header</h3>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+							</div> <!-- /tab-1 -->
+							
+						</div> <!-- /tabs-content -->
+					
+					</div> <!-- /tabs -->
 			
 			</section>
 		</div> <!-- /main_content_wrap -->
@@ -316,6 +334,7 @@
 	    <!-- REQUIRED FILES -->
 		<script src="assets/js/jquery-1.8.3.min.js"></script>
 		<script src="assets/js/jquery.icheck.min.js"></script>
+		<script src="assets/js/jquery.tabs.js"></script>
 		<script src="assets/js/config.js"></script>
 
 	    <!-- LIVE RELOAD -->

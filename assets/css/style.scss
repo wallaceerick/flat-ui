@@ -124,9 +124,6 @@ h6 {font-size: 10px;}
 .btn-red:hover		{background-color: $red-h;}
 .btn-white-h,
 .btn-white:hover	{background-color: $white-h;}
-.btn-opacity,
-.btn-opacity:hover,
-.btn-opacity-h:hover{@include opacity(0.7);}
 /* Transforms */
 .btn-upper		{text-transform: uppercase;}
 .btn-lower 		{text-transform: lowercase;}
@@ -140,6 +137,7 @@ h6 {font-size: 10px;}
 /**********************************************/
 /* Inputs, Textareas & Labels
 /**********************************************/
+
 input, label, textarea { 
 	font: normal 14px "Lato", sans-serif;
 	float: left;
@@ -461,8 +459,61 @@ label {
 	}
 }
 
+/**********************************************/
+/* Tabs
+/**********************************************/
 
-
+.tabs {
+	ul {
+		width: 100%;
+		padding: 10px;
+		li {
+			list-style: none;
+			display: block;
+			float: left;
+			a {
+				margin: 0;
+				display: block;
+				@include border-radius(0);
+				&.current {
+					background: #9f9ea8;
+				}
+				span {
+					font-size: 12px;
+					padding: 5px;
+					background: #9e2f25;
+					color: #fff;
+					display: inline;
+					margin: 0 0 0 10px;
+				}
+			}
+			&:first-child a {
+				@include border-radius(5px 0 0 0);
+			}
+			&:last-child a {
+				@include border-radius(0 5px 0 0);
+			}
+		}
+	}
+}
+.tabs-content {
+	clear: both;
+	height: auto;
+	margin: 0 10px;
+	padding: 10px 15px;
+	border: 1px solid #9f9ea8;
+	@include border-radius(0 5px 5px 5px);
+	div  {
+		clear: both;
+		padding: 0 20px 0 0;
+		&.hide {
+			position: relative;
+			top: 0;
+			left: 0;
+			display: none;
+		}
+	}
+}
 
 
 

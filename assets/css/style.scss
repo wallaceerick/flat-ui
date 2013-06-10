@@ -5,10 +5,9 @@
        -moz-box-sizing: border-box;
             box-sizing: border-box;
 }
-
 body {
-	font: normal 10px "Lato", sans-serif!important;
-	margin: 20px;
+	font: normal 10px "Lato", sans-serif;
+	-webkit-font-smoothing: antialiased;
 }
 a {
 	text-decoration: none;
@@ -57,13 +56,13 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
 	margin: 5px 0;
 	padding: 5px 0;
-	h1 {}
-	h2 {}
-	h3 {}
-	h4 {}
-	h5 {}
-	h6 {}
 }
+h1 {font-size: 35px;}
+h2 {font-size: 30px;}
+h3 {font-size: 25px;}
+h4 {font-size: 20px;}
+h5 {font-size: 15px;}
+h6 {font-size: 10px;}
 
 /**********************************************/
 /* Buttons
@@ -139,8 +138,341 @@ h1, h2, h3, h4, h5, h6 {
 .btn-strike { text-decoration: line-through!important;}
 
 /**********************************************/
+/* Inputs, Textareas & Labels
+/**********************************************/
+input, label, textarea { 
+	font: normal 14px "Lato", sans-serif;
+	float: left;
+}
+input {
+	margin-right: 2px!important;
+}
+label {
+	margin: 0 5px 0 0;
+	padding: 1px 5px 2px;
+	cursor: pointer;
+}
+
+/**********************************************/
+/* Checkbox & Radio Buttons
+/**********************************************/
+
+.check,
+.radio {
+    display: block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    background-image: url('../images/check.png');
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+}
+.check {
+	&.black {
+	    background-position: 0 0;
+	    &.hover {
+	        background-position: -22px 0;
+	    }
+	    &.checked {
+	        background-position: -44px 0;
+	    }
+	    &.disabled {
+	        background-position: -66px 0;
+	        cursor:not-allowed;
+	        &.checked {
+		        background-position: -88px 0;
+		    }
+	    }
+	}
+	&.blue {
+	    background-position: 0 -20px;
+	    &.hover {
+	        background-position: -22px -20px;
+	    }
+	    &.checked {
+	        background-position: -44px -20px;
+	    }
+	    &.disabled {
+	        background-position: -66px -20px;
+	        cursor:not-allowed;
+	        &.checked {
+		        background-position: -88px -20px;
+		    }
+	    }
+	}
+	&.gray {
+	    background-position: 0 -40px;
+	    &.hover {
+	        background-position: -22px -40px;
+	    }
+	    &.checked {
+	        background-position: -44px -40px;
+	    }
+	    &.disabled {
+	        background-position: -66px -40px;
+	        cursor:not-allowed;
+	        &.checked {
+		        background-position: -88px -40px;
+		    }
+	    }
+	}
+	&.green {
+	    background-position: 0 -60px;
+	    &.hover {
+	        background-position: -22px -60px;
+	    }
+	    &.checked {
+	        background-position: -44px -60px;
+	    }
+	    &.disabled {
+	        background-position: -66px -60px;
+	        cursor:not-allowed;
+	        &.checked {
+		        background-position: -88px -60px;
+		    }
+	    }
+	}
+	&.yellow {
+	    background-position: 0 -80px;
+	    &.hover {
+	        background-position: -22px -80px;
+	    }
+	    &.checked {
+	        background-position: -44px -80px;
+	    }
+	    &.disabled {
+	        background-position: -66px -80px;
+	        cursor:not-allowed;
+	        &.checked {
+		        background-position: -88px -80px;
+		    }
+	    }
+	}
+	&.orange {
+	    background-position: 0 -100px;
+	    &.hover {
+	        background-position: -22px -100px;
+	    }
+	    &.checked {
+	        background-position: -44px -100px;
+	    }
+	    &.disabled {
+	        background-position: -66px -100px;
+	        cursor:not-allowed;
+	        &.checked {
+		        background-position: -88px -100px;
+		    }
+	    }
+	} 
+	&.pink {
+	    background-position: 0 -120px;
+	    &.hover {
+	        background-position: -22px -120px;
+	    }
+	    &.checked {
+	        background-position: -44px -120px;
+	    }
+	    &.disabled {
+	        background-position: -66px -120px;
+	        cursor:not-allowed;
+	        &.checked {
+		        background-position: -88px -120px;
+		    }
+	    }
+	}
+	&.purple {
+	    background-position: 0 -140px;
+	    &.hover {
+	        background-position: -22px -140px;
+	    }
+	    &.checked {
+	        background-position: -44px -140px;
+	    }
+	    &.disabled {
+	        background-position: -66px -140px;
+	        cursor:not-allowed;
+	        &.checked {
+		        background-position: -88px -140px;
+		    }
+	    }
+	} 
+	&.red {
+	    background-position: 0 -160px;
+	    &.hover {
+	        background-position: -22px -160px;
+	    }
+	    &.checked {
+	        background-position: -44px -160px;
+	    }
+	    &.disabled {
+	        background-position: -66px -160px;
+	        cursor:not-allowed;
+	        &.checked {
+		        background-position: -88px -160px;
+		    }
+	    }
+	}
+}
+.radio {
+	&.black {
+	    background-position: -110px 0;
+	    &.hover {
+	        background-position: -132px 0;
+	    }
+	    &.checked {
+	        background-position: -154px 0;
+	    }
+	    &.disabled {
+	        background-position: -176px 0;
+	        cursor:not-allowed;
+	        &.checked {
+		        background-position: -198px 0;
+		    }
+	    }
+	}
+	&.blue {
+	    background-position: -110px -20px;
+	    &.hover {
+	        background-position: -132px -20px;
+	    }
+	    &.checked {
+	        background-position: -154px -20px;
+	    }
+	    &.disabled {
+	        background-position: -176px -20px;
+	        cursor:not-allowed;
+	        &.checked {
+		        background-position: -198px -20px;
+		    }
+	    }
+	}
+	&.gray {
+	    background-position: -110px -40px;
+	    &.hover {
+	        background-position: -132px -40px;
+	    }
+	    &.checked {
+	        background-position: -154px -40px;
+	    }
+	    &.disabled {
+	        background-position: -176px -40px;
+	        cursor:not-allowed;
+	        &.checked {
+		        background-position: -198px -40px;
+		    }
+	    }
+	}
+	&.green {
+	    background-position: -110px -60px;
+	    &.hover {
+	        background-position: -132px -60px;
+	    }
+	    &.checked {
+	        background-position: -154px -60px;
+	    }
+	    &.disabled {
+	        background-position: -176px -60px;
+	        cursor:not-allowed;
+	        &.checked {
+		        background-position: -198px -60px;
+		    }
+	    }
+	}
+	&.yellow {
+	    background-position: -110px -80px;
+	    &.hover {
+	        background-position: -132px -80px;
+	    }
+	    &.checked {
+	        background-position: -154px -80px;
+	    }
+	    &.disabled {
+	        background-position: -176px -80px;
+	        cursor:not-allowed;
+	        &.checked {
+		        background-position: -198px -80px;
+		    }
+	    }
+	}
+	&.orange {
+	    background-position: -110px -100px;
+	    &.hover {
+	        background-position: -132px -100px;
+	    }
+	    &.checked {
+	        background-position: -154px -100px;
+	    }
+	    &.disabled {
+	        background-position: -176px -100px;
+	        cursor:not-allowed;
+	        &.checked {
+		        background-position: -198px -100px;
+		    }
+	    }
+	}
+	&.pink {
+	    background-position: -110px -120px;
+	    &.hover {
+	        background-position: -132px -120px;
+	    }
+	    &.checked {
+	        background-position: -154px -120px;
+	    }
+	    &.disabled {
+	        background-position: -176px -120px;
+	        cursor:not-allowed;
+	        &.checked {
+		        background-position: -198px -120px;
+		    }
+	    }
+	}
+	&.purple {
+	    background-position: -110px -140px;
+	    &.hover {
+	        background-position: -132px -140px;
+	    }
+	    &.checked {
+	        background-position: -154px -140px;
+	    }
+	    &.disabled {
+	        background-position: -176px -140px;
+	        cursor:not-allowed;
+	        &.checked {
+		        background-position: -198px -140px;
+		    }
+	    }
+	}
+	&.red {
+	    background-position: -110px -160px;
+	    &.hover {
+	        background-position: -132px -160px;
+	    }
+	    &.checked {
+	        background-position: -154px -160px;
+	    }
+	    &.disabled {
+	        background-position: -176px -160px;
+	        cursor:not-allowed;
+	        &.checked {
+		        background-position: -198px -160px;
+		    }
+	    }
+	}
+}
+
+
+
+
+
+
+
+
+
+
+/**********************************************/
 /* Global
 /**********************************************/
-.clear {
+.clear, br {
 	clear: both;
 }

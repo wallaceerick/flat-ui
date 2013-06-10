@@ -6,6 +6,7 @@
             box-sizing: border-box;
 }
 body {
+	background: #fff;
 	font: normal 10px "Lato", sans-serif;
 	-webkit-font-smoothing: antialiased;
 }
@@ -140,15 +141,128 @@ h6 {font-size: 10px;}
 
 input, label, textarea { 
 	font: normal 14px "Lato", sans-serif;
+	color: #bdc3c7;
 	float: left;
-}
-input {
-	margin-right: 2px!important;
 }
 label {
 	margin: 0 5px 0 0;
 	padding: 1px 5px 2px;
 	cursor: pointer;
+}
+input {
+	margin-right: 2px!important;
+	border: 2px solid $gray;
+	padding: 10px 8px;
+	text-indent: 5px;
+	transition: 0.35s all ease-in;
+	outline: none;
+	@include border-radius(5px);
+	/* Sizes */
+	&.input-small {
+		width: 200px;
+	}
+	&.input-medium {
+		width: 250px;
+	}
+	&.input-large {
+		width: 300px;
+	}
+	/* Types */
+	&.input-disable {
+		cursor:not-allowed;
+		&:hover, &:focus {
+			border-color: $gray;
+			color: $gray;
+
+		}
+	}
+	/* States */
+	&:hover {
+		color: $gray-h;
+		border-color: $gray-h;
+	}
+	&:focus {
+		color: #5a5f63;
+		border-color: #5a5f63;
+	}
+	/* Colors */
+	&.focus-black:focus {
+		color: $black;
+		border-color: $black;
+	}
+	&.focus-blue:focus {
+		color: $blue;
+		border-color: $blue;
+	}
+	&.focus-gray:focus {
+		color: $gray;
+		border-color: $gray;
+	}
+	&.focus-green:focus {
+		color: $green;
+		border-color: $green;
+	}
+	&.focus-yellow:focus {
+		color: $yellow;
+		border-color: $yellow;
+	}
+	&.focus-orange:focus {
+		color: $orange;
+		border-color: $orange;
+	}
+	&.focus-pink:focus {
+		color: $pink;
+		border-color: $pink;
+	}
+	&.focus-purple:focus {
+		color: $purple;
+		border-color: $purple;
+	}
+	&.focus-red:focus {
+		color: $red;
+		border-color: $red;
+	}
+}
+/* Input with Icons */
+.input-icon {
+	position: relative;
+	float: left;
+	input {
+		float: none;
+		padding-right: 32px!important;
+	}
+	i {
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		top: 11px;
+		right: 10px;
+		line-height: 18px;
+		color: #fff;
+		text-align: center;
+		background: #000;
+		font-size: 15px;
+		@include border-radius(100%);
+	}
+	/* Actions */
+	&.input-error {
+		input {
+			border-color: $red;
+			color: $red;
+		}
+		i {
+			background: $red;
+		}
+	}
+	&.input-sucess {
+		input {
+			border-color: $green;
+			color: $green;
+		}
+		i {
+			background: $green;
+		}
+	}
 }
 
 /**********************************************/
@@ -157,6 +271,8 @@ label {
 
 .check,
 .radio {
+	margin: 0;
+	padding: 0;
     display: block;
     float: left;
     width: 20px;

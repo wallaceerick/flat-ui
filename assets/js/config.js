@@ -11,6 +11,8 @@ $(document).ready(function(){
 	//Tabs
 	$.tabs();
 
+	$('input.input-error').prepend('add your smiley here');
+
 	//Not Required 
 	$('.checkboxes ul li').click(function(){ 
 		$('.checkboxes ul li').removeClass('active');

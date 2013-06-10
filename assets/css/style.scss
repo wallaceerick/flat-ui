@@ -141,41 +141,29 @@ h6 {font-size: 10px;}
 
 input, label, textarea { 
 	font: normal 14px "Lato", sans-serif;
-	color: #bdc3c7;
+	color: $white-h;
 	float: left;
 }
 label {
+	color: $gray-h!important;
 	margin: 0 5px 0 0;
 	padding: 1px 5px 2px;
 	cursor: pointer;
+	&.to-inputs, &.to-textareas {
+		font-size: 16px;
+		padding: 10px 0;
+	}
+	&.on-the-top {
+		float: none;
+		display: block;
+	}
 }
-input {
-	margin-right: 2px!important;
-	border: 2px solid $gray;
+input, textarea {
+	border: 2px solid $white-h;
 	padding: 10px 8px;
-	text-indent: 5px;
 	transition: 0.35s all ease-in;
 	outline: none;
 	@include border-radius(5px);
-	/* Sizes */
-	&.input-small {
-		width: 200px;
-	}
-	&.input-medium {
-		width: 250px;
-	}
-	&.input-large {
-		width: 300px;
-	}
-	/* Types */
-	&.input-disable {
-		cursor:not-allowed;
-		&:hover, &:focus {
-			border-color: $gray;
-			color: $gray;
-
-		}
-	}
 	/* States */
 	&:hover {
 		color: $gray-h;
@@ -223,6 +211,27 @@ input {
 		border-color: $red;
 	}
 }
+input {
+	text-indent: 5px;
+	margin: 0 3px 3px 0!important;
+	/* Sizes */
+	&.input-small {
+		width: 200px;
+	}
+	&.input-medium {
+		width: 250px;
+	}
+	&.input-large {
+		width: 300px;
+	}
+	/* Types */
+	&.input-disable {
+		background: #f4f6f6;
+		border-color: #d5dbdb!important;
+		color: #d5dbdb!important;
+		cursor:not-allowed;
+	}
+}
 /* Input with Icons */
 .input-icon {
 	position: relative;
@@ -263,6 +272,9 @@ input {
 			background: $green;
 		}
 	}
+}
+textarea {
+	float: none!important;
 }
 
 /**********************************************/

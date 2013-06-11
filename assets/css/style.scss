@@ -80,12 +80,18 @@ h6 {font-size: 10px;}
 	margin: 1px 0;
 	@include border-radius(3px);
 	@include transition(all 0.2s ease-in);
+	&:hover {
+		color: #fff!important;
+	}
 }
 /* Disable */
-.btn-disable {
+.btn-disabled {
 	background-color: $white;
-	color: #a1a1a1; 
-	cursor:not-allowed;
+	color: #fff; 
+	cursor: not-allowed;
+	&:hover {
+		color: inherit;
+	}
 }
 /* Sizes */
 .btn-xsmall 	{padding: 7px 15px 8px;   font-size:10px!important;}
@@ -145,7 +151,7 @@ input, label, textarea {
 	float: left;
 }
 label {
-	color: $gray-h!important;
+	color: $gray-h;
 	margin: 0 5px 0 0;
 	padding: 1px 5px 2px;
 	cursor: pointer;
@@ -155,14 +161,18 @@ label {
 	}
 	&.on-the-top {
 		float: none;
-		display: block;
+		clear: both;
+		display: table;
+	}
+	&.hover {
+		color: #535d5e;
 	}
 }
 input, textarea {
 	border: 2px solid $white-h;
 	padding: 10px 8px;
-	transition: 0.35s all ease-in;
 	outline: none;
+	@include transition(all 0.35s ease-in);
 	@include border-radius(5px);
 	/* States */
 	&:hover {
@@ -210,6 +220,14 @@ input, textarea {
 		color: $red;
 		border-color: $red;
 	}
+	/* Types */
+	&.input-disabled, 
+	&.textarea-disabled {
+		background: #f4f6f6;
+		border-color: #d5dbdb!important;
+		color: #d5dbdb!important;
+		cursor:not-allowed;
+	}
 }
 input {
 	text-indent: 5px;
@@ -223,13 +241,6 @@ input {
 	}
 	&.input-large {
 		width: 300px;
-	}
-	/* Types */
-	&.input-disable {
-		background: #f4f6f6;
-		border-color: #d5dbdb!important;
-		color: #d5dbdb!important;
-		cursor:not-allowed;
 	}
 }
 /* Input with Icons */
@@ -293,7 +304,61 @@ textarea {
     background-repeat: no-repeat;
     border: none;
     cursor: pointer;
+    &.disabled { 
+    	cursor: not-allowed;
+    	& + label { 
+			cursor: not-allowed;
+	    	color: $gray!important;
+	    } 
+    }
+    /* Label Colors */
+    &.black.checked {
+    	& + label { 
+	     	color: $black-h;
+	    } 
+    }
+    &.blue.checked {
+    	& + label { 
+	     	color: $blue;
+	    } 
+    }
+    &.gray.checked {
+    	& + label { 
+	     	color: $gray;
+	    } 
+    }
+    &.green.checked {
+    	& + label { 
+	     	color: $green;
+	    } 
+    }
+    &.yellow.checked {
+    	& + label { 
+	     	color: $yellow;
+	    } 
+    }
+    &.orange.checked {
+    	& + label { 
+	     	color: $orange;
+	    } 
+    }
+    &.pink.checked {
+    	& + label { 
+	     	color: $pink;
+	    } 
+    }
+    &.purple.checked {
+    	& + label { 
+	     	color: $purple;
+	    } 
+    }
+    &.red.checked {
+    	& + label { 
+	     	color: $red;
+	    } 
+    }
 }
+/* Checkboxes */
 .check {
 	&.black {
 	    background-position: 0 0;
@@ -305,7 +370,6 @@ textarea {
 	    }
 	    &.disabled {
 	        background-position: -66px 0;
-	        cursor:not-allowed;
 	        &.checked {
 		        background-position: -88px 0;
 		    }
@@ -321,7 +385,6 @@ textarea {
 	    }
 	    &.disabled {
 	        background-position: -66px -20px;
-	        cursor:not-allowed;
 	        &.checked {
 		        background-position: -88px -20px;
 		    }
@@ -440,6 +503,7 @@ textarea {
 	    }
 	}
 }
+/* Radio Buttons */
 .radio {
 	&.black {
 	    background-position: -110px 0;
@@ -642,6 +706,10 @@ textarea {
 		}
 	}
 }
+
+/**********************************************/
+/* Accordion
+/**********************************************/
 
 
 

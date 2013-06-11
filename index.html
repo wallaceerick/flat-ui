@@ -69,9 +69,9 @@
 				<a href="#" class="btn btn-yellow btn-cap">Capitalize Button</a>
 				
 				<h2>Disabled</h2>
-				<input type="button" class="btn btn-disable" value="input[type='button']">
-				<button class="btn btn-disable">&lt;button&gt;</button>
-				<a href="#" class="btn btn-disable">&lt;a href="#"&gt;</a>
+				<input type="button" class="btn btn-disabled" value="input[type='button']">
+				<button class="btn btn-disabled">&lt;button&gt;</button>
+				<a href="#" class="btn btn-disabled">&lt;a href="#"&gt;</a>
 				
 				<h2>Styles</h2>
 				<a href="#" class="btn btn-red btn-bold">Bold Button</a>
@@ -240,7 +240,8 @@
 					<i class="icon-block"></i>
 				</div> <!-- /icons -->
 				
-				<h1>Checkboxes &amp; Radios</h1> 
+				<h1>Checkboxes &amp; Radios</h1>
+
 					<input type="checkbox" id="checkbox-1">
 					<label for="checkbox-1">Normal</label>
 						
@@ -297,7 +298,7 @@
 					<h2>Types &amp; Colors</h2>
 					<input type="text" value="Focus to See" class="input-small focus-blue" />
 					<input type="text" value="Focus to See" class="input-small focus-pink" />
-					<input type="text" value="Disabled" disabled="disabled" class="input-small input-disable" />
+					<input type="text" value="Disabled" disabled="disabled" class="input-small input-disabled" />
 					
 					<br />
 
@@ -323,8 +324,11 @@
 					<br />
 					
 				<h1>Textareas</h1>
-					<label for="label-top" class="to-inputs on-the-top">Top Label:</label>
-					<textarea class="focus-purple" name="" cols="100" rows="10">Size is defined on HTML: cols="100" rows="10"</textarea>
+					<label for="default-textarea" class="to-inputs on-the-top">Default:</label>
+					<textarea class="focus-purple" id="default-textarea" cols="100" rows="10">Size is defined on HTML: cols="100" rows="10"</textarea>
+					
+					<label for="disabled-textarea" class="to-inputs on-the-top">Disabled:</label>
+					<textarea class="textarea-disabled" id="disabled-textarea" cols="100" rows="10">Size is defined on HTML: cols="100" rows="10"</textarea>
 						
 				<h1>Tabs</h1>
 					

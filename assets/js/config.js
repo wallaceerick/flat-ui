@@ -5,11 +5,14 @@ $(document).ready(function(){
 		//If you need, change the color!
 		checkboxClass: 'check orange',
 		radioClass: 'radio orange',
-		labelHover: true,
+		labelHover: true
 	});
 
 	//Tabs
 	$.tabs();
+
+	//Accordion
+	$.accordion();
 
 	//Not Required 
 	$('.checkboxes ul li').click(function(){ 

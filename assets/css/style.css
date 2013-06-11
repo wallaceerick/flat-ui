@@ -85,9 +85,9 @@ h6 {
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
-  -webkit-transition: all 0s ease-in;
-  -moz-transition: all 0s ease-in;
-  -o-transition: all 0s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
 /* line 83, style.scss */
@@ -324,9 +324,9 @@ input, textarea {
   border: 2px solid #bdc3c7;
   padding: 10px 8px;
   outline: none;
-  -webkit-transition: all 0s ease-in;
-  -moz-transition: all 0s ease-in;
-  -o-transition: all 0s ease-in;
+  -webkit-transition: all 0.35s ease-in;
+  -moz-transition: all 0.35s ease-in;
+  -o-transition: all 0.35s ease-in;
   transition: all 0.35s ease-in;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -954,7 +954,7 @@ textarea {
 }
 /* line 670, style.scss */
 .tabs ul li a.current {
-  background: #9f9ea8;
+  background: #95a5a6;
 }
 /* line 673, style.scss */
 .tabs ul li a span {
@@ -988,7 +988,7 @@ textarea {
   height: auto;
   margin: 0 10px;
   padding: 10px 15px;
-  border: 1px solid #9f9ea8;
+  border: 1px solid #95a5a6;
   -webkit-border-radius: 0 5px 5px 5px;
   -moz-border-radius: 0 5px 5px 5px;
   -ms-border-radius: 0 5px 5px 5px;
@@ -1000,21 +1000,101 @@ textarea {
   clear: both;
   padding: 0 20px 0 0;
 }
-/* line 701, style.scss */
-.tabs-content div.hide {
+
+/**********************************************/
+/* Accordion
+/**********************************************/
+/* line 707, style.scss */
+.accordion {
+  margin: 0 10px;
+}
+/* line 709, style.scss */
+.accordion h3 {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 15px 0;
+  font-size: 16px;
+  color: #fff;
+  text-indent: 15px;
+  background: #e74c3c;
+  border-bottom: 1px solid #c0392b;
+  cursor: pointer;
+  -webkit-transition: all 0.25s ease-in;
+  -moz-transition: all 0.25s ease-in;
+  -o-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+}
+/* line 721, style.scss */
+.accordion h3:first-child, .accordion h3.first {
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  -ms-border-radius: 5px 5px 0 0;
+  -o-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+}
+/* line 724, style.scss */
+.accordion h3:last-child, .accordion h3.last {
+  -webkit-border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  -ms-border-radius: 0 0 5px 5px;
+  -o-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+}
+/* line 726, style.scss */
+.accordion h3:last-child.current, .accordion h3.last.current {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+/* line 730, style.scss */
+.accordion h3:hover, .accordion h3.hover {
+  background: #c0392b;
+}
+/* line 733, style.scss */
+.accordion h3.current {
+  background: #95a5a6;
+  border-color: #7f8c8d;
+}
+/* line 737, style.scss */
+.accordion h3 i {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+}
+/* line 743, style.scss */
+.accordion .accordion-content {
+  clear: both;
+  height: auto;
+  padding: 10px 15px;
+  border: 1px solid #95a5a6;
+  border-top: 0;
+  border-bottom: 0;
+}
+/* line 750, style.scss */
+.accordion .accordion-content:last-child, .accordion .accordion-content.last {
+  -webkit-border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  -ms-border-radius: 0 0 5px 5px;
+  -o-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+  border: 1px solid #95a5a6;
+}
+
+/**********************************************/
+/* Global
+/**********************************************/
+/* line 771, style.scss */
+.hide {
   position: relative;
   top: 0;
   left: 0;
   display: none;
 }
 
-/**********************************************/
-/* Accordion
-/**********************************************/
-/**********************************************/
-/* Global
-/**********************************************/
-/* line 723, style.scss */
+/* line 777, style.scss */
 .clear, br {
   clear: both;
 }

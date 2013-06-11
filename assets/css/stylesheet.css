@@ -154,6 +154,8 @@ by Jason Costello, @jsncostello
   background: url(../images/sprite_download.png) no-repeat top right;
 }
 #main_content_wrap { 
+  height: auto;
+  padding: 0 0 200px 0;
   border-top: 1px solid #111;
   border-bottom: 1px solid #111;
 }

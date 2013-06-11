@@ -1,6 +1,12 @@
 @import url("http://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,400italic,300");
 @import url("fontello.css");
-/* line 1, style.scss */
+/**********************************************/
+/* Dependences
+/**********************************************/
+/**********************************************/
+/* Configurable Variables
+/**********************************************/
+/* line 38, style.scss */
 * {
   margin: 0;
   padding: 0;
@@ -9,24 +15,18 @@
   box-sizing: border-box;
 }
 
-/* line 8, style.scss */
+/* line 43, style.scss */
 body {
   background: #fff;
   font: normal 10px "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 13, style.scss */
+/* line 48, style.scss */
 a {
   text-decoration: none;
 }
 
-/**********************************************/
-/* Dependences
-/**********************************************/
-/**********************************************/
-/* Configurable Variables
-/**********************************************/
 /**********************************************/
 /* Headings
 /**********************************************/
@@ -141,51 +141,61 @@ h6 {
 /* line 103, style.scss */
 .btn-black {
   background-color: #4f4f4f;
+  border-color: #2a2a2a;
 }
 
 /* line 104, style.scss */
 .btn-blue {
   background-color: #3498db;
+  border-color: #2980b9;
 }
 
 /* line 105, style.scss */
 .btn-gray {
   background-color: #95a5a6;
+  border-color: #7f8c8d;
 }
 
 /* line 106, style.scss */
 .btn-green {
   background-color: #2ecc71;
+  border-color: #27ae60;
 }
 
 /* line 107, style.scss */
 .btn-yellow {
   background-color: #f1c40f;
+  border-color: #e2b80f;
 }
 
 /* line 108, style.scss */
 .btn-orange {
   background-color: #e67e22;
+  border-color: #d35400;
 }
 
 /* line 109, style.scss */
 .btn-pink {
   background-color: #f657ac;
+  border-color: #c6468d;
 }
 
 /* line 110, style.scss */
 .btn-purple {
   background-color: #9b59b6;
+  border-color: #8e44ad;
 }
 
 /* line 111, style.scss */
 .btn-red {
   background-color: #e74c3c;
+  border-color: #c0392b;
 }
 
 /* line 112, style.scss */
 .btn-white {
   background-color: #dbdee1;
+  border-color: #bdc3c7;
 }
 
 /* Rollovers */
@@ -290,40 +300,40 @@ h6 {
 /* Inputs, Textareas & Labels
 /**********************************************/
 /* line 148, style.scss */
-input, label, textarea {
+input, label, textarea, select, option {
   font: normal 14px "Lato", sans-serif;
   color: #bdc3c7;
   float: left;
+  outline: none;
 }
 
-/* line 153, style.scss */
+/* line 154, style.scss */
 label {
   color: #7f8c8d;
   margin: 0 5px 0 0;
   padding: 1px 5px 2px;
   cursor: pointer;
 }
-/* line 158, style.scss */
+/* line 159, style.scss */
 label.to-inputs, label.to-textareas {
   font-size: 16px;
   padding: 10px 0;
 }
-/* line 162, style.scss */
+/* line 163, style.scss */
 label.on-the-top {
   float: none;
   clear: both;
   display: table;
 }
-/* line 167, style.scss */
+/* line 168, style.scss */
 label.hover {
   color: #535d5e;
 }
 
-/* line 171, style.scss */
-input, textarea {
+/* line 172, style.scss */
+input, textarea, .select {
   border: 2px solid #bdc3c7;
   padding: 10px 8px;
-  outline: none;
   -webkit-transition: all 0.35s ease-in;
   -moz-transition: all 0.35s ease-in;
   -o-transition: all 0.35s ease-in;
@@ -338,100 +348,100 @@ input, textarea {
   /* Types */
 }
 /* line 178, style.scss */
-input:hover, textarea:hover {
+input:hover, textarea:hover, .select:hover {
   color: #7f8c8d;
   border-color: #7f8c8d;
 }
 /* line 182, style.scss */
-input:focus, textarea:focus {
+input:focus, textarea:focus, .select:focus {
   color: #5a5f63;
   border-color: #5a5f63;
 }
 /* line 187, style.scss */
-input.focus-black:focus, textarea.focus-black:focus {
+input.focus-black:focus, textarea.focus-black:focus, .select.focus-black:focus {
   color: #4f4f4f;
   border-color: #4f4f4f;
 }
 /* line 191, style.scss */
-input.focus-blue:focus, textarea.focus-blue:focus {
+input.focus-blue:focus, textarea.focus-blue:focus, .select.focus-blue:focus {
   color: #3498db;
   border-color: #3498db;
 }
 /* line 195, style.scss */
-input.focus-gray:focus, textarea.focus-gray:focus {
+input.focus-gray:focus, textarea.focus-gray:focus, .select.focus-gray:focus {
   color: #95a5a6;
   border-color: #95a5a6;
 }
 /* line 199, style.scss */
-input.focus-green:focus, textarea.focus-green:focus {
+input.focus-green:focus, textarea.focus-green:focus, .select.focus-green:focus {
   color: #2ecc71;
   border-color: #2ecc71;
 }
 /* line 203, style.scss */
-input.focus-yellow:focus, textarea.focus-yellow:focus {
+input.focus-yellow:focus, textarea.focus-yellow:focus, .select.focus-yellow:focus {
   color: #f1c40f;
   border-color: #f1c40f;
 }
 /* line 207, style.scss */
-input.focus-orange:focus, textarea.focus-orange:focus {
+input.focus-orange:focus, textarea.focus-orange:focus, .select.focus-orange:focus {
   color: #e67e22;
   border-color: #e67e22;
 }
 /* line 211, style.scss */
-input.focus-pink:focus, textarea.focus-pink:focus {
+input.focus-pink:focus, textarea.focus-pink:focus, .select.focus-pink:focus {
   color: #f657ac;
   border-color: #f657ac;
 }
 /* line 215, style.scss */
-input.focus-purple:focus, textarea.focus-purple:focus {
+input.focus-purple:focus, textarea.focus-purple:focus, .select.focus-purple:focus {
   color: #9b59b6;
   border-color: #9b59b6;
 }
 /* line 219, style.scss */
-input.focus-red:focus, textarea.focus-red:focus {
+input.focus-red:focus, textarea.focus-red:focus, .select.focus-red:focus {
   color: #e74c3c;
   border-color: #e74c3c;
 }
-/* line 225, style.scss */
-input.input-disabled, input.textarea-disabled, textarea.input-disabled, textarea.textarea-disabled {
+/* line 226, style.scss */
+input.input-disabled, input.textarea-disabled, input.select-disabled, textarea.input-disabled, textarea.textarea-disabled, textarea.select-disabled, .select.input-disabled, .select.textarea-disabled, .select.select-disabled {
   background: #f4f6f6;
   border-color: #d5dbdb!important;
   color: #d5dbdb!important;
   cursor: not-allowed;
 }
 
-/* line 232, style.scss */
+/* line 233, style.scss */
 input {
   text-indent: 5px;
   margin: 0 3px 3px 0!important;
   /* Sizes */
 }
-/* line 236, style.scss */
+/* line 237, style.scss */
 input.input-small {
   width: 200px;
 }
-/* line 239, style.scss */
+/* line 240, style.scss */
 input.input-medium {
   width: 250px;
 }
-/* line 242, style.scss */
+/* line 243, style.scss */
 input.input-large {
   width: 300px;
 }
 
 /* Input with Icons */
-/* line 247, style.scss */
+/* line 248, style.scss */
 .input-icon {
   position: relative;
   float: left;
   /* Actions */
 }
-/* line 250, style.scss */
+/* line 251, style.scss */
 .input-icon input {
   float: none;
   padding-right: 32px!important;
 }
-/* line 254, style.scss */
+/* line 255, style.scss */
 .input-icon i {
   width: 20px;
   height: 20px;
@@ -449,26 +459,26 @@ input.input-large {
   -o-border-radius: 100%;
   border-radius: 100%;
 }
-/* line 269, style.scss */
+/* line 270, style.scss */
 .input-icon.input-error input {
   border-color: #e74c3c;
   color: #e74c3c;
 }
-/* line 273, style.scss */
+/* line 274, style.scss */
 .input-icon.input-error i {
   background: #e74c3c;
 }
-/* line 278, style.scss */
+/* line 279, style.scss */
 .input-icon.input-sucess input {
   border-color: #2ecc71;
   color: #2ecc71;
 }
-/* line 282, style.scss */
+/* line 283, style.scss */
 .input-icon.input-sucess i {
   background: #2ecc71;
 }
 
-/* line 287, style.scss */
+/* line 288, style.scss */
 textarea {
   float: none!important;
 }
@@ -476,7 +486,7 @@ textarea {
 /**********************************************/
 /* Checkbox & Radio Buttons
 /**********************************************/
-/* line 296, style.scss */
+/* line 297, style.scss */
 .check,
 .radio {
   margin: 0;
@@ -491,481 +501,621 @@ textarea {
   cursor: pointer;
   /* Label Colors */
 }
-/* line 307, style.scss */
+/* line 308, style.scss */
 .check.disabled,
 .radio.disabled {
   cursor: not-allowed;
 }
-/* line 309, style.scss */
+/* line 310, style.scss */
 .check.disabled + label,
 .radio.disabled + label {
   cursor: not-allowed;
   color: #95a5a6 !important;
 }
-/* line 316, style.scss */
+/* line 317, style.scss */
 .check.black.checked + label,
 .radio.black.checked + label {
   color: #2a2a2a;
 }
-/* line 321, style.scss */
+/* line 322, style.scss */
 .check.blue.checked + label,
 .radio.blue.checked + label {
   color: #3498db;
 }
-/* line 326, style.scss */
+/* line 327, style.scss */
 .check.gray.checked + label,
 .radio.gray.checked + label {
   color: #95a5a6;
 }
-/* line 331, style.scss */
+/* line 332, style.scss */
 .check.green.checked + label,
 .radio.green.checked + label {
   color: #2ecc71;
 }
-/* line 336, style.scss */
+/* line 337, style.scss */
 .check.yellow.checked + label,
 .radio.yellow.checked + label {
   color: #f1c40f;
 }
-/* line 341, style.scss */
+/* line 342, style.scss */
 .check.orange.checked + label,
 .radio.orange.checked + label {
   color: #e67e22;
 }
-/* line 346, style.scss */
+/* line 347, style.scss */
 .check.pink.checked + label,
 .radio.pink.checked + label {
   color: #f657ac;
 }
-/* line 351, style.scss */
+/* line 352, style.scss */
 .check.purple.checked + label,
 .radio.purple.checked + label {
   color: #9b59b6;
 }
-/* line 356, style.scss */
+/* line 357, style.scss */
 .check.red.checked + label,
 .radio.red.checked + label {
   color: #e74c3c;
 }
 
 /* Checkboxes */
-/* line 363, style.scss */
+/* line 364, style.scss */
 .check.black {
   background-position: 0 0;
 }
-/* line 365, style.scss */
+/* line 366, style.scss */
 .check.black.hover {
   background-position: -22px 0;
 }
-/* line 368, style.scss */
+/* line 369, style.scss */
 .check.black.checked {
   background-position: -44px 0;
 }
-/* line 371, style.scss */
+/* line 372, style.scss */
 .check.black.disabled {
   background-position: -66px 0;
 }
-/* line 373, style.scss */
+/* line 374, style.scss */
 .check.black.disabled.checked {
   background-position: -88px 0;
 }
-/* line 378, style.scss */
+/* line 379, style.scss */
 .check.blue {
   background-position: 0 -20px;
 }
-/* line 380, style.scss */
+/* line 381, style.scss */
 .check.blue.hover {
   background-position: -22px -20px;
 }
-/* line 383, style.scss */
+/* line 384, style.scss */
 .check.blue.checked {
   background-position: -44px -20px;
 }
-/* line 386, style.scss */
+/* line 387, style.scss */
 .check.blue.disabled {
   background-position: -66px -20px;
 }
-/* line 388, style.scss */
+/* line 389, style.scss */
 .check.blue.disabled.checked {
   background-position: -88px -20px;
 }
-/* line 393, style.scss */
+/* line 394, style.scss */
 .check.gray {
   background-position: 0 -40px;
 }
-/* line 395, style.scss */
+/* line 396, style.scss */
 .check.gray.hover {
   background-position: -22px -40px;
 }
-/* line 398, style.scss */
+/* line 399, style.scss */
 .check.gray.checked {
   background-position: -44px -40px;
 }
-/* line 401, style.scss */
+/* line 402, style.scss */
 .check.gray.disabled {
   background-position: -66px -40px;
   cursor: not-allowed;
 }
-/* line 404, style.scss */
+/* line 405, style.scss */
 .check.gray.disabled.checked {
   background-position: -88px -40px;
 }
-/* line 409, style.scss */
+/* line 410, style.scss */
 .check.green {
   background-position: 0 -60px;
 }
-/* line 411, style.scss */
+/* line 412, style.scss */
 .check.green.hover {
   background-position: -22px -60px;
 }
-/* line 414, style.scss */
+/* line 415, style.scss */
 .check.green.checked {
   background-position: -44px -60px;
 }
-/* line 417, style.scss */
+/* line 418, style.scss */
 .check.green.disabled {
   background-position: -66px -60px;
   cursor: not-allowed;
 }
-/* line 420, style.scss */
+/* line 421, style.scss */
 .check.green.disabled.checked {
   background-position: -88px -60px;
 }
-/* line 425, style.scss */
+/* line 426, style.scss */
 .check.yellow {
   background-position: 0 -80px;
 }
-/* line 427, style.scss */
+/* line 428, style.scss */
 .check.yellow.hover {
   background-position: -22px -80px;
 }
-/* line 430, style.scss */
+/* line 431, style.scss */
 .check.yellow.checked {
   background-position: -44px -80px;
 }
-/* line 433, style.scss */
+/* line 434, style.scss */
 .check.yellow.disabled {
   background-position: -66px -80px;
   cursor: not-allowed;
 }
-/* line 436, style.scss */
+/* line 437, style.scss */
 .check.yellow.disabled.checked {
   background-position: -88px -80px;
 }
-/* line 441, style.scss */
+/* line 442, style.scss */
 .check.orange {
   background-position: 0 -100px;
 }
-/* line 443, style.scss */
+/* line 444, style.scss */
 .check.orange.hover {
   background-position: -22px -100px;
 }
-/* line 446, style.scss */
+/* line 447, style.scss */
 .check.orange.checked {
   background-position: -44px -100px;
 }
-/* line 449, style.scss */
+/* line 450, style.scss */
 .check.orange.disabled {
   background-position: -66px -100px;
   cursor: not-allowed;
 }
-/* line 452, style.scss */
+/* line 453, style.scss */
 .check.orange.disabled.checked {
   background-position: -88px -100px;
 }
-/* line 457, style.scss */
+/* line 458, style.scss */
 .check.pink {
   background-position: 0 -120px;
 }
-/* line 459, style.scss */
+/* line 460, style.scss */
 .check.pink.hover {
   background-position: -22px -120px;
 }
-/* line 462, style.scss */
+/* line 463, style.scss */
 .check.pink.checked {
   background-position: -44px -120px;
 }
-/* line 465, style.scss */
+/* line 466, style.scss */
 .check.pink.disabled {
   background-position: -66px -120px;
   cursor: not-allowed;
 }
-/* line 468, style.scss */
+/* line 469, style.scss */
 .check.pink.disabled.checked {
   background-position: -88px -120px;
 }
-/* line 473, style.scss */
+/* line 474, style.scss */
 .check.purple {
   background-position: 0 -140px;
 }
-/* line 475, style.scss */
+/* line 476, style.scss */
 .check.purple.hover {
   background-position: -22px -140px;
 }
-/* line 478, style.scss */
+/* line 479, style.scss */
 .check.purple.checked {
   background-position: -44px -140px;
 }
-/* line 481, style.scss */
+/* line 482, style.scss */
 .check.purple.disabled {
   background-position: -66px -140px;
   cursor: not-allowed;
 }
-/* line 484, style.scss */
+/* line 485, style.scss */
 .check.purple.disabled.checked {
   background-position: -88px -140px;
 }
-/* line 489, style.scss */
+/* line 490, style.scss */
 .check.red {
   background-position: 0 -160px;
 }
-/* line 491, style.scss */
+/* line 492, style.scss */
 .check.red.hover {
   background-position: -22px -160px;
 }
-/* line 494, style.scss */
+/* line 495, style.scss */
 .check.red.checked {
   background-position: -44px -160px;
 }
-/* line 497, style.scss */
+/* line 498, style.scss */
 .check.red.disabled {
   background-position: -66px -160px;
   cursor: not-allowed;
 }
-/* line 500, style.scss */
+/* line 501, style.scss */
 .check.red.disabled.checked {
   background-position: -88px -160px;
 }
 
 /* Radio Buttons */
-/* line 508, style.scss */
+/* line 509, style.scss */
 .radio.black {
   background-position: -110px 0;
 }
-/* line 510, style.scss */
+/* line 511, style.scss */
 .radio.black.hover {
   background-position: -132px 0;
 }
-/* line 513, style.scss */
+/* line 514, style.scss */
 .radio.black.checked {
   background-position: -154px 0;
 }
-/* line 516, style.scss */
+/* line 517, style.scss */
 .radio.black.disabled {
   background-position: -176px 0;
   cursor: not-allowed;
 }
-/* line 519, style.scss */
+/* line 520, style.scss */
 .radio.black.disabled.checked {
   background-position: -198px 0;
 }
-/* line 524, style.scss */
+/* line 525, style.scss */
 .radio.blue {
   background-position: -110px -20px;
 }
-/* line 526, style.scss */
+/* line 527, style.scss */
 .radio.blue.hover {
   background-position: -132px -20px;
 }
-/* line 529, style.scss */
+/* line 530, style.scss */
 .radio.blue.checked {
   background-position: -154px -20px;
 }
-/* line 532, style.scss */
+/* line 533, style.scss */
 .radio.blue.disabled {
   background-position: -176px -20px;
   cursor: not-allowed;
 }
-/* line 535, style.scss */
+/* line 536, style.scss */
 .radio.blue.disabled.checked {
   background-position: -198px -20px;
 }
-/* line 540, style.scss */
+/* line 541, style.scss */
 .radio.gray {
   background-position: -110px -40px;
 }
-/* line 542, style.scss */
+/* line 543, style.scss */
 .radio.gray.hover {
   background-position: -132px -40px;
 }
-/* line 545, style.scss */
+/* line 546, style.scss */
 .radio.gray.checked {
   background-position: -154px -40px;
 }
-/* line 548, style.scss */
+/* line 549, style.scss */
 .radio.gray.disabled {
   background-position: -176px -40px;
   cursor: not-allowed;
 }
-/* line 551, style.scss */
+/* line 552, style.scss */
 .radio.gray.disabled.checked {
   background-position: -198px -40px;
 }
-/* line 556, style.scss */
+/* line 557, style.scss */
 .radio.green {
   background-position: -110px -60px;
 }
-/* line 558, style.scss */
+/* line 559, style.scss */
 .radio.green.hover {
   background-position: -132px -60px;
 }
-/* line 561, style.scss */
+/* line 562, style.scss */
 .radio.green.checked {
   background-position: -154px -60px;
 }
-/* line 564, style.scss */
+/* line 565, style.scss */
 .radio.green.disabled {
   background-position: -176px -60px;
   cursor: not-allowed;
 }
-/* line 567, style.scss */
+/* line 568, style.scss */
 .radio.green.disabled.checked {
   background-position: -198px -60px;
 }
-/* line 572, style.scss */
+/* line 573, style.scss */
 .radio.yellow {
   background-position: -110px -80px;
 }
-/* line 574, style.scss */
+/* line 575, style.scss */
 .radio.yellow.hover {
   background-position: -132px -80px;
 }
-/* line 577, style.scss */
+/* line 578, style.scss */
 .radio.yellow.checked {
   background-position: -154px -80px;
 }
-/* line 580, style.scss */
+/* line 581, style.scss */
 .radio.yellow.disabled {
   background-position: -176px -80px;
   cursor: not-allowed;
 }
-/* line 583, style.scss */
+/* line 584, style.scss */
 .radio.yellow.disabled.checked {
   background-position: -198px -80px;
 }
-/* line 588, style.scss */
+/* line 589, style.scss */
 .radio.orange {
   background-position: -110px -100px;
 }
-/* line 590, style.scss */
+/* line 591, style.scss */
 .radio.orange.hover {
   background-position: -132px -100px;
 }
-/* line 593, style.scss */
+/* line 594, style.scss */
 .radio.orange.checked {
   background-position: -154px -100px;
 }
-/* line 596, style.scss */
+/* line 597, style.scss */
 .radio.orange.disabled {
   background-position: -176px -100px;
   cursor: not-allowed;
 }
-/* line 599, style.scss */
+/* line 600, style.scss */
 .radio.orange.disabled.checked {
   background-position: -198px -100px;
 }
-/* line 604, style.scss */
+/* line 605, style.scss */
 .radio.pink {
   background-position: -110px -120px;
 }
-/* line 606, style.scss */
+/* line 607, style.scss */
 .radio.pink.hover {
   background-position: -132px -120px;
 }
-/* line 609, style.scss */
+/* line 610, style.scss */
 .radio.pink.checked {
   background-position: -154px -120px;
 }
-/* line 612, style.scss */
+/* line 613, style.scss */
 .radio.pink.disabled {
   background-position: -176px -120px;
   cursor: not-allowed;
 }
-/* line 615, style.scss */
+/* line 616, style.scss */
 .radio.pink.disabled.checked {
   background-position: -198px -120px;
 }
-/* line 620, style.scss */
+/* line 621, style.scss */
 .radio.purple {
   background-position: -110px -140px;
 }
-/* line 622, style.scss */
+/* line 623, style.scss */
 .radio.purple.hover {
   background-position: -132px -140px;
 }
-/* line 625, style.scss */
+/* line 626, style.scss */
 .radio.purple.checked {
   background-position: -154px -140px;
 }
-/* line 628, style.scss */
+/* line 629, style.scss */
 .radio.purple.disabled {
   background-position: -176px -140px;
   cursor: not-allowed;
 }
-/* line 631, style.scss */
+/* line 632, style.scss */
 .radio.purple.disabled.checked {
   background-position: -198px -140px;
 }
-/* line 636, style.scss */
+/* line 637, style.scss */
 .radio.red {
   background-position: -110px -160px;
 }
-/* line 638, style.scss */
+/* line 639, style.scss */
 .radio.red.hover {
   background-position: -132px -160px;
 }
-/* line 641, style.scss */
+/* line 642, style.scss */
 .radio.red.checked {
   background-position: -154px -160px;
 }
-/* line 644, style.scss */
+/* line 645, style.scss */
 .radio.red.disabled {
   background-position: -176px -160px;
   cursor: not-allowed;
 }
-/* line 647, style.scss */
+/* line 648, style.scss */
 .radio.red.disabled.checked {
   background-position: -198px -160px;
 }
 
 /**********************************************/
+/* Selects
+/**********************************************/
+/* line 660, style.scss */
+.select {
+  width: 220px;
+  height: 40px;
+  background: #fff;
+  border: 2px solid #ccc;
+  font-size: 14px;
+  position: relative;
+  outline: none;
+  border-radius: 5px;
+}
+/* line 669, style.scss */
+.select .selector {
+  display: block;
+  width: 100%;
+  height: 38px;
+  line-height: 35px;
+  text-indent: 15px;
+  background: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+/* line 680, style.scss */
+.select .selector:link, .select .selector:visited, .select .selector:hover {
+  color: #EBB52D;
+  outline: none;
+  text-decoration: none;
+}
+/* line 686, style.scss */
+.select i {
+  font-size: 19px;
+  -webkit-transition: all 0.25s ease-in;
+  -moz-transition: all 0.25s ease-in;
+  -o-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+}
+/* line 689, style.scss */
+.select i.teste {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+/* line 693, style.scss */
+.select .toggle {
+  display: block;
+  width: 26px;
+  height: 38px;
+  outline: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: 1px solid #f08;
+  background: url(../images/select-icons.png) 0 -167px no-repeat;
+}
+/* line 703, style.scss */
+.select .toggle:hover {
+  background: url(../images/select-icons.png) 0 -167px no-repeat;
+}
+/* line 706, style.scss */
+.select .toggle.open {
+  background: url(../images/select-icons.png) 0 -16px no-repeat;
+}
+/* line 708, style.scss */
+.select .toggle.open:hover {
+  background: url(../images/select-icons.png) 0 -66px no-repeat;
+}
+/* line 713, style.scss */
+.select ul.options {
+  background: #EBB52D;
+  list-style: none;
+  left: -5%;
+  margin: 10px 0 0 0;
+  padding: 0;
+  position: absolute;
+  top: 30px;
+  width: 110%;
+  z-index: 1;
+  overflow-y: auto;
+  border-radius: 5px;
+}
+/* line 725, style.scss */
+.select ul.options li {
+  padding: 0 7px;
+}
+/* line 727, style.scss */
+.select ul.options li a {
+  border-bottom: dotted 1px #515151;
+  display: block;
+  outline: none;
+  padding: 7px 0 7px 3px;
+}
+/* line 732, style.scss */
+.select ul.options li a:link, .select ul.options li a:visited {
+  color: #ddd;
+  text-decoration: none;
+}
+/* line 736, style.scss */
+.select ul.options li a:hover, .select ul.options li a:focus, .select ul.options li a.sbFocus {
+  color: #EBB52D;
+}
+/* line 740, style.scss */
+.select ul.options li.last a {
+  border-bottom: none;
+}
+/* line 744, style.scss */
+.select ul.options .disabled {
+  border-bottom: dotted 1px #515151;
+  color: #999;
+  display: block;
+  padding: 7px 0 7px 3px;
+}
+/* line 750, style.scss */
+.select ul.options .group {
+  border-bottom: dotted 1px #515151;
+  color: #EBB52D;
+  display: block;
+  font-weight: bold;
+  padding: 7px 0 7px 3px;
+}
+/* line 757, style.scss */
+.select ul.options .sub {
+  padding-left: 17px;
+}
+
+/**********************************************/
 /* Tabs
 /**********************************************/
-/* line 659, style.scss */
+/* line 768, style.scss */
 .tabs ul {
   width: 100%;
   padding: 10px;
 }
-/* line 662, style.scss */
+/* line 771, style.scss */
 .tabs ul li {
   list-style: none;
   display: block;
   float: left;
 }
-/* line 666, style.scss */
+/* line 775, style.scss */
 .tabs ul li a {
   margin: 0;
   display: block;
+  border-right-width: 1px;
+  border-right-style: solid;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   -o-border-radius: 0;
   border-radius: 0;
 }
-/* line 670, style.scss */
+/* line 781, style.scss */
 .tabs ul li a.current {
   background: #95a5a6;
+  border-color: #7f8c8d;
 }
-/* line 673, style.scss */
+/* line 785, style.scss */
 .tabs ul li a span {
-  font-size: 12px;
+  font-size: 13px;
   padding: 5px;
-  background: #9e2f25;
-  color: #fff;
+  background: rgba(0, 0, 0, 0.3);
+  color: #dbdee1;
+  text-align: center;
   display: inline;
   margin: 0 0 0 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
 }
-/* line 682, style.scss */
+/* line 796, style.scss */
 .tabs ul li:first-child a {
   -webkit-border-radius: 5px 0 0 0;
   -moz-border-radius: 5px 0 0 0;
@@ -973,7 +1123,7 @@ textarea {
   -o-border-radius: 5px 0 0 0;
   border-radius: 5px 0 0 0;
 }
-/* line 685, style.scss */
+/* line 799, style.scss */
 .tabs ul li:last-child a {
   -webkit-border-radius: 0 5px 0 0;
   -moz-border-radius: 0 5px 0 0;
@@ -982,7 +1132,7 @@ textarea {
   border-radius: 0 5px 0 0;
 }
 
-/* line 691, style.scss */
+/* line 808, style.scss */
 .tabs-content {
   clear: both;
   height: auto;
@@ -995,7 +1145,7 @@ textarea {
   -o-border-radius: 0 5px 5px 5px;
   border-radius: 0 5px 5px 5px;
 }
-/* line 698, style.scss */
+/* line 815, style.scss */
 .tabs-content div {
   clear: both;
   padding: 0 20px 0 0;
@@ -1004,11 +1154,11 @@ textarea {
 /**********************************************/
 /* Accordion
 /**********************************************/
-/* line 707, style.scss */
+/* line 824, style.scss */
 .accordion {
   margin: 0 10px;
 }
-/* line 709, style.scss */
+/* line 826, style.scss */
 .accordion h3 {
   display: block;
   position: relative;
@@ -1025,7 +1175,7 @@ textarea {
   -o-transition: all 0.25s ease-in;
   transition: all 0.25s ease-in;
 }
-/* line 721, style.scss */
+/* line 838, style.scss */
 .accordion h3:first-child, .accordion h3.first {
   -webkit-border-radius: 5px 5px 0 0;
   -moz-border-radius: 5px 5px 0 0;
@@ -1033,7 +1183,7 @@ textarea {
   -o-border-radius: 5px 5px 0 0;
   border-radius: 5px 5px 0 0;
 }
-/* line 724, style.scss */
+/* line 841, style.scss */
 .accordion h3:last-child, .accordion h3.last {
   -webkit-border-radius: 0 0 5px 5px;
   -moz-border-radius: 0 0 5px 5px;
@@ -1041,7 +1191,7 @@ textarea {
   -o-border-radius: 0 0 5px 5px;
   border-radius: 0 0 5px 5px;
 }
-/* line 726, style.scss */
+/* line 843, style.scss */
 .accordion h3:last-child.current, .accordion h3.last.current {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -1049,22 +1199,35 @@ textarea {
   -o-border-radius: 0;
   border-radius: 0;
 }
-/* line 730, style.scss */
+/* line 847, style.scss */
 .accordion h3:hover, .accordion h3.hover {
   background: #c0392b;
 }
-/* line 733, style.scss */
+/* line 850, style.scss */
 .accordion h3.current {
   background: #95a5a6;
   border-color: #7f8c8d;
 }
-/* line 737, style.scss */
+/* line 853, style.scss */
+.accordion h3.current i {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+/* line 857, style.scss */
 .accordion h3 i {
   position: absolute;
+  text-indent: 0;
   top: 17px;
   right: 20px;
+  -webkit-transition: all 0.15s ease-in;
+  -moz-transition: all 0.15s ease-in;
+  -o-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
 }
-/* line 743, style.scss */
+/* line 865, style.scss */
 .accordion .accordion-content {
   clear: both;
   height: auto;
@@ -1073,7 +1236,7 @@ textarea {
   border-top: 0;
   border-bottom: 0;
 }
-/* line 750, style.scss */
+/* line 872, style.scss */
 .accordion .accordion-content:last-child, .accordion .accordion-content.last {
   -webkit-border-radius: 0 0 5px 5px;
   -moz-border-radius: 0 0 5px 5px;
@@ -1086,7 +1249,7 @@ textarea {
 /**********************************************/
 /* Global
 /**********************************************/
-/* line 771, style.scss */
+/* line 890, style.scss */
 .hide {
   position: relative;
   top: 0;
@@ -1094,7 +1257,7 @@ textarea {
   display: none;
 }
 
-/* line 777, style.scss */
+/* line 896, style.scss */
 .clear, br {
   clear: both;
 }

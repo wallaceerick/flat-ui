@@ -5,7 +5,8 @@ by Jason Costello, @jsncostello
 
 .icons {
   padding: 5px;
-  height: 300px;
+  height: auto;
+  min-height: 220px;
   line-height: 50px;
 }
 .icons i {

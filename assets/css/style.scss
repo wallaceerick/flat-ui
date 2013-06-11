@@ -1,26 +1,12 @@
-* {
-	margin: 0;
-	padding: 0;
-	-webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-}
-body {
-	background: #fff;
-	font: normal 10px "Lato", sans-serif;
-	-webkit-font-smoothing: antialiased;
-}
-a {
-	text-decoration: none;
-}
-
 /**********************************************/
 /* Dependences
 /**********************************************/
 
+@import "compass/css3/box-sizing";
 @import "compass/css3/border-radius";
 @import "compass/css3/opacity";
 @import "compass/css3/transition";
+@import "compass/css3/transform";
 @import url("http://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,400italic,300");
 @import url("fontello.css");
 
@@ -48,6 +34,20 @@ $red: 		#E74C3C;
 $red-h: 	#C0392B;
 $white: 	#DBDEE1;
 $white-h: 	#BDC3C7;
+
+* {
+	margin: 0;
+	padding: 0;
+	@include box-sizing(border-box);
+}
+body {
+	background: #fff;
+	font: normal 10px "Lato", sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+a {
+	text-decoration: none;
+}
 
 /**********************************************/
 /* Headings
@@ -100,16 +100,16 @@ h6 {font-size: 10px;}
 .btn-large 		{padding: 13px 35px 14px; font-size:16px!important;}
 .btn-xlarge 	{padding: 14px 35px 15px; font-size:18px!important;}
 /* Colors */
-.btn-black 		{background-color: $black;}
-.btn-blue 		{background-color: $blue;}
-.btn-gray 		{background-color: $gray;}
-.btn-green 		{background-color: $green;}
-.btn-yellow 	{background-color: $yellow;}
-.btn-orange 	{background-color: $orange;}
-.btn-pink 		{background-color: $pink;}
-.btn-purple 	{background-color: $purple;}
-.btn-red 		{background-color: $red;}
-.btn-white 		{background-color: $white;}
+.btn-black 		{background-color: $black; 	border-color: $black-h;}
+.btn-blue 		{background-color: $blue; 	border-color: $blue-h;}
+.btn-gray 		{background-color: $gray; 	border-color: $gray-h;}
+.btn-green 		{background-color: $green; 	border-color: $green-h;}
+.btn-yellow 	{background-color: $yellow; border-color: $yellow-h;}
+.btn-orange 	{background-color: $orange; border-color: $orange-h;}
+.btn-pink 		{background-color: $pink; 	border-color: $pink-h;}
+.btn-purple 	{background-color: $purple; border-color: $purple-h;}
+.btn-red 		{background-color: $red; 	border-color: $red-h;}
+.btn-white 		{background-color: $white; 	border-color: $white-h;}
 /* Rollovers */
 .btn-black-h,
 .btn-black:hover 	{background-color: $black-h;}
@@ -145,10 +145,11 @@ h6 {font-size: 10px;}
 /* Inputs, Textareas & Labels
 /**********************************************/
 
-input, label, textarea { 
+input, label, textarea, select, option { 
 	font: normal 14px "Lato", sans-serif;
 	color: $white-h;
 	float: left;
+	outline: none;
 }
 label {
 	color: $gray-h;
@@ -168,10 +169,9 @@ label {
 		color: #535d5e;
 	}
 }
-input, textarea {
+input, textarea, .select {
 	border: 2px solid $white-h;
 	padding: 10px 8px;
-	outline: none;
 	@include transition(all 0.35s ease-in);
 	@include border-radius(5px);
 	/* States */
@@ -222,11 +222,12 @@ input, textarea {
 	}
 	/* Types */
 	&.input-disabled, 
-	&.textarea-disabled {
+	&.textarea-disabled, 
+	&.select-disabled {
 		background: #f4f6f6;
 		border-color: #d5dbdb!important;
 		color: #d5dbdb!important;
-		cursor:not-allowed;
+		cursor: not-allowed;
 	}
 }
 input {
@@ -652,6 +653,114 @@ textarea {
 }
 
 /**********************************************/
+/* Selects
+/**********************************************/
+
+
+.select {
+	width: 220px; 
+	height: 40px;
+	background: #fff;
+	border: 2px solid #ccc;
+	font-size: 14px; 
+	position: relative;
+	outline: none;
+	border-radius:5px;
+	.selector {
+		display: block;
+		width: 100%;
+		height: 38px;
+		line-height: 35px;
+		text-indent: 15px;
+		background: rgba(0,0,0,.1);
+		position: absolute;
+		top: 0;
+		left: 0; 
+		overflow: hidden;
+		&:link, &:visited, &:hover{
+			color: #EBB52D;
+			outline: none;
+			text-decoration: none;
+		}
+	}
+	i {
+		font-size: 19px;
+		@include transition(all 0.25s ease-in);
+		&.teste {
+			@include transform(rotate(-90deg));
+		}
+	}
+	.toggle {
+		display: block;
+		width: 26px;
+		height: 38px;
+		outline: none;
+		position: absolute;
+		right: 0;
+		top: 0;
+		border:1px solid #f08;
+		background: url(../images/select-icons.png) 0 -167px no-repeat;
+		&:hover{
+			background: url(../images/select-icons.png) 0 -167px no-repeat;
+		}
+		&.open {
+			background: url(../images/select-icons.png) 0 -16px no-repeat;
+			&:hover {
+				background: url(../images/select-icons.png) 0 -66px no-repeat;
+			}
+		}
+	}
+	ul.options {
+		background: #EBB52D;
+		list-style: none;
+		left: -5%;
+		margin: 10px 0 0 0;
+		padding: 0;
+		position: absolute;
+		top: 30px;
+		width: 110%;
+		z-index: 1;
+		overflow-y: auto;
+		border-radius: 5px;
+		li {
+			padding: 0 7px;
+			a {
+				border-bottom: dotted 1px #515151;
+				display: block;
+				outline: none;
+				padding: 7px 0 7px 3px;
+				&:link, &:visited{
+					color: #ddd;
+					text-decoration: none;
+				}
+				&:hover, &:focus, &.sbFocus{
+					color: #EBB52D;
+				}
+			}
+			&.last a {
+				border-bottom: none;
+			}
+	}
+	.disabled {
+		border-bottom: dotted 1px #515151;
+		color: #999;
+		display: block;
+		padding: 7px 0 7px 3px;
+	}
+	.group{
+		border-bottom: dotted 1px #515151;
+		color: #EBB52D;
+		display: block;
+		font-weight: bold;
+		padding: 7px 0 7px 3px;
+	}
+	.sub{
+		padding-left: 17px;
+	}
+}
+}
+
+/**********************************************/
 /* Tabs
 /**********************************************/
 
@@ -666,17 +775,22 @@ textarea {
 			a {
 				margin: 0;
 				display: block;
+				border-right-width: 1px;
+				border-right-style: solid;
 				@include border-radius(0);
 				&.current {
 					background: $gray;
+					border-color: $gray-h;
 				}
 				span {
-					font-size: 12px;
+					font-size: 13px;
 					padding: 5px;
-					background: #9e2f25;
-					color: #fff;
+					background: rgba(0, 0, 0, 0.3); 
+					color: $white;
+					text-align: center;
 					display: inline;
 					margin: 0 0 0 10px;
+					@include border-radius(3px);
 				}
 			}
 			&:first-child a {
@@ -686,6 +800,9 @@ textarea {
 				@include border-radius(0 5px 0 0);
 			}
 		}
+	}
+	&.black {
+
 	}
 }
 .tabs-content {
@@ -733,11 +850,16 @@ textarea {
 		&.current {
 			background: $gray;
 			border-color: $gray-h;
+			i  {
+				@include transform(rotate(90deg));
+			}
 		}
 		i {
 			position: absolute;
+			text-indent: 0;
 			top: 17px; 
 			right: 20px;
+			@include transition(all 0.15s ease-in);
 		}
 	}
 	.accordion-content { 
@@ -751,11 +873,8 @@ textarea {
 			@include border-radius(0 0 5px 5px);
 			border: 1px solid $gray;
 		}
-		p {
-		}
 	}
 }
-
 
 
 

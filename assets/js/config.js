@@ -14,6 +14,9 @@ $(document).ready(function(){
 	//Accordion
 	$.accordion();
 
+	//Select
+	$('select').selectbox();
+
 	//Not Required 
 	$('.checkboxes ul li').click(function(){ 
 		$('.checkboxes ul li').removeClass('active');

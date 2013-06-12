@@ -84,7 +84,8 @@ h6 {font-size: 10px;}
 		color: #fff!important;
 	}
 }
-/* Disable */
+
+/* Disabled */
 .btn-disabled {
 	background-color: $white;
 	color: #fff; 
@@ -93,12 +94,14 @@ h6 {font-size: 10px;}
 		color: inherit;
 	}
 }
+
 /* Sizes */
 .btn-xsmall 	{padding: 7px 15px 8px;   font-size:10px!important;}
 .btn-small 		{padding: 10px 15px 11px; font-size:12px!important;}
-.btn-medium		{padding: 12px 25px 13px;}
+.btn-medium		{padding: 12px 25px 13px; font-size:inherit;}
 .btn-large 		{padding: 13px 35px 14px; font-size:16px!important;}
 .btn-xlarge 	{padding: 14px 35px 15px; font-size:18px!important;}
+
 /* Colors */
 .btn-black 		{background-color: $black; 	border-color: $black-h;}
 .btn-blue 		{background-color: $blue; 	border-color: $blue-h;}
@@ -110,6 +113,7 @@ h6 {font-size: 10px;}
 .btn-purple 	{background-color: $purple; border-color: $purple-h;}
 .btn-red 		{background-color: $red; 	border-color: $red-h;}
 .btn-white 		{background-color: $white; 	border-color: $white-h;}
+
 /* Rollovers */
 .btn-black-h,
 .btn-black:hover 	{background-color: $black-h;}
@@ -131,15 +135,17 @@ h6 {font-size: 10px;}
 .btn-red:hover		{background-color: $red-h;}
 .btn-white-h,
 .btn-white:hover	{background-color: $white-h;}
+
 /* Transforms */
-.btn-upper		{text-transform: uppercase;}
-.btn-lower 		{text-transform: lowercase;}
-.btn-cap		{text-transform: capitalize;}
+.btn-upper			{text-transform: uppercase;}
+.btn-lower 			{text-transform: lowercase;}
+.btn-cap			{text-transform: capitalize;}
+
 /* Styles */
-.btn-bold {font-weight: bold!important;}
-.btn-italic { font-style: italic!important;}
-.btn-under { text-decoration: underline!important;}
-.btn-strike { text-decoration: line-through!important;}
+.btn-bold 			{font-weight: bold!important;}
+.btn-italic 		{font-style: italic!important;}
+.btn-under 			{text-decoration: underline!important;}
+.btn-strike 		{text-decoration: line-through!important;}
 
 /**********************************************/
 /* Inputs, Textareas & Labels
@@ -169,11 +175,12 @@ label {
 		color: #535d5e;
 	}
 }
-input, textarea, .select {
+input, textarea {
 	border: 2px solid $white-h;
 	padding: 10px 8px;
 	@include transition(all 0.35s ease-in);
 	@include border-radius(5px);
+
 	/* States */
 	&:hover {
 		color: $gray-h;
@@ -183,6 +190,15 @@ input, textarea, .select {
 		color: #5a5f63;
 		border-color: #5a5f63;
 	}
+	&.input-disabled, 
+	&.textarea-disabled, 
+	&.select-disabled {
+		background: #f4f6f6;
+		border-color: #d5dbdb!important;
+		color: #d5dbdb!important;
+		cursor: not-allowed;
+	}
+
 	/* Colors */
 	&.focus-black:focus {
 		color: $black;
@@ -220,19 +236,11 @@ input, textarea, .select {
 		color: $red;
 		border-color: $red;
 	}
-	/* Types */
-	&.input-disabled, 
-	&.textarea-disabled, 
-	&.select-disabled {
-		background: #f4f6f6;
-		border-color: #d5dbdb!important;
-		color: #d5dbdb!important;
-		cursor: not-allowed;
-	}
 }
 input {
 	text-indent: 5px;
 	margin: 0 3px 3px 0!important;
+
 	/* Sizes */
 	&.input-small {
 		width: 200px;
@@ -244,6 +252,7 @@ input {
 		width: 300px;
 	}
 }
+
 /* Input with Icons */
 .input-icon {
 	position: relative;
@@ -433,7 +442,6 @@ textarea {
 	    }
 	    &.disabled {
 	        background-position: -66px -80px;
-	        cursor:not-allowed;
 	        &.checked {
 		        background-position: -88px -80px;
 		    }
@@ -449,7 +457,6 @@ textarea {
 	    }
 	    &.disabled {
 	        background-position: -66px -100px;
-	        cursor:not-allowed;
 	        &.checked {
 		        background-position: -88px -100px;
 		    }
@@ -465,7 +472,6 @@ textarea {
 	    }
 	    &.disabled {
 	        background-position: -66px -120px;
-	        cursor:not-allowed;
 	        &.checked {
 		        background-position: -88px -120px;
 		    }
@@ -481,7 +487,6 @@ textarea {
 	    }
 	    &.disabled {
 	        background-position: -66px -140px;
-	        cursor:not-allowed;
 	        &.checked {
 		        background-position: -88px -140px;
 		    }
@@ -497,7 +502,6 @@ textarea {
 	    }
 	    &.disabled {
 	        background-position: -66px -160px;
-	        cursor:not-allowed;
 	        &.checked {
 		        background-position: -88px -160px;
 		    }
@@ -516,7 +520,6 @@ textarea {
 	    }
 	    &.disabled {
 	        background-position: -176px 0;
-	        cursor:not-allowed;
 	        &.checked {
 		        background-position: -198px 0;
 		    }
@@ -532,7 +535,6 @@ textarea {
 	    }
 	    &.disabled {
 	        background-position: -176px -20px;
-	        cursor:not-allowed;
 	        &.checked {
 		        background-position: -198px -20px;
 		    }
@@ -548,7 +550,6 @@ textarea {
 	    }
 	    &.disabled {
 	        background-position: -176px -40px;
-	        cursor:not-allowed;
 	        &.checked {
 		        background-position: -198px -40px;
 		    }
@@ -564,7 +565,6 @@ textarea {
 	    }
 	    &.disabled {
 	        background-position: -176px -60px;
-	        cursor:not-allowed;
 	        &.checked {
 		        background-position: -198px -60px;
 		    }
@@ -580,7 +580,6 @@ textarea {
 	    }
 	    &.disabled {
 	        background-position: -176px -80px;
-	        cursor:not-allowed;
 	        &.checked {
 		        background-position: -198px -80px;
 		    }
@@ -596,7 +595,6 @@ textarea {
 	    }
 	    &.disabled {
 	        background-position: -176px -100px;
-	        cursor:not-allowed;
 	        &.checked {
 		        background-position: -198px -100px;
 		    }
@@ -612,7 +610,6 @@ textarea {
 	    }
 	    &.disabled {
 	        background-position: -176px -120px;
-	        cursor:not-allowed;
 	        &.checked {
 		        background-position: -198px -120px;
 		    }
@@ -628,7 +625,6 @@ textarea {
 	    }
 	    &.disabled {
 	        background-position: -176px -140px;
-	        cursor:not-allowed;
 	        &.checked {
 		        background-position: -198px -140px;
 		    }
@@ -644,7 +640,6 @@ textarea {
 	    }
 	    &.disabled {
 	        background-position: -176px -160px;
-	        cursor:not-allowed;
 	        &.checked {
 		        background-position: -198px -160px;
 		    }
@@ -656,108 +651,100 @@ textarea {
 /* Selects
 /**********************************************/
 
-
 .select {
 	width: 220px; 
-	height: 40px;
-	background: #fff;
-	border: 2px solid #ccc;
-	font-size: 14px; 
+	height: 60px;
+	font-size: 14px;
+	font-weight: bold;
 	position: relative;
 	outline: none;
-	border-radius:5px;
 	.selector {
+		background: #fff;
+		border: 2px solid $white-h;
+		color: $white-h;
 		display: block;
 		width: 100%;
-		height: 38px;
-		line-height: 35px;
+		height: 40px;
+		line-height: 36px;
 		text-indent: 15px;
-		background: rgba(0,0,0,.1);
 		position: absolute;
 		top: 0;
 		left: 0; 
 		overflow: hidden;
-		&:link, &:visited, &:hover{
-			color: #EBB52D;
-			outline: none;
-			text-decoration: none;
+		z-index: 5;
+		@include border-radius(4px);
+		@include transition(all 0.25s ease-in);
+		&.focus, &.open {
+			color: #fff;
+			border: 2px solid $orange;
+			background: $orange;
 		}
 	}
 	i {
-		font-size: 19px;
+		display: inline-block;
+		color: $white-h;
+		font-size: 20px;
+		position: absolute;
+		top: 8px;
+		right: 5px;
+		z-index: 10;
 		@include transition(all 0.25s ease-in);
-		&.teste {
+		&.open, &.focus {
+			color: #fff;
+		}
+		&.open {
 			@include transform(rotate(-90deg));
 		}
 	}
-	.toggle {
-		display: block;
-		width: 26px;
-		height: 38px;
-		outline: none;
-		position: absolute;
-		right: 0;
-		top: 0;
-		border:1px solid #f08;
-		background: url(../images/select-icons.png) 0 -167px no-repeat;
-		&:hover{
-			background: url(../images/select-icons.png) 0 -167px no-repeat;
-		}
-		&.open {
-			background: url(../images/select-icons.png) 0 -16px no-repeat;
-			&:hover {
-				background: url(../images/select-icons.png) 0 -66px no-repeat;
-			}
-		}
-	}
 	ul.options {
-		background: #EBB52D;
+		background: $orange;
 		list-style: none;
-		left: -5%;
-		margin: 10px 0 0 0;
-		padding: 0;
+		font-weight: normal;
+		left: 0;
+		margin: 41px 0 0 0;
+		padding: 5px;
 		position: absolute;
-		top: 30px;
-		width: 110%;
+		top: 0!important;
+		width: 100%;
 		z-index: 1;
 		overflow-y: auto;
-		border-radius: 5px;
+		@include border-radius(4px);
 		li {
-			padding: 0 7px;
+			color: #fff;
+			margin-bottom: 1px;
 			a {
-				border-bottom: dotted 1px #515151;
+				background: #fff;
+				color: #000;
 				display: block;
 				outline: none;
-				padding: 7px 0 7px 3px;
-				&:link, &:visited{
-					color: #ddd;
-					text-decoration: none;
-				}
-				&:hover, &:focus, &.sbFocus{
-					color: #EBB52D;
+				padding: 7px;
+				&:hover, &:focus, &.focus{
+					color: #fff;
+					background: #000;
 				}
 			}
 			&.last a {
 				border-bottom: none;
 			}
+			.disabled {
+				cursor: not-allowed;
+				color: $gray;
+				background: $white;
+				display: block;
+				padding: 7px;
+			}
+			.group {
+				color: $orange;
+				background: #fff;
+				display: block;
+				font-weight: bold;
+				padding: 10px;
+			}
+			.sub {
+				text-indent: 10px;
+			}
+		}
 	}
-	.disabled {
-		border-bottom: dotted 1px #515151;
-		color: #999;
-		display: block;
-		padding: 7px 0 7px 3px;
-	}
-	.group{
-		border-bottom: dotted 1px #515151;
-		color: #EBB52D;
-		display: block;
-		font-weight: bold;
-		padding: 7px 0 7px 3px;
-	}
-	.sub{
-		padding-left: 17px;
-	}
-}
 }
 
 /**********************************************/

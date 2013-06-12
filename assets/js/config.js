@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+	//Menu Dropdown
+	$('ul.menu').superfish();
+
 	//Checkboxes & Radio Buttons
 	$('input').iCheck({
 		//If you need, change the color!

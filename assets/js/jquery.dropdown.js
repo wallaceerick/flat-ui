@@ -13,10 +13,10 @@
 	var methods = (function(){
 		// private properties and methods go here
 		var c = {
-				bcClass: 'sf-breadcrumb',
-				menuClass: 'sf-js-enabled',
-				anchorClass: 'sf-with-ul',
-				menuArrowClass: 'sf-arrows'
+				bcClass: 'breadcrumb',
+				menuClass: 'js-enabled',
+				anchorClass: 'with-ul',
+				menuArrowClass: 'arrows'
 			},
 			ios = (function(){
 				var ios = /iPhone|iPad|iPod/i.test(navigator.userAgent);
@@ -228,15 +228,15 @@
 	};
 
 	$.fn.superfish.defaults = {
-		popUpSelector: 'ul,.sf-mega', // within menu context
-		hoverClass: 'sfHover',
+		popUpSelector: 'ul, .sf-mega', // within menu context
+		hoverClass: 'hover',
 		pathClass: 'overrideThisToUse',
 		pathLevels: 1,
-		delay: 800,
+		delay: 300,
 		animation: {opacity:'show'},
 		animationOut: {opacity:'hide'},
-		speed: 'normal',
-		speedOut: 'fast',
+		speed: 300,
+		speedOut: 300,
 		cssArrows: true,
 		disableHI: false,
 		onInit: $.noop,

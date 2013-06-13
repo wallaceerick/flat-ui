@@ -408,31 +408,46 @@ input {
 .input-increment {
 	display: inline-block;
 	position: relative;
+	padding: 10px;
+	input {
+		width: 70px;
+	}
+	&.input-medium {
+		input {
+			width: 110px;
+		}
+	}
+	&.input-large {
+		input {
+			width: 150px;
+		}
+	}
 	i {  
-		display: block;
-		float: right;
+		display: block; 
 		color: #fff;
-		background: $gray;
+		background: $white;
 		font-size: 20px;
 		font-style: normal;
 		font-weight: bold;
-		width: 18px;
-		height: 18px;
+		width: 15px;
+		height: 15px;
 		text-align: center;
-		line-height: 16px; 
+		line-height: 13px; 
 		cursor: pointer;
-		@include border-radius(100%);	
 		-webkit-user-select: none;
 		-khtml-user-select: none;
 		-moz-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
-		&.more {
-			margin: 2px 0;
+		position: absolute;
+		right: 18px;
+		@include border-radius(100%);	
+		&.more { 
+			top: 14px;
 		} 
 		&.less {
-			line-height: 15px;
-			font-size: 25px;
+			bottom: 17px;
+			font-size: 25px; 
 		}
 		&:hover {
 			background: $gray-h;

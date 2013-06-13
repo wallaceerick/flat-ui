@@ -2,12 +2,7 @@
 /* Dependences
 /**********************************************/
 
-@import "compass/css3/box-sizing";
-@import "compass/css3/border-radius";
-@import "compass/css3/opacity";
-@import "compass/css3/transition";
-@import "compass/css3/transform";
-@import "compass/css3/box-shadow";
+@import "compass/css3";
 @import url("http://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,400italic,300");
 @import url("fontello.css");
 
@@ -1157,13 +1152,98 @@ input {
 	}
 }
 
+/**********************************************/
+/* Progressbar
+/**********************************************/
 
+.progressbar {
+	height: 10px;
+	padding: 5px;
+	position: relative;
+	background: $white;
+	@include border-radius(20px);
+	@include box-sizing(content-box);
+	> span { 
+			position: relative;
+			display: block;
+			overflow: hidden;
+			height: 100%;
+			@include border-radius(20px 8px 8px 20px);
+			@include box-shadow(inset 0 2px 9px  rgba(255,255,255,0.3), inset 0 -2px 6px rgba(0,0,0,0.4));
+	}
+	/* Colors */
+	&.black > span {
+		@include background-image(linear-gradient(left top, $black, $black-h));
+	}
+	&.blue > span {
+		@include background-image(linear-gradient(left top, $blue, $blue-h));
+	}
+	&.gray > span {
+		@include background-image(linear-gradient(left top, $gray, $gray-h));
+	}
+	&.green > span {
+		@include background-image(linear-gradient(left top, $green, $green-h));
+	}
+	&.yellow > span {
+		@include background-image(linear-gradient(left top, $yellow, $yellow-h));
+	}
+	&.orange > span {
+		@include background-image(linear-gradient(left top, $orange, $orange-h));
+	}
+	&.pink > span {
+		@include background-image(linear-gradient(left top, $pink, $pink-h));
+	}
+	&.purple > span {
+		@include background-image(linear-gradient(left top, $purple, $purple-h));
+	}
+	&.red > span {
+		@include background-image(linear-gradient(left top, $red, $red-h));
+	}
+	/* Sizes */
+	&.medium {
+		height: 15px;
+		padding: 8px;
+	}
+	&.large {
+		height: 20px;
+		padding: 12px;
+		@include border-radius(25px);
+	}
 
-
-
-
-
-
+} 
+.progressbar > span:after, .animate > span > span {
+	content: "";
+	position: absolute;
+	top: 0; 
+	left: 0; 
+	bottom: 0; 
+	right: 0;
+	overflow: hidden;
+	background-image:-webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, rgba(255, 255, 255, .2)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .2)), color-stop(.75, rgba(255, 255, 255, .2)), color-stop(.75, transparent), to(transparent));
+	background-image:-moz-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+	z-index: 1;
+	@include border-radius(20px 8px 8px 20px);
+	@include background-size(50px 50px);
+	-webkit-background-size: 50px 50px;
+	-moz-background-size: 50px 50px;
+	-webkit-animation: move 2s linear infinite;
+}
+.animate > span:after {
+	display: none;
+}
+@-webkit-keyframes move {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 50px 50px;
+	}
+}
+.nostripes > span > span, 
+.nostripes > span:after {
+	-webkit-animation: none;
+	background-image: none;
+}		
 
 
 

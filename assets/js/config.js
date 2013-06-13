@@ -20,6 +20,11 @@ $(document).ready(function(){
 	//Select
 	$('select').selectbox();
 
+	//Progressbar
+	$(".progressbar > span").each(function() {
+		$(this).data("origWidth", $(this).width()).width(0).animate({width: $(this).data("origWidth")}, 1200);
+	});
+
 	//Tooltip
 	$('.north').tipsy({gravity: 'n'});
     $('.south').tipsy({gravity: 's'});

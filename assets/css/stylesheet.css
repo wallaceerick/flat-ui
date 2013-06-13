@@ -94,7 +94,18 @@ ul.tooltips li:hover {
     background: #afb2b6;
 }
 
-
+ul.progressbars li {
+  width: 30%;
+  float: left;
+}
+ul.progressbars li.one {
+  margin-right: 4.5%;
+  padding: 12px 0 0 0;
+}
+ul.progressbars li.two {
+  margin-right: 4.5%;
+  padding: 7px 0 0 0;
+}
 
 
 

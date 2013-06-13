@@ -26,8 +26,6 @@ $(document).ready(function(){
 	$(".mask-celular").mask("(99) 9 9999-9999");
 
 
-
-
 	//Not Required 
 	$('.checkboxes ul li').click(function(){ 
 		$('.checkboxes ul li').removeClass('active');

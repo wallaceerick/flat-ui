@@ -7,6 +7,7 @@
 @import "compass/css3/opacity";
 @import "compass/css3/transition";
 @import "compass/css3/transform";
+@import "compass/css3/box-shadow";
 @import url("http://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,400italic,300");
 @import url("fontello.css");
 
@@ -254,6 +255,9 @@ h6 {font-size: 10px;}
 .btn-italic 		{font-style: italic!important;}
 .btn-under 			{text-decoration: underline!important;}
 .btn-strike 		{text-decoration: line-through!important;}
+
+/* Align Right */
+.btn-right 			{float: right; margin-left: 10px;}
 
 /**********************************************/
 /* Inputs, Textareas & Labels
@@ -971,9 +975,48 @@ textarea {
 	}
 }
 
+/**********************************************/
+/* Modal
+/**********************************************/
 
-
-
+.modal-background { 
+	position: fixed; 
+	height: 100%;
+	width: 100%;
+	background: #000;
+	z-index: 100;
+	display: none;
+	top: 0;
+	left: 0; 
+}
+.modal {
+	visibility: hidden;
+	top: 100px; 
+	left: 50%;
+	margin-left: -300px;
+	width: 520px;
+	background: #fff;
+	position: absolute;
+	z-index: 200;
+	padding: 30px 40px 34px;
+	@include border-radius(5px);
+	@include box-shadow(0 0 10px rgba(0, 0, 0, 0.6));
+	&.small 	{width: 200px; margin-left: -140px;}
+	&.medium 	{width: 400px; margin-left: -240px;}
+	&.large 	{width: 600px; margin-left: -340px;}
+	&.xlarge 	{width: 800px; margin-left: -440px;}
+	.close-modal {
+		font-size: 15px;
+		position: absolute;
+		top: 8px;
+		right: 10px;
+		color: $black;
+		cursor: pointer;
+		&:hover {
+			color: $black-h;
+		}
+	} 
+}
 
 
 

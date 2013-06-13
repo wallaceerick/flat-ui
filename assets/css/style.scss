@@ -1092,6 +1092,89 @@ input {
 .tipsy-e .tipsy-arrow 	{right: 0; top: 50%; margin-top: -5px; border-left-style: solid; border-right: none; border-top-color: transparent; border-bottom-color: transparent;}
 .tipsy-w .tipsy-arrow 	{left: 0; top: 50%; margin-top: -5px; border-right-style: solid; border-left: none; border-top-color: transparent; border-bottom-color: transparent;}
 
+/**********************************************/
+/* Pagination
+/**********************************************/
+.pagination {
+	width: 100%; 
+	ul {
+		display: inline-block;
+		background: $white;
+		width: auto;
+		@include border-radius(5px);
+		&.right {
+			float: right;
+		}
+		&.left {
+			float: left;
+		}
+		li {
+			display: inline-block;
+				margin: 0 2px;
+			a {
+				display: block;
+				border: 4px solid $white;
+				color: #fff;
+				background: #fff;
+				padding: 1px 6px;
+				text-align: center;
+				font-weight: bold;
+				@include border-radius(100%);
+				@include transition (background 0.2s ease-in, border-color .1s ease-in, color 0.2s ease-in);
+				&:hover {
+					border-color: $green;
+					background: $green;
+				}
+				&.current {
+					color: $white;
+				}
+			}
+			&.previous, &.next {
+					margin: 0;
+				a {
+					color: #fff;
+					padding: 12px 17px;
+					background: $white;
+					border: none;
+					&:hover {
+						background: $green;
+					}
+				}
+			}
+			&.previous {
+				a {
+					border-right: 1px solid #fff;
+					@include border-radius(5px 0 0 5px);
+				}
+			}
+			&.next {
+				a {
+					border-left: 1px solid #fff;
+					@include border-radius(0 5px 5px 0);
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /**********************************************/

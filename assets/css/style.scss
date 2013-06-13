@@ -43,7 +43,7 @@ $white-h: 	#BDC3C7;
 }
 body {
 	background: #fff;
-	font: normal 10px "Lato", sans-serif;
+	font: normal 14px "Lato", sans-serif;
 	-webkit-font-smoothing: antialiased;
 }
 li {
@@ -269,6 +269,9 @@ input, label, textarea, select, option {
 	float: left;
 	outline: none;
 }
+textarea {
+	float: none!important;
+}
 label {
 	color: $gray-h;
 	margin: 0 5px 0 0;
@@ -406,9 +409,42 @@ input {
 		}
 	}
 }
-textarea {
-	float: none!important;
+/* Input Increment */
+.input-increment {
+	display: inline-block;
+	position: relative;
+	i {  
+		display: block;
+		float: right;
+		color: #fff;
+		background: $gray;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: bold;
+		width: 18px;
+		height: 18px;
+		text-align: center;
+		line-height: 16px; 
+		cursor: pointer;
+		@include border-radius(100%);
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		&.more {
+			margin: 2px 0;
+		} 
+		&.less {
+			line-height: 15px;
+			font-size: 25px;
+		}
+		&:hover {
+			background: $gray-h;
+		} 
+	} 
 }
+
 
 /**********************************************/
 /* Checkbox & Radio Buttons
@@ -878,8 +914,8 @@ textarea {
 				border-right-style: solid;
 				@include border-radius(0);
 				&.current {
-					background: $gray;
-					border-color: $gray-h;
+					background: $white;
+					border-color: $white;
 				}
 				span {
 					font-size: 13px;
@@ -909,7 +945,7 @@ textarea {
 	height: auto;
 	margin: 0 10px;
 	padding: 10px 15px;
-	border: 1px solid $gray;
+	background: $white;
 	@include border-radius(0 5px 5px 5px);
 	div  {
 		clear: both;

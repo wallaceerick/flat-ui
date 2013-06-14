@@ -1974,9 +1974,96 @@ table {
 }
 
 /**********************************************/
+/* Responsive Slider
+/**********************************************/
+/* line 1350, style.scss */
+ul.slider {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  padding: 0;
+  margin: 10px;
+}
+/* line 1356, style.scss */
+ul.slider li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  overflow: hidden;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+/* line 1364, style.scss */
+ul.slider li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+}
+/* line 1370, style.scss */
+ul.slider img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+}
+/* line 1377, style.scss */
+ul.slider p.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #000;
+  color: #fff;
+  font-size: 15px;
+  padding: 15px 0;
+  text-indent: 20px;
+  width: 100%;
+}
+
+/* line 1389, style.scss */
+ul.rslides_tabs {
+  clear: both;
+  padding-left: 10px;
+}
+/* line 1392, style.scss */
+ul.rslides_tabs li {
+  display: block;
+  float: left;
+  margin-right: 1px;
+}
+/* line 1396, style.scss */
+ul.rslides_tabs li a {
+  display: block;
+  padding: 8px;
+  background: #ccc;
+  color: #fff;
+}
+/* line 1402, style.scss */
+ul.rslides_tabs li.rslides_here a {
+  background: #000;
+}
+
+/* line 1408, style.scss */
+.callbacks_container a.prev {
+  margin-left: 10px;
+  margin-right: 1px;
+}
+/* line 1412, style.scss */
+.callbacks_container a.prev, .callbacks_container a.next {
+  padding: 10px;
+  background: #ccc;
+  color: #fff;
+}
+/* line 1416, style.scss */
+.callbacks_container a.prev:hover, .callbacks_container a.next:hover {
+  background: #000;
+}
+
+/**********************************************/
 /* Global
 /**********************************************/
-/* line 1358, style.scss */
+/* line 1428, style.scss */
 .hide {
   position: relative;
   top: 0;
@@ -1984,7 +2071,7 @@ table {
   display: none;
 }
 
-/* line 1364, style.scss */
+/* line 1434, style.scss */
 .clear, br {
   clear: both;
 }

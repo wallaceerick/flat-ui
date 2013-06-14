@@ -1343,11 +1343,81 @@ table {
 	}
 }
 
+/**********************************************/
+/* Responsive Slider
+/**********************************************/
 
-
-
-
-
+ul.slider {
+	position: relative;
+	list-style: none;
+	overflow: hidden; 
+	padding: 0;
+	margin: 10px;
+	li {
+		-webkit-backface-visibility: hidden;
+		position: absolute;
+		overflow: hidden;
+		display: none;
+		width: 100%;
+		left: 0;
+		top: 0;
+		&:first-child {
+			position: relative;
+			display: block;
+			float: left;
+		}
+	}
+	img {
+		display: block;
+		height: auto;
+		float: left;
+		width: 100%;
+		border: 0;
+	}
+	p.caption {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background: #000;
+		color: #fff;
+		font-size: 15px;
+		padding: 15px 0;
+		text-indent: 20px;
+		width: 100%;
+	}
+}
+ul.rslides_tabs {
+	clear: both;
+	padding-left: 10px;
+	li {
+		display: block;
+		float: left;
+		margin-right: 1px;
+		a {
+			display: block; 
+			padding: 8px;
+			background: #ccc;
+			color: #fff;
+		}
+		&.rslides_here a {
+			background: #000;
+		}
+	}
+}
+.callbacks_container a {
+	&.prev {
+		margin-left: 10px;
+		margin-right: 1px;
+	}
+	&.prev, &.next {
+		padding: 10px;
+		background: #ccc;
+		color: #fff;
+		&:hover {
+			background: #000;
+		}
+	}
+}
 
 
 

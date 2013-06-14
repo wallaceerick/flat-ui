@@ -1920,7 +1920,7 @@ table tr:nth-child(odd) td {
 }
 /* line 1282, style.scss */
 table tr:hover td {
-  background: #4f4f4f;
+  background: #3498db;
   color: #dbdee1;
 }
 /* line 1287, style.scss */

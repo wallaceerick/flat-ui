@@ -1894,9 +1894,89 @@ input.input-large {
 }
 
 /**********************************************/
+/* Tables
+/**********************************************/
+/* line 1267, style.scss */
+table {
+  margin: 10px 0;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+/* line 1272, style.scss */
+table td {
+  padding: 10px;
+  background: #dbdee1;
+  color: #7f8c8d;
+  border-bottom: 1px solid #fff;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+/* line 1279, style.scss */
+table tr:nth-child(odd) td {
+  background: #bdc3c7;
+}
+/* line 1282, style.scss */
+table tr:hover td {
+  background: #4f4f4f;
+  color: #dbdee1;
+}
+/* line 1287, style.scss */
+table thead td {
+  background: #2980b9 !important;
+  color: #dbdee1;
+}
+/* line 1290, style.scss */
+table thead td:first-child {
+  -webkit-border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+  -ms-border-radius: 5px 0 0 0;
+  -o-border-radius: 5px 0 0 0;
+  border-radius: 5px 0 0 0;
+}
+/* line 1293, style.scss */
+table thead td:last-child {
+  -webkit-border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+  -ms-border-radius: 0 5px 0 0;
+  -o-border-radius: 0 5px 0 0;
+  border-radius: 0 5px 0 0;
+}
+/* line 1299, style.scss */
+table tfoot td {
+  background: #3498db !important;
+  color: #dbdee1;
+}
+/* line 1302, style.scss */
+table tfoot td:first-child {
+  -webkit-border-radius: 0 0 0 5px;
+  -moz-border-radius: 0 0 0 5px;
+  -ms-border-radius: 0 0 0 5px;
+  -o-border-radius: 0 0 0 5px;
+  border-radius: 0 0 0 5px;
+}
+/* line 1305, style.scss */
+table tfoot td:last-child {
+  -webkit-border-radius: 0 0 5px 0;
+  -moz-border-radius: 0 0 5px 0;
+  -ms-border-radius: 0 0 5px 0;
+  -o-border-radius: 0 0 5px 0;
+  border-radius: 0 0 5px 0;
+}
+
+/* line 1313, style.scss */
+table {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/**********************************************/
 /* Global
 /**********************************************/
-/* line 1278, style.scss */
+/* line 1358, style.scss */
 .hide {
   position: relative;
   top: 0;
@@ -1904,7 +1984,7 @@ input.input-large {
   display: none;
 }
 
-/* line 1284, style.scss */
+/* line 1364, style.scss */
 .clear, br {
   clear: both;
 }

@@ -1,5 +1,6 @@
+@import url("_config.scss");
 /* Shadowbox */
-/* line 2, shadowbox.scss */
+/* line 4, shadowbox.scss */
 #sb-container {
   position: fixed;
   top: 0;
@@ -9,13 +10,13 @@
   visibility: hidden;
   display: none;
 }
-/* line 10, shadowbox.scss */
+/* line 12, shadowbox.scss */
 #sb-container #sb-overlay {
   position: relative;
   height: 100%;
   width: 100%;
 }
-/* line 15, shadowbox.scss */
+/* line 17, shadowbox.scss */
 #sb-container #sb-wrapper {
   position: absolute;
   visibility: hidden;
@@ -23,7 +24,7 @@
   background: #fff;
   /* Title */
 }
-/* line 21, shadowbox.scss */
+/* line 23, shadowbox.scss */
 #sb-container #sb-wrapper #sb-title, #sb-container #sb-wrapper #sb-info {
   margin: 0 20px;
   position: relative;
@@ -31,16 +32,16 @@
   font-size: 25px;
   height: 30px;
 }
-/* line 28, shadowbox.scss */
+/* line 30, shadowbox.scss */
 #sb-container #sb-wrapper #sb-title {
   padding-top: 20px;
 }
-/* line 31, shadowbox.scss */
+/* line 33, shadowbox.scss */
 #sb-container #sb-wrapper #sb-info {
   padding-bottom: 10px;
 }
 
-/* line 36, shadowbox.scss */
+/* line 38, shadowbox.scss */
 #sb-wrapper-inner {
   position: relative;
   border: 1px solid #303030;
@@ -49,26 +50,26 @@
   margin: 20px;
   /* Loading */
 }
-/* line 42, shadowbox.scss */
+/* line 44, shadowbox.scss */
 #sb-wrapper-inner #sb-body {
   background: #060606;
   position: relative;
   height: 100%;
   padding: 0!important;
 }
-/* line 47, shadowbox.scss */
+/* line 49, shadowbox.scss */
 #sb-wrapper-inner #sb-body #sb-body-inner {
   position: absolute;
   height: 100%;
   width: 100%;
 }
-/* line 54, shadowbox.scss */
+/* line 56, shadowbox.scss */
 #sb-wrapper-inner #sb-loading {
   background: #060606;
   position: relative;
   height: 100%;
 }
-/* line 58, shadowbox.scss */
+/* line 60, shadowbox.scss */
 #sb-wrapper-inner #sb-loading #sb-loading-inner {
   position: absolute;
   font-size: 14px;
@@ -79,13 +80,13 @@
   width: 100%;
   text-align: center;
 }
-/* line 67, shadowbox.scss */
+/* line 69, shadowbox.scss */
 #sb-wrapper-inner #sb-loading #sb-loading-inner i {
   font-size: 30px;
   color: #fff;
 }
 
-/* line 75, shadowbox.scss */
+/* line 77, shadowbox.scss */
 #sb-info, #sb-info-inner {
   height: 20px;
   line-height: 20px;
@@ -93,12 +94,12 @@
 }
 
 /* Counter */
-/* line 82, shadowbox.scss */
+/* line 84, shadowbox.scss */
 #sb-counter {
   float: left;
   width: 45%;
 }
-/* line 85, shadowbox.scss */
+/* line 87, shadowbox.scss */
 #sb-counter a {
   padding: 0 4px 0 0;
   font-size: 20px;
@@ -106,20 +107,20 @@
   cursor: pointer;
   color: #000;
 }
-/* line 91, shadowbox.scss */
+/* line 93, shadowbox.scss */
 #sb-counter a:hover, #sb-counter a.sb-counter-current {
   color: #f08;
 }
 
 /* Navigation */
-/* line 98, shadowbox.scss */
+/* line 100, shadowbox.scss */
 #sb-nav {
   float: right;
   height: 16px;
   padding: 2px 0;
   width: 45%;
 }
-/* line 103, shadowbox.scss */
+/* line 105, shadowbox.scss */
 #sb-nav a {
   display: block;
   float: right;
@@ -129,11 +130,11 @@
   cursor: pointer;
   background-repeat: no-repeat;
 }
-/* line 111, shadowbox.scss */
+/* line 113, shadowbox.scss */
 #sb-nav a#sb-nav-play {
   background-image: url(assets/images/play.png);
 }
-/* line 114, shadowbox.scss */
+/* line 116, shadowbox.scss */
 #sb-nav a#sb-nav-pause {
   background-image: url(assets/images/pause.png);
 }

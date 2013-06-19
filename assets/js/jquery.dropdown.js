@@ -15,7 +15,7 @@
 		var c = {
 				bcClass: 'breadcrumb',
 				menuClass: 'js-enabled',
-				anchorClass: 'with-ul',
+				anchorClass: 'dropdown',
 				menuArrowClass: 'arrows'
 			},
 			ios = (function(){
@@ -236,7 +236,7 @@
 		animation: {opacity:'show'},
 		animationOut: {opacity:'hide'},
 		speed: 300,
-		speedOut: 300,
+		speedOut: 200,
 		cssArrows: true,
 		disableHI: false,
 		onInit: $.noop,

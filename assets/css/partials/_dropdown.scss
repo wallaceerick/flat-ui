@@ -1,0 +1,122 @@
+/******************/
+/* Dropdown
+/******************/
+.menu {
+	float: left;
+	/* Default is Horizontal */
+	li {
+		position: relative;
+		white-space: nowrap;
+		@include transition(all 0.2s ease-in);
+		a {
+			font-size: 14px;
+			padding: 12px 15px 13px;
+			display: block;
+			position: relative;
+			color: #fff;
+		}
+	}
+	/* First Level */
+	> li {
+		float: left;
+		background: $blue;
+		&:hover, &.hover {
+			background: $green; 
+		}
+		/* Second Level */
+		ul {
+			position: absolute;
+			display: none;
+			top: 100%;
+			left: 0;
+			z-index: 99;
+			background: $green; 
+			> li {
+				&:hover, &.hover {
+					background: $yellow; 
+				}
+			}
+			/* Third Level */
+			ul {
+				top: 0;
+				left: 100%;
+				background: $yellow; 
+				> li {
+					&:hover, &.hover {
+						background: $yellow-h; 
+					}
+				}
+			}
+		}
+	}
+	/* Vertical */
+	&.vertical {
+		ul {
+			left: 100%;
+			top: 0;
+		}
+		li {
+			width: 100%;
+		}
+		> li {
+		  float: none;
+		}
+	}
+	/* Navbar */
+	&.navbar {
+		position: relative;
+		ul {
+			li { 
+				position: relative;
+			}
+			ul {
+				left: 0;
+				top: 100%;
+				li {
+					float: left;
+				}
+			}
+		}
+		li { 
+			position: static;
+		}
+		> li > ul > li {
+			float: left;
+		}
+	}
+	/* Arrows */
+	&.arrows {
+		a.dropdown {
+			padding-right: 40px;
+			&:after {
+				font-family: 'Fontello';
+				font-size: 10px;
+				content: '\e83c';
+				position: absolute;
+				top: 16px;
+				right: 13px;
+			}
+		}
+		ul {
+			a.dropdown {
+				&:after { 
+					content: '\e83a';
+				}
+			}
+		}
+		&.vertical {
+			a.dropdown {
+				&:after { 
+					content: '\e83a';
+				}
+			}
+		}
+		&.navbar {
+			a.dropdown {
+				&:after { 
+					content: '\e83c';
+				}
+			}
+		}
+	}
+}

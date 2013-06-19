@@ -1,0 +1,201 @@
+/******************/
+/* Inputs, Textareas & Labels
+/******************/
+input, label, textarea {
+	color: $white-h;
+	float: left;
+	outline: none;
+	font-size: 1.4em;
+	font-weight: normal!important;
+}
+textarea {
+	float: none!important;
+}
+label {
+	color: $gray-h;
+	margin: 0 5px 0 0;
+	padding: 1px 5px 2px;
+	cursor: pointer;
+	&.to-inputs, &.to-textareas {
+		font-size: 16px;
+		padding: 10px 0;
+	}
+	&.on-the-top {
+		float: none;
+		clear: both;
+		display: table;
+	}
+	&.hover {
+		color: #535d5e;
+	}
+}
+input, textarea {
+	border: 2px solid $white-h;
+	padding: 10px 8px;
+	@include transition(all 0.35s ease-in);
+	@include border-radius(5px);
+
+	/* States */
+	&:hover {
+		color: $gray-h;
+		border-color: $gray-h;
+	}
+	&:focus {
+		color: #5a5f63;
+		border-color: #5a5f63;
+	}
+	&.input-disabled, 
+	&.textarea-disabled, 
+	&.select-disabled {
+		background: #f4f6f6;
+		border-color: #d5dbdb!important;
+		color: #d5dbdb!important;
+		cursor: not-allowed;
+	}
+
+	/* Colors */
+	&.focus-black:focus {
+		color: $black;
+		border-color: $black;
+	}
+	&.focus-blue:focus {
+		color: $blue;
+		border-color: $blue;
+	}
+	&.focus-gray:focus {
+		color: $gray;
+		border-color: $gray;
+	}
+	&.focus-green:focus {
+		color: $green;
+		border-color: $green;
+	}
+	&.focus-yellow:focus {
+		color: $yellow;
+		border-color: $yellow;
+	}
+	&.focus-orange:focus {
+		color: $orange;
+		border-color: $orange;
+	}
+	&.focus-pink:focus {
+		color: $pink;
+		border-color: $pink;
+	}
+	&.focus-purple:focus {
+		color: $purple;
+		border-color: $purple;
+	}
+	&.focus-red:focus {
+		color: $red;
+		border-color: $red;
+	}
+}
+
+/* Input Sizes */
+input {
+	text-indent: 5px;
+	margin: 0 3px 3px 0!important;
+	&.input-small {
+		width: 200px;
+	}
+	&.input-medium {
+		width: 250px;
+	}
+	&.input-large {
+		width: 300px;
+	}
+}
+
+/* Input with Icons */
+.input-icon {
+	position: relative;
+	float: left;
+	input {
+		float: none;
+		padding-right: 32px!important;
+	}
+	i {
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		top: 11px;
+		right: 10px;
+		line-height: 18px;
+		color: #fff;
+		text-align: center;
+		background: #000;
+		font-size: 15px;
+		@include border-radius(100%);
+	}
+	/* Actions */
+	&.input-error {
+		input {
+			border-color: $red;
+			color: $red;
+		}
+		i {
+			background: $red;
+		}
+	}
+	&.input-sucess {
+		input {
+			border-color: $green;
+			color: $green;
+		}
+		i {
+			background: $green;
+		}
+	}
+}
+
+/* Input Increment */
+.input-increment {
+	display: inline-block;
+	position: relative;
+	padding: 10px;
+	input {
+		width: 70px;
+	}
+	&.input-medium {
+		input {
+			width: 110px;
+		}
+	}
+	&.input-large {
+		input {
+			width: 150px;
+		}
+	}
+	i {  
+		display: block; 
+		color: #fff;
+		background: $white;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: bold;
+		width: 15px;
+		height: 15px;
+		text-align: center;
+		line-height: 13px; 
+		cursor: pointer;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		position: absolute;
+		right: 18px;
+		@include border-radius(100%);	
+		&.more { 
+			top: 14px;
+		} 
+		&.less {
+			bottom: 17px;
+			font-size: 25px; 
+		}
+		&:hover {
+			background: $gray-h;
+		} 
+	} 
+}

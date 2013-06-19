@@ -1,0 +1,39 @@
+.modal-background { 
+	position: fixed; 
+	height: 100%;
+	width: 100%;
+	background: #000;
+	z-index: 100;
+	display: none;
+	top: 0;
+	left: 0; 
+}
+.modal {
+	visibility: hidden;
+	top: 100px; 
+	left: 50%;
+	margin-left: -300px;
+	width: 520px;
+	background: #fff;
+	position: absolute;
+	z-index: 200;
+	padding: 30px 40px 34px;
+	@include border-radius(5px);
+	@include box-shadow(0 0 10px rgba(0, 0, 0, 0.6));
+	.close-modal {
+		font-size: 15px;
+		position: absolute;
+		top: 8px;
+		right: 10px;
+		color: $black;
+		cursor: pointer;
+		&:hover {
+			color: $black-h;
+		}
+	}
+	/* Sizes */
+	&.small 	{width: 200px; margin-left: -140px;}
+	&.medium 	{width: 400px; margin-left: -240px;}
+	&.large 	{width: 600px; margin-left: -340px;}
+	&.xlarge 	{width: 800px; margin-left: -440px;}
+}

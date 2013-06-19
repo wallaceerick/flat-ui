@@ -1,0 +1,28 @@
+* {
+	margin: 0;
+	padding: 0;
+	@include box-sizing(border-box);
+}
+body {
+	font: {
+		family: "Lato", sans-serif;
+		weight: normal;
+		size: 10px;
+	}
+	-webkit-font-smoothing: antialiased;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+.hide {
+	position: relative;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.clear, br {
+	clear: both;
+}

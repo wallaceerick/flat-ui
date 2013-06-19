@@ -1,0 +1,58 @@
+/******************/
+/* Accordion
+/******************/
+.accordion {
+	margin: 0 10px;
+	h3 {
+		display: block;
+		position: relative;
+		margin: 0;
+		padding: 15px 0;
+		font-size: 16px;
+		color: #fff;
+		text-indent: 15px;
+		background: $red;
+		border-bottom: 1px solid $red-h;
+		cursor: pointer;
+		@include transition(all 0.25s ease-in);
+		&:first-child, &.first {
+			@include border-radius(5px 5px 0 0);
+		}
+		&:last-child, &.last {
+			@include border-radius(0 0 5px 5px);
+			&.current {
+				@include border-radius(0);
+			}
+		}
+		&:hover, &.hover {
+			background: $red-h;
+		}
+		&.current {
+			background: $gray;
+			border-color: $gray-h;
+			i  {
+				@include transform(rotate(90deg));
+			}
+		}
+		i {
+			position: absolute;
+			text-indent: 0;
+			top: 17px; 
+			right: 20px;
+			@include transition(all 0.15s ease-in);
+		}
+	}
+	.accordion-content { 
+		clear: both;
+		height: auto;
+		padding: 10px 15px;
+		border: 1px solid $gray;
+		border-top: 0;
+		border-bottom: 0;
+		font-size: 1.4em;
+		&:last-child, &.last {
+			@include border-radius(0 0 5px 5px);
+			border: 1px solid $gray;
+		}
+	}
+}

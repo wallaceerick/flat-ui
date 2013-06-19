@@ -1,0 +1,136 @@
+/******************/
+/* Audio Player
+/******************/
+.audiojs {
+	width:460px;
+	height:36px;
+	background:#404040;
+	overflow:hidden;
+	font-family:monospace;
+	font-size: 1.4em;
+	background-image: none;
+	@include box-shadow(1px 1px 8px rgba(0,0,0,0.3));
+	audio {
+		position:absolute;
+		left:-1px;
+	}
+	p {
+		display:none;
+		width:25px;
+		height:40px;
+		cursor:pointer;
+		margin:0;
+	}
+	.play-pause {
+		width:25px;
+		height:40px;
+		float:left;
+		overflow:hidden;
+		border-right:1px solid #000;
+		margin:0;
+		padding:4px 6px;
+	}
+	.play, .loading, .error, .pause {
+		display:block;
+		background-image: image-url('player-graphics.gif');
+		background-repeat: no-repeat;
+	}
+	.play {
+		background-position: -2px -1px;
+	}
+	.loading {
+		background-position: -2px -31px;
+	}
+	.error {
+		background-position: -2px -61px;
+	}
+	.pause {
+		background-position: -2px -91px;
+	}
+	.scrubber {
+		position:relative;
+		float:left;
+		width:280px;
+		background:#5a5a5a;
+		height:14px;
+		border-top:1px solid #3f3f3f;
+		border-left:0;
+		border-bottom:0;
+		overflow:hidden;
+		margin:10px;
+	}
+	.progress {
+		position:absolute;
+		top:0;
+		left:0;
+		height:14px;
+		width:0;
+		background:#ccc;
+		z-index:1;
+		background-image:0;
+	}
+	.loaded {
+		position:absolute;
+		top:0;
+		left:0;
+		height:14px;
+		width:0;
+		background:#000;
+		background-image:0;
+	}
+	.time {
+		float:left;
+		height:36px;
+		line-height:36px;
+		border-left:1px solid #000;
+		color:#ddd;
+		text-shadow:1px 1px 0 rgba(0,0,0,0.5);
+		margin:0 0 0 6px;
+		padding:0 6px 0 12px;
+		em {
+			color:#f9f9f9;
+			font-style:normal;
+			padding:0 2px 0 0;
+		}
+	}
+	.error-message {
+		float:left;
+		display:none;
+		height:36px;
+		width:400px;
+		overflow:hidden;
+		line-height:36px;
+		white-space:nowrap;
+		color:#fff;
+		margin:0 10px;
+		text-overflow: ellipsis;
+		-o-text-overflow: ellipsis;
+		-moz-text-overflow: ellipsis;
+		-webkit-text-overflow: ellipsis;
+		a {
+			color:#eee;
+			text-decoration:none;
+			padding-bottom:1px;
+			border-bottom:1px solid #999;
+			white-space:wrap;
+		}
+	}
+	&.playing {
+		.play,
+		.loading,
+		.error,
+		.play,
+		.error {
+			display:none;
+		}
+	}
+	&.loading {
+		p {
+			display: none;
+		}
+		.loading {
+			display:block!important;
+		}
+	}
+} 
+

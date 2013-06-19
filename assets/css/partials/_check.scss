@@ -1,0 +1,346 @@
+/******************/
+/* Checkboxes & Radio Buttons
+/******************/
+.check, .radio {
+	margin: 0;
+	padding: 0;
+    display: block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    background-image: url('../images/check.png');
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    &.disabled { 
+    	cursor: not-allowed;
+    	& + label { 
+			cursor: not-allowed;
+	    	color: $gray!important;
+	    } 
+    }
+    /* Label Colors */
+    &.black.checked {
+    	& + label { 
+	     	color: $black-h;
+	    } 
+    }
+    &.blue.checked {
+    	& + label { 
+	     	color: $blue;
+	    } 
+    }
+    &.gray.checked {
+    	& + label { 
+	     	color: $gray;
+	    } 
+    }
+    &.green.checked {
+    	& + label { 
+	     	color: $green;
+	    } 
+    }
+    &.yellow.checked {
+    	& + label { 
+	     	color: $yellow;
+	    } 
+    }
+    &.orange.checked {
+    	& + label { 
+	     	color: $orange;
+	    } 
+    }
+    &.pink.checked {
+    	& + label { 
+	     	color: $pink;
+	    } 
+    }
+    &.purple.checked {
+    	& + label { 
+	     	color: $purple;
+	    } 
+    }
+    &.red.checked {
+    	& + label { 
+	     	color: $red;
+	    } 
+    }
+}
+/* Checkboxes */
+.check {
+	&.black {
+	    background-position: 0 0;
+	    &.hover {
+	        background-position: -22px 0;
+	    }
+	    &.checked {
+	        background-position: -44px 0;
+	    }
+	    &.disabled {
+	        background-position: -66px 0;
+	        &.checked {
+		        background-position: -88px 0;
+		    }
+	    }
+	}
+	&.blue {
+	    background-position: 0 -20px;
+	    &.hover {
+	        background-position: -22px -20px;
+	    }
+	    &.checked {
+	        background-position: -44px -20px;
+	    }
+	    &.disabled {
+	        background-position: -66px -20px;
+	        &.checked {
+		        background-position: -88px -20px;
+		    }
+	    }
+	}
+	&.gray {
+	    background-position: 0 -40px;
+	    &.hover {
+	        background-position: -22px -40px;
+	    }
+	    &.checked {
+	        background-position: -44px -40px;
+	    }
+	    &.disabled {
+	        background-position: -66px -40px;
+	        cursor:not-allowed;
+	        &.checked {
+		        background-position: -88px -40px;
+		    }
+	    }
+	}
+	&.green {
+	    background-position: 0 -60px;
+	    &.hover {
+	        background-position: -22px -60px;
+	    }
+	    &.checked {
+	        background-position: -44px -60px;
+	    }
+	    &.disabled {
+	        background-position: -66px -60px;
+	        cursor:not-allowed;
+	        &.checked {
+		        background-position: -88px -60px;
+		    }
+	    }
+	}
+	&.yellow {
+	    background-position: 0 -80px;
+	    &.hover {
+	        background-position: -22px -80px;
+	    }
+	    &.checked {
+	        background-position: -44px -80px;
+	    }
+	    &.disabled {
+	        background-position: -66px -80px;
+	        &.checked {
+		        background-position: -88px -80px;
+		    }
+	    }
+	}
+	&.orange {
+	    background-position: 0 -100px;
+	    &.hover {
+	        background-position: -22px -100px;
+	    }
+	    &.checked {
+	        background-position: -44px -100px;
+	    }
+	    &.disabled {
+	        background-position: -66px -100px;
+	        &.checked {
+		        background-position: -88px -100px;
+		    }
+	    }
+	} 
+	&.pink {
+	    background-position: 0 -120px;
+	    &.hover {
+	        background-position: -22px -120px;
+	    }
+	    &.checked {
+	        background-position: -44px -120px;
+	    }
+	    &.disabled {
+	        background-position: -66px -120px;
+	        &.checked {
+		        background-position: -88px -120px;
+		    }
+	    }
+	}
+	&.purple {
+	    background-position: 0 -140px;
+	    &.hover {
+	        background-position: -22px -140px;
+	    }
+	    &.checked {
+	        background-position: -44px -140px;
+	    }
+	    &.disabled {
+	        background-position: -66px -140px;
+	        &.checked {
+		        background-position: -88px -140px;
+		    }
+	    }
+	} 
+	&.red {
+	    background-position: 0 -160px;
+	    &.hover {
+	        background-position: -22px -160px;
+	    }
+	    &.checked {
+	        background-position: -44px -160px;
+	    }
+	    &.disabled {
+	        background-position: -66px -160px;
+	        &.checked {
+		        background-position: -88px -160px;
+		    }
+	    }
+	}
+}
+/* Radio Buttons */
+.radio {
+	&.black {
+	    background-position: -110px 0;
+	    &.hover {
+	        background-position: -132px 0;
+	    }
+	    &.checked {
+	        background-position: -154px 0;
+	    }
+	    &.disabled {
+	        background-position: -176px 0;
+	        &.checked {
+		        background-position: -198px 0;
+		    }
+	    }
+	}
+	&.blue {
+	    background-position: -110px -20px;
+	    &.hover {
+	        background-position: -132px -20px;
+	    }
+	    &.checked {
+	        background-position: -154px -20px;
+	    }
+	    &.disabled {
+	        background-position: -176px -20px;
+	        &.checked {
+		        background-position: -198px -20px;
+		    }
+	    }
+	}
+	&.gray {
+	    background-position: -110px -40px;
+	    &.hover {
+	        background-position: -132px -40px;
+	    }
+	    &.checked {
+	        background-position: -154px -40px;
+	    }
+	    &.disabled {
+	        background-position: -176px -40px;
+	        &.checked {
+		        background-position: -198px -40px;
+		    }
+	    }
+	}
+	&.green {
+	    background-position: -110px -60px;
+	    &.hover {
+	        background-position: -132px -60px;
+	    }
+	    &.checked {
+	        background-position: -154px -60px;
+	    }
+	    &.disabled {
+	        background-position: -176px -60px;
+	        &.checked {
+		        background-position: -198px -60px;
+		    }
+	    }
+	}
+	&.yellow {
+	    background-position: -110px -80px;
+	    &.hover {
+	        background-position: -132px -80px;
+	    }
+	    &.checked {
+	        background-position: -154px -80px;
+	    }
+	    &.disabled {
+	        background-position: -176px -80px;
+	        &.checked {
+		        background-position: -198px -80px;
+		    }
+	    }
+	}
+	&.orange {
+	    background-position: -110px -100px;
+	    &.hover {
+	        background-position: -132px -100px;
+	    }
+	    &.checked {
+	        background-position: -154px -100px;
+	    }
+	    &.disabled {
+	        background-position: -176px -100px;
+	        &.checked {
+		        background-position: -198px -100px;
+		    }
+	    }
+	}
+	&.pink {
+	    background-position: -110px -120px;
+	    &.hover {
+	        background-position: -132px -120px;
+	    }
+	    &.checked {
+	        background-position: -154px -120px;
+	    }
+	    &.disabled {
+	        background-position: -176px -120px;
+	        &.checked {
+		        background-position: -198px -120px;
+		    }
+	    }
+	}
+	&.purple {
+	    background-position: -110px -140px;
+	    &.hover {
+	        background-position: -132px -140px;
+	    }
+	    &.checked {
+	        background-position: -154px -140px;
+	    }
+	    &.disabled {
+	        background-position: -176px -140px;
+	        &.checked {
+		        background-position: -198px -140px;
+		    }
+	    }
+	}
+	&.red {
+	    background-position: -110px -160px;
+	    &.hover {
+	        background-position: -132px -160px;
+	    }
+	    &.checked {
+	        background-position: -154px -160px;
+	    }
+	    &.disabled {
+	        background-position: -176px -160px;
+	        &.checked {
+		        background-position: -198px -160px;
+		    }
+	    }
+	}
+}

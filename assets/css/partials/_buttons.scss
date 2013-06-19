@@ -1,0 +1,81 @@
+/******************/
+/* Buttons
+/******************/
+.btn {
+	display: inline-block;
+	float: none;
+	font-size: 1.4em!important;
+	color: #fff;
+	cursor: pointer;
+	background-color: $white;
+	border: none;
+	padding: 12px 15px 13px;
+	margin: 2px!important;
+	@include border-radius(3px);
+	@include transition(all 0.2s ease-in);
+}
+
+/* Disabled */
+.btn-disabled {
+	background-color: $white;
+	color: #fff; 
+	cursor: not-allowed;
+	&:hover {
+		color: inherit;
+	}
+}
+
+/* Sizes */
+.btn-xsmall 	{padding: 7px 15px 8px;   font-size:10px!important;}
+.btn-small 		{padding: 10px 15px 11px; font-size:12px!important;}
+.btn-medium		{padding: 12px 25px 13px; font-size:inherit;}
+.btn-large 		{padding: 13px 35px 14px; font-size:16px!important;}
+.btn-xlarge 	{padding: 14px 35px 15px; font-size:18px!important;}
+
+/* Colors */
+.btn-black 		{background-color: $black; 	border-color: $black-h;}
+.btn-blue 		{background-color: $blue; 	border-color: $blue-h;}
+.btn-gray 		{background-color: $gray; 	border-color: $gray-h;}
+.btn-green 		{background-color: $green; 	border-color: $green-h;}
+.btn-yellow 	{background-color: $yellow; border-color: $yellow-h;}
+.btn-orange 	{background-color: $orange; border-color: $orange-h;}
+.btn-pink 		{background-color: $pink; 	border-color: $pink-h;}
+.btn-purple 	{background-color: $purple; border-color: $purple-h;}
+.btn-red 		{background-color: $red; 	border-color: $red-h;}
+.btn-white 		{background-color: $white; 	border-color: $white-h;}
+
+/* Rollovers */
+.btn-black-h,
+.btn-black:hover 	{background-color: $black-h;}
+.btn-blue-h,
+.btn-blue:hover		{background-color: $blue-h;}
+.btn-gray-h,
+.btn-gray:hover		{background-color: $gray-h;}
+.btn-green-h,
+.btn-green:hover	{background-color: $green-h;}
+.btn-yellow-h,
+.btn-yellow:hover 	{background-color: $yellow-h;}
+.btn-orange-h,
+.btn-orange:hover 	{background-color: $orange-h;}
+.btn-pink-h,
+.btn-pink:hover		{background-color: $pink-h;}
+.btn-purple-h,
+.btn-purple:hover	{background-color: $purple-h;}
+.btn-red-h,
+.btn-red:hover		{background-color: $red-h;}
+.btn-white-h,
+.btn-white:hover	{background-color: $white-h;}
+
+/* Transforms */
+.btn-upper			{text-transform: uppercase;}
+.btn-lower 			{text-transform: lowercase;}
+.btn-cap			{text-transform: capitalize;}
+
+/* Styles */
+.btn-bold 			{font-weight: bold!important;}
+.btn-italic 		{font-style: italic!important;}
+.btn-under 			{text-decoration: underline!important;}
+.btn-strike 		{text-decoration: line-through!important;}
+
+/* Align Right */
+.btn-right 			{float: right; margin-left: 10px;}

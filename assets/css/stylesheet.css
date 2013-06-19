@@ -88,10 +88,15 @@ ul.tooltips li {
     display: block;
     float: left;
     margin: 0 2px 2px 0; 
-    color: #4F4F4F;
+    color: #fff;
+    font-size: 14px;
 }
 ul.tooltips li:hover {
     background: #afb2b6;
+}
+ul.tooltips li.none {
+    background: #DBDEE1;
+    cursor: default;
 }
 
 ul.progressbars li {

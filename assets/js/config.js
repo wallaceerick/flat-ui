@@ -76,7 +76,9 @@ $(document).ready(function(){
 				}
 		});
 	}); 
- 
+
+	//Video Callback
+	videojs.options.flash.swf = "video.swf";
 
 	//Not Required 
 	$('.checkboxes ul li').click(function(){ 

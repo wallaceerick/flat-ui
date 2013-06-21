@@ -1,6 +1,59 @@
 /******************/
 /* Audio Player
 /******************/
+/* Player */
+.audio { 
+	width: 400px; 
+	margin: 10px;
+	img {
+		width: 300px;
+		margin: 0 auto;
+		border: 3px solid #ccc;
+	}
+	ol { 
+		padding: 0px; 
+		margin: 0px; 
+		list-style: decimal-leading-zero inside; 
+		width: 100%;   
+		li { 
+			position: relative; 
+			margin: 0px;  
+			cursor: pointer; 
+			a {
+				font-size: 1.4em;
+				display: block; 
+				padding: 10px 20px;
+				border-bottom: 1px solid #ccc; 
+			}
+			&.playing { 
+				color: #aaa; 
+				text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3);
+				a {
+					text-indent: 10px;
+					color: #000;
+				}
+				&:before {
+					content: '♬'; 
+					width: 14px; 
+					height: 14px; 
+					padding: 3px; 
+					line-height: 14px; 
+					margin: 0px; 
+					position: absolute; 
+					left: 0; 
+					top: 9px; 
+					color: #000; 
+					font-size: 1.4em; 
+					text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2); 
+				}
+			}
+		}
+	}
+}
+
+
+
+/* Theme */
 .audiojs {
 	width:460px;
 	height:36px;

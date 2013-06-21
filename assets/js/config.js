@@ -40,7 +40,26 @@ $(document).ready(function(){
 	$(".mask-telefone").mask("(99) 9999-9999");
 	$(".mask-celular").mask("(99) 9 9999-9999");
 
+	//Shadowbox
+	Shadowbox.init({
+		displayNav: true,
+		displayCounter: true,
+		counterType: "skip"
 
+	});
+	/*
+	//onLoad Message
+	window.onload = function(){
+		Shadowbox.open({
+	       content:    '<div id="welcome-msg"><p>Welcome to my website!</p></div>',
+	       player:     "html",
+	       title:      "Welcome",
+	       height:     350,
+	       width:      350
+ 		});
+	};
+	*/
+	
 	//Not Required 
 	$('.checkboxes ul li').click(function(){ 
 		$('.checkboxes ul li').removeClass('active');

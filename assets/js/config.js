@@ -60,6 +60,15 @@ $(document).ready(function(){
 	};
 	*/
 	
+	//Slider
+	$(".slider").responsiveSlides({
+		auto: false,
+		pager: true,
+		speed: 300,
+		maxwidth: 960
+	});
+
+
 	//Not Required 
 	$('.checkboxes ul li').click(function(){ 
 		$('.checkboxes ul li').removeClass('active');

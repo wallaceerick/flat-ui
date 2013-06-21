@@ -67,7 +67,16 @@ $(document).ready(function(){
 		speed: 300,
 		maxwidth: 960
 	});
-
+ 
+	//Scrollbar
+	$(window).load(function(){
+		$(".scrolled").mCustomScrollbar({
+				scrollButtons:{
+					enable: true
+				}
+		});
+	}); 
+ 
 
 	//Not Required 
 	$('.checkboxes ul li').click(function(){ 
@@ -83,3 +92,5 @@ $(document).ready(function(){
 	});
 
 });
+
+ 

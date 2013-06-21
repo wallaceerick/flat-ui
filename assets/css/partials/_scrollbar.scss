@@ -1,3 +1,23 @@
+.scrolled {
+	margin: 10px; 
+	width: 305px; 
+	height: 445px; 
+	padding: 20px; 
+	overflow: auto; 
+	background: $blue;
+
+	float: left;
+
+	@include border-radius(3px);
+	p {
+		font-size: 1.4em;
+		margin-bottom: 15px;
+	}
+	h2, p {
+		color: #fff;
+	}
+}
+
 .mCSB_container{ 
 	width:auto;
 	margin-right:30px;

@@ -13,7 +13,7 @@
 
 		<!-- REQUIRED CSS -->
 		<link rel="stylesheet" href="assets/css/style.css" media="all" />
-	    
+	    <link rel="stylesheet" href="http://twitter.github.io/typeahead.js/css/examples.css" media="all">
 	    <!-- REQUIRED JS -->   
 		<script src="assets/js/jquery-1.8.3.min.js"></script>
 	    <script src="assets/js/jquery.dropdown.js"></script>
@@ -30,6 +30,8 @@
 	    <script src="assets/js/jquery.scrollbar.min.js"></script>
 	    <script src="assets/js/jquery.video.min.js"></script>
 		<script src="assets/js/jquery.audio.min.js"></script>
+		<script src="assets/js/jquery.datepicker.js"></script>
+		<script src="assets/js/jquery.typeahead.js"></script>
 	    <script src="assets/js/config.js"></script>
 
 	</head>
@@ -504,6 +506,13 @@
 					
 					<br />
 					
+					<h2>Datepicker</h2> 
+					<input type="text" id="label-left" value="" class="example-twitter-oss typeahead input-small" />
+						
+						
+						
+					<br />
+					
 				<h1>Textareas</h1>
 					<label for="default-textarea" class="to-inputs on-the-top">Default:</label>
 					<textarea class="focus-purple" id="default-textarea" cols="100" rows="10">Size is defined on HTML: cols="100" rows="10"</textarea>
@@ -716,7 +725,7 @@
 			<br />
 			
 			<h1>Tables</h1>	
-				<table id="box-table-a">
+				<table class="styled">
 				    <thead>
 				        <tr>
 				            <td>Nation</td>

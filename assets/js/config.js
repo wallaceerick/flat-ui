@@ -93,6 +93,21 @@ $(document).ready(function(){
 		alert($(this).attr("class"));
 	});
 
+	//Datepicker
+	//$('.datepicker').pickadate();
+
+ 
+	$('.example-twitter-oss .typeahead').typeahead({                              
+  name: 'twitter-oss',                                                        
+  prefetch: 'http://twitter.github.io/typeahead.js/data/repos.json',                                             
+  template: [                                                                 
+    '<p class="repo-language">{{language}}</p>',                              
+    '<p class="repo-name">{{name}}</p>',                                      
+    '<p class="repo-description">{{description}}</p>'                         
+  ].join(''),                                                                 
+  engine: Hogan                                                               
+});
+
 });
 
  

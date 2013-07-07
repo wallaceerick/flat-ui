@@ -10,7 +10,7 @@
 		white-space: nowrap;
 		@include transition(all 0.15s ease-in);
 		a {
-			font-size: 18px;
+			font-size: 1.8em;
 			padding: 25px 20px;
 			display: block;
 			position: relative;
@@ -39,7 +39,7 @@
 					background: $red; 
 				}
 				a {
-					font-size: 16px;
+					font-size: 1.6em;
 					padding: 15px 20px;
 				}
 			}

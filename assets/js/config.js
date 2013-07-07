@@ -93,20 +93,22 @@ $(document).ready(function(){
 		alert($(this).attr("class"));
 	});
 
-	//Datepicker
-	//$('.datepicker').pickadate();
 
- 
-	$('.example-twitter-oss .typeahead').typeahead({                              
-  name: 'twitter-oss',                                                        
-  prefetch: 'http://twitter.github.io/typeahead.js/data/repos.json',                                             
-  template: [                                                                 
-    '<p class="repo-language">{{language}}</p>',                              
-    '<p class="repo-name">{{name}}</p>',                                      
-    '<p class="repo-description">{{description}}</p>'                         
-  ].join(''),                                                                 
-  engine: Hogan                                                               
-});
+
+	
+
+	/* Not Required */
+	$('a.icon-up-open').hide();
+	$('.icons a.icon-down-open').click(function(){
+		$('.icons').animate({height: '520px'}, 500);
+		$(this).hide();
+		$('a.icon-up-open').show();
+	});
+	$('.icons a.icon-up-open').click(function(){
+		$('.icons').animate({height: '193px'}, 300);
+		$(this).hide();
+		$('a.icon-down-open').show();
+	});
 
 });
 

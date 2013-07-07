@@ -3,25 +3,28 @@
 /******************/
 .menu {
 	float: left;
+	background: #eee;
 	/* Default is Horizontal */
 	li {
 		position: relative;
 		white-space: nowrap;
-		@include transition(all 0.2s ease-in);
+		@include transition(all 0.15s ease-in);
 		a {
-			font-size: 14px;
-			padding: 12px 15px 13px;
+			font-size: 18px;
+			padding: 25px 20px;
 			display: block;
 			position: relative;
-			color: #fff;
+			color: #848484;
 		}
 	}
 	/* First Level */
 	> li {
 		float: left;
-		background: $blue;
-		&:hover, &.hover {
-			background: $green; 
+		&:hover, &.hover { 
+			background: $orange;
+			a {
+				color: #fff;
+			}
 		}
 		/* Second Level */
 		ul {
@@ -30,20 +33,24 @@
 			top: 100%;
 			left: 0;
 			z-index: 99;
-			background: $green; 
+			background: $orange; 
 			> li {
 				&:hover, &.hover {
-					background: $yellow; 
+					background: $red; 
+				}
+				a {
+					font-size: 16px;
+					padding: 15px 20px;
 				}
 			}
 			/* Third Level */
 			ul {
 				top: 0;
 				left: 100%;
-				background: $yellow; 
+				background: $red; 
 				> li {
 					&:hover, &.hover {
-						background: $yellow-h; 
+						background: $red-h; 
 					}
 				}
 			}
@@ -90,11 +97,12 @@
 			padding-right: 40px;
 			&:after {
 				font-family: 'Fontello';
-				font-size: 10px;
+				font-size: 14px;
 				content: '\e83c';
 				position: absolute;
-				top: 16px;
+				top: 50%;
 				right: 13px;
+				margin-top: -8px;
 			}
 		}
 		ul {

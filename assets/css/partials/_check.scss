@@ -2,13 +2,23 @@
 /* Checkboxes & Radio Buttons
 /******************/
 .check, .radio {
+    font-family: "Fontello";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-decoration: inherit;
+    text-transform: none;
+    text-align: center;
+    speak: none;
+    display: inline-block;
+    width: 1em; 
+    line-height: 1em;
 	margin: 0;
-	padding: 0;
-    display: block;
+	padding: 0; 
     float: left;
     width: 20px;
     height: 20px;
-    background-image: url('../images/check.png');
+    //background-image: url('../images/check.png');
     background-repeat: no-repeat;
     border: none;
     cursor: pointer;
@@ -69,6 +79,10 @@
 /* Checkboxes */
 .check {
 	&.black {
+    	font-family: "Fontello";
+		content: "\e83a";
+		color: #000;
+		font-size: 30px;
 	    background-position: 0 0;
 	    &.hover {
 	        background-position: -22px 0;

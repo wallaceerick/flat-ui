@@ -6,8 +6,8 @@ $(document).ready(function(){
 	//Checkboxes & Radio Buttons
 	$('input').iCheck({
 		//If you need, change the color!
-		checkboxClass: 'check orange',
-		radioClass: 'radio orange',
+		checkboxClass: 'check black',
+		radioClass: 'radio black',
 		labelHover: true
 	});
 

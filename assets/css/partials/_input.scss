@@ -31,10 +31,12 @@ label {
 }
 input, textarea {
 	border: 2px solid $white-h;
-	padding: 10px 8px;
+	padding: 11px;
 	@include transition(all 0.35s ease-in);
-	@include border-radius(5px);
-
+	/* Rounded */
+	&.rounded {
+		@include border-radius(5px);
+	}
 	/* States */
 	&:hover {
 		color: $gray-h;
@@ -52,7 +54,6 @@ input, textarea {
 		color: #d5dbdb!important;
 		cursor: not-allowed;
 	}
-
 	/* Colors */
 	&.focus-black:focus {
 		color: $black;
@@ -97,13 +98,13 @@ input {
 	text-indent: 5px;
 	margin: 0 3px 3px 0!important;
 	&.input-small {
-		width: 200px;
+		width: 220px;
 	}
 	&.input-medium {
-		width: 250px;
+		width: 270px;
 	}
 	&.input-large {
-		width: 300px;
+		width: 320px;
 	}
 }
 
@@ -152,32 +153,36 @@ input {
 /* Input Increment */
 .input-increment {
 	display: inline-block;
-	position: relative;
-	padding: 10px;
+	position: relative; 
 	input {
 		width: 70px;
 	}
 	&.input-medium {
 		input {
-			width: 110px;
+			width: 90px;
 		}
 	}
 	&.input-large {
 		input {
-			width: 150px;
+			width: 110px;
 		}
+	}
+	span.background {
+		width: 18px;
+		height: 39px;
+		position: absolute;
+		top: 2px;
+		right: 5px;
+		background: $white-h;
+		z-index: 10;
+		@include border-radius(0 2px 2px 0);
+		@include transition(all 0.35s ease-in);
 	}
 	i {  
 		display: block; 
-		color: #fff;
-		background: $white;
-		font-size: 20px;
+		color: #fff; 
+		font-size: 1.6em;
 		font-style: normal;
-		font-weight: bold;
-		width: 15px;
-		height: 15px;
-		text-align: center;
-		line-height: 13px; 
 		cursor: pointer;
 		-webkit-user-select: none;
 		-khtml-user-select: none;
@@ -185,17 +190,25 @@ input {
 		-ms-user-select: none;
 		user-select: none;
 		position: absolute;
-		right: 18px;
-		@include border-radius(100%);	
-		&.more { 
-			top: 14px;
+		right: 5px;
+		z-index: 20; 
+		&.icon-up-dir { 
+			top: 3px;
 		} 
-		&.less {
-			bottom: 17px;
-			font-size: 25px; 
+		&.icon-down-dir {
+			bottom: 7px; 
 		}
 		&:hover {
-			background: $gray-h;
+			color: $black;
 		} 
+	} 
+	&.hover {
+		input {
+			//5a5f63
+			border-color: $gray-h;
+		}
+		span.background {
+			background: $gray-h;
+		}
 	} 
 }

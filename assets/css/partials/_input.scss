@@ -16,10 +16,8 @@ label {
 	margin: 0 5px 0 0;
 	padding: 1px 5px 2px;
 	cursor: pointer;
-	&.to-inputs, &.to-textareas {
-		font-size: 16px;
-		padding: 10px 0;
-	}
+	font-size: 16px;
+	padding: 10px 0;
 	&.on-the-top {
 		float: none;
 		clear: both;
@@ -38,11 +36,11 @@ input, textarea {
 		@include border-radius(5px);
 	}
 	/* States */
-	&:hover {
+	&:hover, &.input-hover {
 		color: $gray-h;
 		border-color: $gray-h;
 	}
-	&:focus {
+	&:focus, &.input-focus {
 		color: #5a5f63;
 		border-color: #5a5f63;
 	}

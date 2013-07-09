@@ -418,8 +418,10 @@
 					
 					<div class="span2 mr30">
 					<h2>Types &amp; Colors</h2>
-					<input type="text" value="Focus to See" class="input-small focus-blue" />
-					<input type="text" value="Focus to See" class="input-small focus-pink" />
+					<input type="text" value="Normal" class="input-small input-" />
+					<input type="text" value="Hover" class="input-small input-hover" />
+					<input type="text" value="Focus" class="input-small input-focus" />
+					<input type="text" value="Rounded" class="input-small input-rounded" />
 					<input type="text" value="Disabled" disabled="disabled" class="input-small input-disabled" />
 					</div>
 					
@@ -455,18 +457,62 @@
 					</span> 
 					<br />
 					<h2>With Labels</h2>
-					<label for="label-left" class="to-inputs">Left Label:</label>
+					<label for="label-left">Left Label:</label>
 					<input type="text" id="label-left" value="Inactive" class="input-small" />
 					<br />
-					<label for="label-top" class="to-inputs on-the-top">Top Label:</label>
+					<label for="label-top" class="on-the-top">Top Label:</label>
 					<input type="text" id="label-top" value="Inactive" class="input-small" />
 					</div>
 					
 				<br />
-				<br />
 				
+					
+				<h1>Textareas</h1>
+					<span class="span5">
+						<label for="default-textarea" class="on-the-top">Default:</label>
+						<textarea class="focus-purple rounded" id="default-textarea" cols="60" rows="10" disabled>Size is defined on HTML: cols="100" rows="10"</textarea>
+					</span>
+					
+					<span class="span5">
+						<label for="disabled-textarea" class="on-the-top">Disabled:</label>
+						<textarea class="textarea-disabled rounded" id="disabled-textarea" cols="60" rows="10" disabled="disabled">Size is defined on HTML: cols="100" rows="10"</textarea>
+					</span>
 				
-				<h1>Selects</h1>
+				<br />	
+				
+				<span class="span2 mr20">
+					<h1>Checkboxes</h1>
+
+					<input type="checkbox" id="checkbox-normal">
+					<label for="checkbox-normal">Normal</label>
+						<br />		
+					<input type="checkbox" id="checkbox-checked" checked>
+					<label for="checkbox-checked">Checked</label>
+						<br />		
+					<input type="checkbox" id="checkbox-disabled" disabled>
+					<label for="checkbox-disabled">Disabled</label>
+						<br />		
+					<input type="checkbox" id="checkbox-disabled-checked" checked disabled>
+					<label for="checkbox-disabled-checked">Disabled &amp; Checked</label>
+					
+				</span>
+				<span class="span2 mr40">
+					<h1>Radio Buttons</h1> 
+					<input type="radio" id="radio-1" name="radio" >
+					<label for="radio-1">Normal</label>
+						<br />	
+					<input type="radio" id="radio-2" name="radio" checked>
+					<label for="radio-2">Checked</label>
+						<br />	
+					<input type="radio" id="radio-disabled" disabled>
+					<label for="radio-disabled">Disabled</label>
+						<br />	
+					<input type="radio" id="radio-disabled-checked" checked disabled>
+					<label for="radio-disabled-checked">Disabled &amp; Checked</label>
+				</span>
+				
+				<span class="span5">
+					<h1>Selects</h1>
 					
 					<select name="country_id" id="country_id" tabindex="1">
 						<option value="">Select Your Option</option>
@@ -483,59 +529,9 @@
 						</optgroup>
 						<option value="10">Option Whitout Group</option>
 					</select>
+				</span>
 				
-				<h1>Checkboxes &amp; Radios</h1>
-
-					<input type="checkbox" id="checkbox-1">
-					<label for="checkbox-1">Normal</label>
-						
-					<input type="checkbox" id="checkbox-2" checked>
-					<label for="checkbox-2">Checked</label>
-						
-					<input type="checkbox" id="checkbox-disabled" disabled>
-					<label for="checkbox-disabled">Disabled</label>
-						
-					<input type="checkbox" id="checkbox-disabled-checked" checked disabled>
-					<label for="checkbox-disabled-checked">Disabled &amp; Checked</label>
-					
-					<br /><br />
-					
-					<input type="radio" id="radio-1" name="radio" >
-					<label for="radio-1">Normal</label>
-						
-					<input type="radio" id="radio-2" name="radio" checked>
-					<label for="radio-2">Checked</label>
-						
-					<input type="radio" id="radio-disabled" disabled>
-					<label for="radio-disabled">Disabled</label>
-						
-					<input type="radio" id="radio-disabled-checked" checked disabled>
-					<label for="radio-disabled-checked">Disabled &amp; Checked</label>
-					
-					<br />
-					
-					<div class="colors checkboxes">
-						<span>Themes:</span>
-						<ul>
-							<li class="black active" title="Black"></li>
-							<li class="blue" title="Blue"></li>
-							<li class="grey" title="Grey"></li>
-							<li class="green" title="Green"></li>
-							<li class="yellow" title="Yellow"></li>
-							<li class="orange" title="Orange"></li>
-							<li class="pink" title="Pin`k"></li>
-							<li class="purple" title="Purple"></li>
-							<li class="red" title="Red"></li>
-							<li class="white" title="White"></li>
-						</ul>
-					</div> <!-- /colors -->
-					
-				<h1>Textareas</h1>
-					<label for="default-textarea" class="to-inputs on-the-top">Default:</label>
-					<textarea class="focus-purple" id="default-textarea" cols="100" rows="10">Size is defined on HTML: cols="100" rows="10"</textarea>
-					
-					<label for="disabled-textarea" class="to-inputs on-the-top">Disabled:</label>
-					<textarea class="textarea-disabled" id="disabled-textarea" cols="100" rows="10">Size is defined on HTML: cols="100" rows="10"</textarea>
+				 <br /> 
 						
 				<h1>Tabs</h1>
 					

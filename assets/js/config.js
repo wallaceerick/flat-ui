@@ -70,7 +70,14 @@ $(document).ready(function(){
  
 	//Scrollbar
 	$(window).load(function(){
-		$(".scrolled").mCustomScrollbar({
+		$("#scrollbar-1").mCustomScrollbar();
+		$("#scrollbar-2").mCustomScrollbar({
+				scrollButtons:{
+					enable: true
+				}
+		});
+		$("#scrollbar-3").mCustomScrollbar({
+				horizontalScroll:true,
 				scrollButtons:{
 					enable: true
 				}

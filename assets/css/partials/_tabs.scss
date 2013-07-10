@@ -3,54 +3,83 @@
 /******************/
 .tabs {
 	ul {
-		width: 100%;
-		padding: 10px;
+		margin: 0;
+		padding: 0;
 		li {
 			list-style: none;
 			display: block;
 			float: left;
+			margin: 0!important;
 			a {
 				margin: 0!important;
-				display: block;
-				border-right-width: 1px;
-				border-right-style: solid;
+				display: inline-block;
+				border-top: 10px solid #fff;
+				text-align: center;
+				width: 190px;
 				@include border-radius(0);
 				&.current {
 					background: $white;
-					border-color: $white;
-				}
-				span {
-					font-size: 13px;
-					padding: 5px;
-					background: rgba(0, 0, 0, 0.3); 
-					color: $white;
-					text-align: center;
-					display: inline;
-					margin: 0 0 0 10px;
-					@include border-radius(3px);
+					border-color: $white!important;
 				}
 			}
+			/* Rounded Corners */
 			&:first-child a {
-				@include border-radius(5px 0 0 0);
+				//@include border-radius(5px 0 0 0);
 			}
 			&:last-child a {
-				@include border-radius(0 5px 0 0);
+				//@include border-radius(0 5px 0 0);
+			}
+		}
+	}
+	.tabs-content {
+		display: block;
+		height: auto;
+		margin: 0 ;
+		padding: 10px 15px;
+		background: $white;
+		clear: both;
+		div  {
+			clear: both;min-height: 200px;
+		}
+	}
+	&.vertical {
+		ul {
+			float: left;
+			li {
+				float: none;
+				a {
+					border-top: none;
+					border-left: 10px solid #fff;
+				}
+			}
+		}
+		.tabs-content {
+			clear: none;
+			float: right; 
+		}
+	}
+}
+
+/* Not Required, only to Demo */
+.tabs {
+	.tabs-content {
+		div  {
+			text-align: center;
+			line-height: 200px;
+			font-size: 4em;
+			color: #fff;
+		}
+	}
+	&.vertical {
+		.tabs-content { 
+			width: 359px;
+			div {
+				min-height: 280px;
+				line-height: 280px;
 			}
 		}
 	}
 }
-.tabs-content {
-	clear: both;
-	height: auto;
-	margin: 0 10px;
-	padding: 10px 15px;
-	background: $white;
-	@include border-radius(0 5px 5px 5px);
-	div  {
-		clear: both;
-		padding: 0 20px 0 0;
-		p {
-			font-size: 1.4em;
-		}
-	}
-}
+
+		
+

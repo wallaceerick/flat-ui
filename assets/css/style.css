@@ -83,6 +83,12 @@ a {
 }
 
 /* line 20, modules/_base.scss */
+p {
+  line-height: 20px;
+  font-size: 1.4em;
+}
+
+/* line 24, modules/_base.scss */
 .hide {
   position: relative;
   top: 0;
@@ -90,7 +96,7 @@ a {
   display: none;
 }
 
-/* line 26, modules/_base.scss */
+/* line 30, modules/_base.scss */
 .clear, br {
   clear: both;
 }
@@ -2385,85 +2391,84 @@ input.input-large {
 /******************/
 /* line 5, partials/_tabs.scss */
 .tabs ul {
-  width: 100%;
-  padding: 10px;
+  margin: 0;
+  padding: 0;
 }
 /* line 8, partials/_tabs.scss */
 .tabs ul li {
   list-style: none;
   display: block;
   float: left;
+  margin: 0!important;
+  /* Rounded Corners */
 }
-/* line 12, partials/_tabs.scss */
+/* line 13, partials/_tabs.scss */
 .tabs ul li a {
   margin: 0!important;
-  display: block;
-  border-right-width: 1px;
-  border-right-style: solid;
+  display: inline-block;
+  border-top: 10px solid white;
+  text-align: center;
+  width: 190px;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   -o-border-radius: 0;
   border-radius: 0;
 }
-/* line 18, partials/_tabs.scss */
+/* line 20, partials/_tabs.scss */
 .tabs ul li a.current {
   background: #dbdee1;
-  border-color: #dbdee1;
+  border-color: #dbdee1 !important;
 }
-/* line 22, partials/_tabs.scss */
-.tabs ul li a span {
-  font-size: 13px;
-  padding: 5px;
-  background: rgba(0, 0, 0, 0.3);
-  color: #dbdee1;
-  text-align: center;
-  display: inline;
-  margin: 0 0 0 10px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-}
-/* line 33, partials/_tabs.scss */
-.tabs ul li:first-child a {
-  -webkit-border-radius: 5px 0 0 0;
-  -moz-border-radius: 5px 0 0 0;
-  -ms-border-radius: 5px 0 0 0;
-  -o-border-radius: 5px 0 0 0;
-  border-radius: 5px 0 0 0;
-}
-/* line 36, partials/_tabs.scss */
-.tabs ul li:last-child a {
-  -webkit-border-radius: 0 5px 0 0;
-  -moz-border-radius: 0 5px 0 0;
-  -ms-border-radius: 0 5px 0 0;
-  -o-border-radius: 0 5px 0 0;
-  border-radius: 0 5px 0 0;
-}
-
-/* line 42, partials/_tabs.scss */
-.tabs-content {
-  clear: both;
+/* line 34, partials/_tabs.scss */
+.tabs .tabs-content {
+  display: block;
   height: auto;
-  margin: 0 10px;
+  margin: 0;
   padding: 10px 15px;
   background: #dbdee1;
-  -webkit-border-radius: 0 5px 5px 5px;
-  -moz-border-radius: 0 5px 5px 5px;
-  -ms-border-radius: 0 5px 5px 5px;
-  -o-border-radius: 0 5px 5px 5px;
-  border-radius: 0 5px 5px 5px;
-}
-/* line 49, partials/_tabs.scss */
-.tabs-content div {
   clear: both;
-  padding: 0 20px 0 0;
 }
-/* line 52, partials/_tabs.scss */
-.tabs-content div p {
-  font-size: 1.4em;
+/* line 41, partials/_tabs.scss */
+.tabs .tabs-content div {
+  clear: both;
+  min-height: 200px;
+}
+/* line 46, partials/_tabs.scss */
+.tabs.vertical ul {
+  float: left;
+}
+/* line 48, partials/_tabs.scss */
+.tabs.vertical ul li {
+  float: none;
+}
+/* line 50, partials/_tabs.scss */
+.tabs.vertical ul li a {
+  border-top: none;
+  border-left: 10px solid white;
+}
+/* line 56, partials/_tabs.scss */
+.tabs.vertical .tabs-content {
+  clear: none;
+  float: right;
+}
+
+/* Not Required, only to Demo */
+/* line 66, partials/_tabs.scss */
+.tabs .tabs-content div {
+  text-align: center;
+  line-height: 200px;
+  font-size: 4em;
+  color: #fff;
+}
+/* line 74, partials/_tabs.scss */
+.tabs.vertical .tabs-content {
+  width: 359px;
+}
+/* line 76, partials/_tabs.scss */
+.tabs.vertical .tabs-content div {
+  min-height: 280px;
+  line-height: 280px;
 }
 
 /******************/

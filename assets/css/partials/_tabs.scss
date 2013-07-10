@@ -15,20 +15,21 @@
 				display: inline-block;
 				border-top: 10px solid #fff;
 				text-align: center;
-				width: 190px;
-				@include border-radius(0);
+				width: 190px; 
 				&.current {
 					background: $white;
 					border-color: $white!important;
 				}
 			}
-			/* Rounded Corners */
+			/*
+			Rounded Corners
 			&:first-child a {
-				//@include border-radius(5px 0 0 0);
+				@include border-radius(5px 0 0 0);
 			}
 			&:last-child a {
-				//@include border-radius(0 5px 0 0);
+				@include border-radius(0 5px 0 0);
 			}
+			*/
 		}
 	}
 	.tabs-content {

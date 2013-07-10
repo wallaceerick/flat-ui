@@ -1,11 +1,9 @@
 $.accordion = function(){
+ 
 
-    var accordion = '.accordion h3';
-    var content = '.accordion-content';
-
-    $(accordion).click(function(){
-    	$(accordion).removeClass('current');
-    	$(content).slideUp('normal');
+    $('.horizontal h3').click(function(){
+    	$('.horizontal h3').removeClass('current');
+    	$('.accordion-content').slideUp('normal');
 
     	if($(this).next().is(':hidden') == true){
     		$(this).addClass('current');
@@ -13,12 +11,16 @@ $.accordion = function(){
 		}
 	});
 
-	$(accordion).mouseover(function() {
-		$(this).addClass('hover');
-	}).mouseout(function() {
-		$(this).removeClass('hover');										
+	$('.vertical h3').click(function(){
+    	$('.vertical h3').removeClass('current');
+    	$('.accordion-content').hide();
+
+    	if($(this).next().is(':hidden') == true){
+    		$(this).addClass('current');
+    		$(this).next().fadeIn(300);
+		}
 	});
 
-	//$(content).hide();
-	
-}; 
+
+
+};

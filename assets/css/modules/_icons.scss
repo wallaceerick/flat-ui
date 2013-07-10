@@ -214,21 +214,3 @@
     animation: spin 2s infinite linear;
     display: inline-block;
 }
-
-@mixin keyframes($name) {
-    @-webkit-keyframes #{$name} {@content;}
-    @-moz-keyframes #{$name} {@content;}
-    @-ms-keyframes #{$name} {@content;}
-    @-o-keyframes #{$name} {@content;}
-    @keyframes #{$name} {@content;}
-}
-
-@include keyframes (spin) {
-    0% {
-        @include transform(rotate(0deg));
-    }
-    100% {
-        @include transform(rotate(359deg));
-    }
-}
-

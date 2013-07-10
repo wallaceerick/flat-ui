@@ -1,9 +1,11 @@
+
+
 .tipsy {
 	position: absolute;
 	font-style: 12px;
 	padding: 5px; 
 	z-index: 9999;
-	font-size: 1.4em;
+	font-size: 18px;
 	.tipsy-inner {
 		background: $black-h;
 		color: #fff; 
@@ -32,4 +34,30 @@
 .tipsy-se 	.tipsy-arrow 	{bottom: 0; right: 10px; border-top-style: solid; border-bottom: none; border-left-color: transparent; border-right-color: transparent;}
 .tipsy-e 	.tipsy-arrow 	{right: 0; top: 50%; margin-top: -5px; border-left-style: solid; border-right: none; border-top-color: transparent; border-bottom-color: transparent;}
 .tipsy-w 	.tipsy-arrow 	{left: 0; top: 50%; margin-top: -5px; border-right-style: solid; border-left: none; border-top-color: transparent; border-bottom-color: transparent;}
+
+/* Only to Demo */
+ul.tooltips {
+    width: 100%;
+    li {
+	    cursor: pointer;
+	    text-align: center; 
+	    width: 150px;
+	    height: 70px;
+	    line-height: 70px;
+	    background: $blue; 
+	    display: block;
+	    float: left; 
+	    margin: 0 15px 15px 0; 
+	    color: #fff;
+	    font-size: 20px;
+	    &:hover {
+	    	background: $blue-h; 
+	    }
+	    &.none {
+	    	background: #fff;
+	    	cursor: default;
+	    }
+	}
+}
+
 

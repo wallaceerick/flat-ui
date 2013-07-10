@@ -147,30 +147,7 @@ body {
 
 
 
-ul.tooltips {
-    width: 610px;
-}
-ul.tooltips li {
-    cursor: pointer;
-    text-align: center;
-    line-height: 38px;
-    width: 200px;
-    height: 38px;
-    background: #DBDEE1;
-    border-radius: 5px;
-    display: block;
-    float: left;
-    margin: 0 2px 2px 0; 
-    color: #fff;
-    font-size: 14px;
-}
-ul.tooltips li:hover {
-    background: #afb2b6;
-}
-ul.tooltips li.none {
-    background: #DBDEE1;
-    cursor: default;
-}
+
 
 ul.progressbars li {
   width: 30%;

@@ -20,9 +20,11 @@ $(document).ready(function(){
 	//Select
 	$('select').selectbox();
 
-	//Progressbar
+	//Progressbar Animation
 	$(".progressbar > span").each(function() {
-		$(this).data("origWidth", $(this).width()).width(0).animate({width: $(this).data("origWidth")}, 1200);
+		$(this).data("origWidth", $(this).width()).width(0).animate({
+			width: $(this).data("origWidth"
+		)}, 1200);
 	});
 
 	//Tooltip

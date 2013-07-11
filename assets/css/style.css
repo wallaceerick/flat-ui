@@ -10,51 +10,14 @@
 *	Last Modified:	20 Jun 2013
 *
 *************************************************************************/
-/**********************************************/
-/* Headings
-/**********************************************/
-/* line 17, style.scss */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
-  margin: 5px 0;
-  padding: 5px 0;
-}
-
-/* line 22, style.scss */
-h1 {
-  font-size: 35px;
-}
-
-/* line 23, style.scss */
-h2 {
-  font-size: 30px;
-}
-
-/* line 24, style.scss */
-h3 {
-  font-size: 25px;
-}
-
-/* line 25, style.scss */
-h4 {
-  font-size: 20px;
-}
-
-/* line 26, style.scss */
-h5 {
-  font-size: 15px;
-}
-
-/* line 27, style.scss */
-h6 {
-  font-size: 10px;
-}
-
 /******************/
 /* Required
 /******************/
 /******************/
 /* Modules
+/******************/
+/******************/
+/* Mixin's
 /******************/
 /* line 1, modules/_base.scss */
 * {
@@ -72,23 +35,60 @@ body {
   font-size: 10px;
 }
 
-/* line 14, modules/_base.scss */
+/* line 15, modules/_base.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  margin: 5px 0;
+  padding: 5px 0;
+}
+
+/* line 20, modules/_base.scss */
+h1 {
+  font-size: 35px;
+}
+
+/* line 21, modules/_base.scss */
+h2 {
+  font-size: 30px;
+}
+
+/* line 22, modules/_base.scss */
+h3 {
+  font-size: 25px;
+}
+
+/* line 23, modules/_base.scss */
+h4 {
+  font-size: 20px;
+}
+
+/* line 24, modules/_base.scss */
+h5 {
+  font-size: 15px;
+}
+
+/* line 25, modules/_base.scss */
+h6 {
+  font-size: 10px;
+}
+
+/* line 27, modules/_base.scss */
 li {
   list-style: none;
 }
 
-/* line 17, modules/_base.scss */
+/* line 30, modules/_base.scss */
 a {
   text-decoration: none;
 }
 
-/* line 20, modules/_base.scss */
+/* line 33, modules/_base.scss */
 p {
   line-height: 20px;
   font-size: 1.4em;
 }
 
-/* line 24, modules/_base.scss */
+/* line 37, modules/_base.scss */
 .hide {
   position: relative;
   top: 0;
@@ -96,7 +96,7 @@ p {
   display: none;
 }
 
-/* line 30, modules/_base.scss */
+/* line 43, modules/_base.scss */
 .clear, br {
   clear: both;
 }
@@ -2867,8 +2867,8 @@ ul.tooltips li.none {
 
 /* line 1, partials/_progressbar.scss */
 .progressbar {
-  height: 10px;
-  padding: 5px;
+  height: 8px;
+  padding: 4px;
   position: relative;
   background: #dbdee1;
   -webkit-border-radius: 20px;
@@ -2879,10 +2879,14 @@ ul.tooltips li.none {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
+  -webkit-box-shadow: inset 0px 1px 1px #c5c5c5;
+  -moz-box-shadow: inset 0px 1px 1px #c5c5c5;
+  box-shadow: inset 0px 1px 1px #c5c5c5;
   /* Colors */
   /* Sizes */
+  /* No Stripes */
 }
-/* line 8, partials/_progressbar.scss */
+/* line 9, partials/_progressbar.scss */
 .progressbar > span {
   position: relative;
   display: block;
@@ -2897,96 +2901,8 @@ ul.tooltips li.none {
   -moz-box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3), inset 0 -2px 6px rgba(0, 0, 0, 0.4);
   box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3), inset 0 -2px 6px rgba(0, 0, 0, 0.4);
 }
-/* line 17, partials/_progressbar.scss */
-.progressbar.black > span {
-  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #4f4f4f), color-stop(100%, #2a2a2a));
-  background-image: -webkit-linear-gradient(left top, #4f4f4f, #2a2a2a);
-  background-image: -moz-linear-gradient(left top, #4f4f4f, #2a2a2a);
-  background-image: -o-linear-gradient(left top, #4f4f4f, #2a2a2a);
-  background-image: linear-gradient(left top, #4f4f4f, #2a2a2a);
-}
-/* line 20, partials/_progressbar.scss */
-.progressbar.blue > span {
-  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #3498db), color-stop(100%, #2980b9));
-  background-image: -webkit-linear-gradient(left top, #3498db, #2980b9);
-  background-image: -moz-linear-gradient(left top, #3498db, #2980b9);
-  background-image: -o-linear-gradient(left top, #3498db, #2980b9);
-  background-image: linear-gradient(left top, #3498db, #2980b9);
-}
-/* line 23, partials/_progressbar.scss */
-.progressbar.gray > span {
-  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #95a5a6), color-stop(100%, #7f8c8d));
-  background-image: -webkit-linear-gradient(left top, #95a5a6, #7f8c8d);
-  background-image: -moz-linear-gradient(left top, #95a5a6, #7f8c8d);
-  background-image: -o-linear-gradient(left top, #95a5a6, #7f8c8d);
-  background-image: linear-gradient(left top, #95a5a6, #7f8c8d);
-}
-/* line 26, partials/_progressbar.scss */
-.progressbar.green > span {
-  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #2ecc71), color-stop(100%, #27ae60));
-  background-image: -webkit-linear-gradient(left top, #2ecc71, #27ae60);
-  background-image: -moz-linear-gradient(left top, #2ecc71, #27ae60);
-  background-image: -o-linear-gradient(left top, #2ecc71, #27ae60);
-  background-image: linear-gradient(left top, #2ecc71, #27ae60);
-}
-/* line 29, partials/_progressbar.scss */
-.progressbar.yellow > span {
-  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #f1c40f), color-stop(100%, #e2b80f));
-  background-image: -webkit-linear-gradient(left top, #f1c40f, #e2b80f);
-  background-image: -moz-linear-gradient(left top, #f1c40f, #e2b80f);
-  background-image: -o-linear-gradient(left top, #f1c40f, #e2b80f);
-  background-image: linear-gradient(left top, #f1c40f, #e2b80f);
-}
-/* line 32, partials/_progressbar.scss */
-.progressbar.orange > span {
-  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #f39039), color-stop(100%, #d35400));
-  background-image: -webkit-linear-gradient(left top, #f39039, #d35400);
-  background-image: -moz-linear-gradient(left top, #f39039, #d35400);
-  background-image: -o-linear-gradient(left top, #f39039, #d35400);
-  background-image: linear-gradient(left top, #f39039, #d35400);
-}
-/* line 35, partials/_progressbar.scss */
-.progressbar.pink > span {
-  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #f657ac), color-stop(100%, #c6468d));
-  background-image: -webkit-linear-gradient(left top, #f657ac, #c6468d);
-  background-image: -moz-linear-gradient(left top, #f657ac, #c6468d);
-  background-image: -o-linear-gradient(left top, #f657ac, #c6468d);
-  background-image: linear-gradient(left top, #f657ac, #c6468d);
-}
-/* line 38, partials/_progressbar.scss */
-.progressbar.purple > span {
-  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #9b59b6), color-stop(100%, #8e44ad));
-  background-image: -webkit-linear-gradient(left top, #9b59b6, #8e44ad);
-  background-image: -moz-linear-gradient(left top, #9b59b6, #8e44ad);
-  background-image: -o-linear-gradient(left top, #9b59b6, #8e44ad);
-  background-image: linear-gradient(left top, #9b59b6, #8e44ad);
-}
-/* line 41, partials/_progressbar.scss */
-.progressbar.red > span {
-  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #e74c3c), color-stop(100%, #c0392b));
-  background-image: -webkit-linear-gradient(left top, #e74c3c, #c0392b);
-  background-image: -moz-linear-gradient(left top, #e74c3c, #c0392b);
-  background-image: -o-linear-gradient(left top, #e74c3c, #c0392b);
-  background-image: linear-gradient(left top, #e74c3c, #c0392b);
-}
-/* line 45, partials/_progressbar.scss */
-.progressbar.medium {
-  height: 15px;
-  padding: 8px;
-}
-/* line 49, partials/_progressbar.scss */
-.progressbar.large {
-  height: 20px;
-  padding: 12px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  -ms-border-radius: 25px;
-  -o-border-radius: 25px;
-  border-radius: 25px;
-}
-
-/* line 56, partials/_progressbar.scss */
-.progressbar > span:after, .animate > span > span {
+/* line 16, partials/_progressbar.scss */
+.progressbar > span:after {
   content: "";
   position: absolute;
   top: 0;
@@ -3006,46 +2922,165 @@ ul.tooltips li.none {
   -moz-background-size: 50px 50px;
   -o-background-size: 50px 50px;
   background-size: 50px 50px;
-  -webkit-background-size: 50px 50px;
-  -moz-background-size: 50px 50px;
-  -webkit-animation: move 2s linear infinite;
-  -moz-animation: move 2s linear infinite;
+  -webkit-animation-name: gradient;
+  -moz-animation-name: gradient;
+  -o-animation-name: gradient;
+  animation-name: gradient;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  -o-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-direction: linear;
+  -moz-animation-direction: linear;
+  -o-animation-direction: linear;
+  animation-direction: linear;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }
-
-/* line 74, partials/_progressbar.scss */
-.animate > span:after {
-  display: none;
+/* line 36, partials/_progressbar.scss */
+.progressbar.black > span {
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #4f4f4f), color-stop(100%, #2a2a2a));
+  background-image: -webkit-linear-gradient(left top, #4f4f4f, #2a2a2a);
+  background-image: -moz-linear-gradient(left top, #4f4f4f, #2a2a2a);
+  background-image: -o-linear-gradient(left top, #4f4f4f, #2a2a2a);
+  background-image: linear-gradient(left top, #4f4f4f, #2a2a2a);
 }
-
-@-webkit-keyframes move {
-  /* line 78, partials/_progressbar.scss */
-  0% {
-    background-position: 0 0;
-  }
-
-  /* line 81, partials/_progressbar.scss */
-  100% {
-    background-position: 50px 50px;
-  }
+/* line 39, partials/_progressbar.scss */
+.progressbar.blue > span {
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #3498db), color-stop(100%, #2980b9));
+  background-image: -webkit-linear-gradient(left top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(left top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(left top, #3498db, #2980b9);
+  background-image: linear-gradient(left top, #3498db, #2980b9);
 }
-
-@-moz-keyframes move {
-  /* line 86, partials/_progressbar.scss */
-  0% {
-    background-position: 0 0;
-  }
-
-  /* line 89, partials/_progressbar.scss */
-  100% {
-    background-position: 50px 50px;
-  }
+/* line 42, partials/_progressbar.scss */
+.progressbar.gray > span {
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #95a5a6), color-stop(100%, #7f8c8d));
+  background-image: -webkit-linear-gradient(left top, #95a5a6, #7f8c8d);
+  background-image: -moz-linear-gradient(left top, #95a5a6, #7f8c8d);
+  background-image: -o-linear-gradient(left top, #95a5a6, #7f8c8d);
+  background-image: linear-gradient(left top, #95a5a6, #7f8c8d);
 }
-
-/* line 94, partials/_progressbar.scss */
-.nostripes > span > span,
-.nostripes > span:after {
-  -webkit-animation: none;
+/* line 45, partials/_progressbar.scss */
+.progressbar.green > span {
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #2ecc71), color-stop(100%, #27ae60));
+  background-image: -webkit-linear-gradient(left top, #2ecc71, #27ae60);
+  background-image: -moz-linear-gradient(left top, #2ecc71, #27ae60);
+  background-image: -o-linear-gradient(left top, #2ecc71, #27ae60);
+  background-image: linear-gradient(left top, #2ecc71, #27ae60);
+}
+/* line 48, partials/_progressbar.scss */
+.progressbar.yellow > span {
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #f1c40f), color-stop(100%, #e2b80f));
+  background-image: -webkit-linear-gradient(left top, #f1c40f, #e2b80f);
+  background-image: -moz-linear-gradient(left top, #f1c40f, #e2b80f);
+  background-image: -o-linear-gradient(left top, #f1c40f, #e2b80f);
+  background-image: linear-gradient(left top, #f1c40f, #e2b80f);
+}
+/* line 51, partials/_progressbar.scss */
+.progressbar.orange > span {
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #f39039), color-stop(100%, #d35400));
+  background-image: -webkit-linear-gradient(left top, #f39039, #d35400);
+  background-image: -moz-linear-gradient(left top, #f39039, #d35400);
+  background-image: -o-linear-gradient(left top, #f39039, #d35400);
+  background-image: linear-gradient(left top, #f39039, #d35400);
+}
+/* line 54, partials/_progressbar.scss */
+.progressbar.pink > span {
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #f657ac), color-stop(100%, #c6468d));
+  background-image: -webkit-linear-gradient(left top, #f657ac, #c6468d);
+  background-image: -moz-linear-gradient(left top, #f657ac, #c6468d);
+  background-image: -o-linear-gradient(left top, #f657ac, #c6468d);
+  background-image: linear-gradient(left top, #f657ac, #c6468d);
+}
+/* line 57, partials/_progressbar.scss */
+.progressbar.purple > span {
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #9b59b6), color-stop(100%, #8e44ad));
+  background-image: -webkit-linear-gradient(left top, #9b59b6, #8e44ad);
+  background-image: -moz-linear-gradient(left top, #9b59b6, #8e44ad);
+  background-image: -o-linear-gradient(left top, #9b59b6, #8e44ad);
+  background-image: linear-gradient(left top, #9b59b6, #8e44ad);
+}
+/* line 60, partials/_progressbar.scss */
+.progressbar.red > span {
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #e74c3c), color-stop(100%, #c0392b));
+  background-image: -webkit-linear-gradient(left top, #e74c3c, #c0392b);
+  background-image: -moz-linear-gradient(left top, #e74c3c, #c0392b);
+  background-image: -o-linear-gradient(left top, #e74c3c, #c0392b);
+  background-image: linear-gradient(left top, #e74c3c, #c0392b);
+}
+/* line 64, partials/_progressbar.scss */
+.progressbar.medium {
+  height: 15px;
+  padding: 6px;
+}
+/* line 68, partials/_progressbar.scss */
+.progressbar.large {
+  height: 27px;
+  padding: 8px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  border-radius: 25px;
+}
+/* line 75, partials/_progressbar.scss */
+.progressbar.no-stripes > span > span, .progressbar.no-stripes > span:after {
+  -webkit-animation-name: none;
+  -moz-animation-name: none;
+  -o-animation-name: none;
+  animation-name: none;
   background-image: none;
+}
+
+@-webkit-keyframes gradient {
+  /* line 81, partials/_progressbar.scss */
+  0% {
+    background-position: 0 0;
+  }
+
+  /* line 84, partials/_progressbar.scss */
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+@-moz-keyframes gradient {
+  /* line 81, partials/_progressbar.scss */
+  0% {
+    background-position: 0 0;
+  }
+
+  /* line 84, partials/_progressbar.scss */
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+@-o-keyframes gradient {
+  /* line 81, partials/_progressbar.scss */
+  0% {
+    background-position: 0 0;
+  }
+
+  /* line 84, partials/_progressbar.scss */
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+@keyframes gradient {
+  /* line 81, partials/_progressbar.scss */
+  0% {
+    background-position: 0 0;
+  }
+
+  /* line 84, partials/_progressbar.scss */
+  100% {
+    background-position: 50px 50px;
+  }
 }
 
 /* line 1, partials/_table.scss */

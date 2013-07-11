@@ -26,10 +26,7 @@
 				z-index: 1;
 				@include border-radius(20px 8px 8px 20px);
 				@include background-size(50px 50px);
-				@include animation-name(gradient);
-				@include animation-duration(2s);
-				@include animation-direction(linear);
-				@include animation-iteration-count(infinite);
+    			@include animation(gradient 2s linear infinite);
 			}
 	}
 	/* Colors */

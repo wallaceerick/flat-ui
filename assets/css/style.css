@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("http://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,400italic,300");
 /************************************************************************
 *   
@@ -1043,12 +1042,59 @@ p {
 
 /* line 209, modules/_icons.scss */
 .animate-spin {
-  -webkit-animation: spin 2s infinite linear;
-  -moz-animation: spin 2s infinite linear;
-  -ms-animation: spin 2s infinite linear;
-  -o-animation: spin 2s infinite linear;
-  animation: spin 2s infinite linear;
   display: inline-block;
+  -webkit-animation: spin 2s linear infinite;
+  -moz-animation: spin 2s linear infinite;
+  -o-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  /* line 215, modules/_icons.scss */
+  0% {
+    transform: rotate(0);
+  }
+
+  /* line 218, modules/_icons.scss */
+  100% {
+    transform: rotate(359);
+  }
+}
+
+@-moz-keyframes spin {
+  /* line 215, modules/_icons.scss */
+  0% {
+    transform: rotate(0);
+  }
+
+  /* line 218, modules/_icons.scss */
+  100% {
+    transform: rotate(359);
+  }
+}
+
+@-o-keyframes spin {
+  /* line 215, modules/_icons.scss */
+  0% {
+    transform: rotate(0);
+  }
+
+  /* line 218, modules/_icons.scss */
+  100% {
+    transform: rotate(359);
+  }
+}
+
+@keyframes spin {
+  /* line 215, modules/_icons.scss */
+  0% {
+    transform: rotate(0);
+  }
+
+  /* line 218, modules/_icons.scss */
+  100% {
+    transform: rotate(359);
+  }
 }
 
 /******************/
@@ -2923,24 +2969,12 @@ ul.tooltips li.none {
   -moz-background-size: 50px 50px;
   -o-background-size: 50px 50px;
   background-size: 50px 50px;
-  -webkit-animation-name: gradient;
-  -moz-animation-name: gradient;
-  -o-animation-name: gradient;
-  animation-name: gradient;
-  -webkit-animation-duration: 2s;
-  -moz-animation-duration: 2s;
-  -o-animation-duration: 2s;
-  animation-duration: 2s;
-  -webkit-animation-direction: linear;
-  -moz-animation-direction: linear;
-  -o-animation-direction: linear;
-  animation-direction: linear;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
+  -webkit-animation: gradient 2s linear infinite;
+  -moz-animation: gradient 2s linear infinite;
+  -o-animation: gradient 2s linear infinite;
+  animation: gradient 2s linear infinite;
 }
-/* line 36, partials/_progressbar.scss */
+/* line 33, partials/_progressbar.scss */
 .progressbar.black > span {
   background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #4f4f4f), color-stop(100%, #2a2a2a));
   background-image: -webkit-linear-gradient(left top, #4f4f4f, #2a2a2a);
@@ -2948,7 +2982,7 @@ ul.tooltips li.none {
   background-image: -o-linear-gradient(left top, #4f4f4f, #2a2a2a);
   background-image: linear-gradient(left top, #4f4f4f, #2a2a2a);
 }
-/* line 39, partials/_progressbar.scss */
+/* line 36, partials/_progressbar.scss */
 .progressbar.blue > span {
   background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #3498db), color-stop(100%, #2980b9));
   background-image: -webkit-linear-gradient(left top, #3498db, #2980b9);
@@ -2956,7 +2990,7 @@ ul.tooltips li.none {
   background-image: -o-linear-gradient(left top, #3498db, #2980b9);
   background-image: linear-gradient(left top, #3498db, #2980b9);
 }
-/* line 42, partials/_progressbar.scss */
+/* line 39, partials/_progressbar.scss */
 .progressbar.gray > span {
   background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #95a5a6), color-stop(100%, #7f8c8d));
   background-image: -webkit-linear-gradient(left top, #95a5a6, #7f8c8d);
@@ -2964,7 +2998,7 @@ ul.tooltips li.none {
   background-image: -o-linear-gradient(left top, #95a5a6, #7f8c8d);
   background-image: linear-gradient(left top, #95a5a6, #7f8c8d);
 }
-/* line 45, partials/_progressbar.scss */
+/* line 42, partials/_progressbar.scss */
 .progressbar.green > span {
   background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #2ecc71), color-stop(100%, #27ae60));
   background-image: -webkit-linear-gradient(left top, #2ecc71, #27ae60);
@@ -2972,7 +3006,7 @@ ul.tooltips li.none {
   background-image: -o-linear-gradient(left top, #2ecc71, #27ae60);
   background-image: linear-gradient(left top, #2ecc71, #27ae60);
 }
-/* line 48, partials/_progressbar.scss */
+/* line 45, partials/_progressbar.scss */
 .progressbar.yellow > span {
   background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #f1c40f), color-stop(100%, #e2b80f));
   background-image: -webkit-linear-gradient(left top, #f1c40f, #e2b80f);
@@ -2980,7 +3014,7 @@ ul.tooltips li.none {
   background-image: -o-linear-gradient(left top, #f1c40f, #e2b80f);
   background-image: linear-gradient(left top, #f1c40f, #e2b80f);
 }
-/* line 51, partials/_progressbar.scss */
+/* line 48, partials/_progressbar.scss */
 .progressbar.orange > span {
   background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #f39039), color-stop(100%, #d35400));
   background-image: -webkit-linear-gradient(left top, #f39039, #d35400);
@@ -2988,7 +3022,7 @@ ul.tooltips li.none {
   background-image: -o-linear-gradient(left top, #f39039, #d35400);
   background-image: linear-gradient(left top, #f39039, #d35400);
 }
-/* line 54, partials/_progressbar.scss */
+/* line 51, partials/_progressbar.scss */
 .progressbar.pink > span {
   background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #f657ac), color-stop(100%, #c6468d));
   background-image: -webkit-linear-gradient(left top, #f657ac, #c6468d);
@@ -2996,7 +3030,7 @@ ul.tooltips li.none {
   background-image: -o-linear-gradient(left top, #f657ac, #c6468d);
   background-image: linear-gradient(left top, #f657ac, #c6468d);
 }
-/* line 57, partials/_progressbar.scss */
+/* line 54, partials/_progressbar.scss */
 .progressbar.purple > span {
   background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #9b59b6), color-stop(100%, #8e44ad));
   background-image: -webkit-linear-gradient(left top, #9b59b6, #8e44ad);
@@ -3004,7 +3038,7 @@ ul.tooltips li.none {
   background-image: -o-linear-gradient(left top, #9b59b6, #8e44ad);
   background-image: linear-gradient(left top, #9b59b6, #8e44ad);
 }
-/* line 60, partials/_progressbar.scss */
+/* line 57, partials/_progressbar.scss */
 .progressbar.red > span {
   background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #e74c3c), color-stop(100%, #c0392b));
   background-image: -webkit-linear-gradient(left top, #e74c3c, #c0392b);
@@ -3012,12 +3046,12 @@ ul.tooltips li.none {
   background-image: -o-linear-gradient(left top, #e74c3c, #c0392b);
   background-image: linear-gradient(left top, #e74c3c, #c0392b);
 }
-/* line 64, partials/_progressbar.scss */
+/* line 61, partials/_progressbar.scss */
 .progressbar.medium {
   height: 15px;
   padding: 6px;
 }
-/* line 68, partials/_progressbar.scss */
+/* line 65, partials/_progressbar.scss */
 .progressbar.large {
   height: 27px;
   padding: 8px;
@@ -3027,7 +3061,7 @@ ul.tooltips li.none {
   -o-border-radius: 25px;
   border-radius: 25px;
 }
-/* line 75, partials/_progressbar.scss */
+/* line 72, partials/_progressbar.scss */
 .progressbar.no-stripes > span > span, .progressbar.no-stripes > span:after {
   -webkit-animation-name: none;
   -moz-animation-name: none;
@@ -3037,48 +3071,48 @@ ul.tooltips li.none {
 }
 
 @-webkit-keyframes gradient {
-  /* line 81, partials/_progressbar.scss */
+  /* line 78, partials/_progressbar.scss */
   0% {
     background-position: 0 0;
   }
 
-  /* line 84, partials/_progressbar.scss */
+  /* line 81, partials/_progressbar.scss */
   100% {
     background-position: 50px 50px;
   }
 }
 
 @-moz-keyframes gradient {
-  /* line 81, partials/_progressbar.scss */
+  /* line 78, partials/_progressbar.scss */
   0% {
     background-position: 0 0;
   }
 
-  /* line 84, partials/_progressbar.scss */
+  /* line 81, partials/_progressbar.scss */
   100% {
     background-position: 50px 50px;
   }
 }
 
 @-o-keyframes gradient {
-  /* line 81, partials/_progressbar.scss */
+  /* line 78, partials/_progressbar.scss */
   0% {
     background-position: 0 0;
   }
 
-  /* line 84, partials/_progressbar.scss */
+  /* line 81, partials/_progressbar.scss */
   100% {
     background-position: 50px 50px;
   }
 }
 
 @keyframes gradient {
-  /* line 81, partials/_progressbar.scss */
+  /* line 78, partials/_progressbar.scss */
   0% {
     background-position: 0 0;
   }
 
-  /* line 84, partials/_progressbar.scss */
+  /* line 81, partials/_progressbar.scss */
   100% {
     background-position: 50px 50px;
   }
@@ -3637,176 +3671,248 @@ ul.paginate li.current a {
 /******************/
 /* Audio Player
 /******************/
-/* Player */
-/* line 5, partials/_audio.scss */
+/* line 4, partials/_audio.scss */
 .audio {
   width: 400px;
   margin: 10px;
+  position: relative;
+  background: #fcfcfc;
+  padding-bottom: 15px;
+  overflow: hidden;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 0 #f0f0f0;
+  -moz-box-shadow: 0 1px 0 #f0f0f0;
+  box-shadow: 0 1px 0 #f0f0f0;
+  /* Title */
+  /* Cover */
+  /* Playlist */
+  /* Player */
 }
-/* line 8, partials/_audio.scss */
-.audio img {
-  width: 300px;
-  margin: 0 auto;
-  border: 3px solid #ccc;
-}
-/* line 13, partials/_audio.scss */
-.audio ol {
-  padding: 0px;
-  margin: 0px;
-  list-style: decimal-leading-zero inside;
+/* line 14, partials/_audio.scss */
+.audio h2 {
+  font-size: 20px !important;
+  color: #dbdee1;
+  position: absolute;
+  top: 275px;
   width: 100%;
+  text-align: center;
+  z-index: 50;
 }
-/* line 18, partials/_audio.scss */
+/* line 24, partials/_audio.scss */
+.audio img {
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: 3px solid #f39039;
+}
+/* line 30, partials/_audio.scss */
+.audio ol {
+  margin: 0 20px;
+}
+/* line 32, partials/_audio.scss */
 .audio ol li {
   position: relative;
-  margin: 0px;
-  cursor: pointer;
 }
-/* line 22, partials/_audio.scss */
+/* line 34, partials/_audio.scss */
 .audio ol li a {
-  font-size: 1.4em;
   display: block;
-  padding: 10px 20px;
-  border-bottom: 1px solid #ccc;
-}
-/* line 28, partials/_audio.scss */
-.audio ol li.playing {
-  color: #aaa;
-  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3);
-}
-/* line 31, partials/_audio.scss */
-.audio ol li.playing a {
-  text-indent: 10px;
-  color: #000;
-}
-/* line 35, partials/_audio.scss */
-.audio ol li.playing:before {
-  content: '♬';
-  width: 14px;
-  height: 14px;
-  padding: 3px;
-  line-height: 14px;
-  margin: 0px;
-  position: absolute;
-  left: 0;
-  top: 9px;
-  color: #000;
-  font-size: 1.4em;
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
-}
-
-/* Theme */
-/* line 57, partials/_audio.scss */
-.audiojs {
-  width: 460px;
-  height: 36px;
-  background: #404040;
+  font-size: 18px;
+  color: #dbdee1;
+  padding: 15px 20px 5px;
+  text-indent: 15px;
+  border-bottom: 1px solid #f6f6f6;
+  white-space: nowrap;
   overflow: hidden;
-  font-family: monospace;
-  font-size: 1.4em;
-  background-image: none;
-  -webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
-  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+  text-overflow: ellipsis;
+  -webkit-transition: all 0.15s ease-in;
+  -moz-transition: all 0.15s ease-in;
+  -o-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
 }
-/* line 66, partials/_audio.scss */
-.audiojs audio {
+/* line 45, partials/_audio.scss */
+.audio ol li a:before {
+  font-family: "Fontello";
+  content: '\e809';
+  position: absolute;
+  left: -8px;
+  top: 17px;
+  width: 40px;
+}
+/* line 53, partials/_audio.scss */
+.audio ol li a:hover {
+  color: #bdc3c7;
+}
+/* line 58, partials/_audio.scss */
+.audio ol li.playing a {
+  color: #f39039;
+}
+/* line 63, partials/_audio.scss */
+.audio ol li:last-child a {
+  border: none;
+}
+/* line 70, partials/_audio.scss */
+.audio .audiojs {
+  width: 100%;
+  height: auto;
+  clear: both;
+  position: relative;
+  border: 1px solid #fcfcfc;
+  /* Loading */
+  /* Timer */
+  /* Scrubber */
+  /* Buttons */
+}
+/* line 78, partials/_audio.scss */
+.audio .audiojs audio {
   position: absolute;
   left: -1px;
 }
-/* line 70, partials/_audio.scss */
-.audiojs p {
+/* line 83, partials/_audio.scss */
+.audio .audiojs .loading {
+  font-size: 50px;
+  color: #fff;
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  margin-left: -25px;
   display: none;
-  width: 25px;
-  height: 40px;
-  cursor: pointer;
-  margin: 0;
-}
-/* line 77, partials/_audio.scss */
-.audiojs .play-pause {
-  width: 25px;
-  height: 40px;
-  float: left;
-  overflow: hidden;
-  border-right: 1px solid #000;
-  margin: 0;
-  padding: 4px 6px;
-}
-/* line 86, partials/_audio.scss */
-.audiojs .play, .audiojs .loading, .audiojs .error, .audiojs .pause {
-  display: block;
-  background-image: url('../images/player-graphics.gif?1305744316');
-  background-repeat: no-repeat;
-}
-/* line 91, partials/_audio.scss */
-.audiojs .play {
-  background-position: -2px -1px;
 }
 /* line 94, partials/_audio.scss */
-.audiojs .loading {
-  background-position: -2px -31px;
+.audio .audiojs .time {
+  font-size: 25px;
+  color: #fff;
+  position: absolute;
+  top: -40px;
+  right: 10px;
+  font-weight: normal;
 }
-/* line 97, partials/_audio.scss */
-.audiojs .error {
-  background-position: -2px -61px;
+/* line 101, partials/_audio.scss */
+.audio .audiojs .time em {
+  font-style: italic;
 }
-/* line 100, partials/_audio.scss */
-.audiojs .pause {
-  background-position: -2px -91px;
-}
-/* line 103, partials/_audio.scss */
-.audiojs .scrubber {
+/* line 106, partials/_audio.scss */
+.audio .audiojs .scrubber {
   position: relative;
-  float: left;
-  width: 280px;
-  background: #5a5a5a;
-  height: 14px;
-  border-top: 1px solid #3f3f3f;
-  border-left: 0;
-  border-bottom: 0;
-  overflow: hidden;
-  margin: 10px;
+  background: #f3f3f3;
+  height: 1px;
+  margin: 20px 15px;
 }
-/* line 115, partials/_audio.scss */
-.audiojs .progress {
+/* line 112, partials/_audio.scss */
+.audio .audiojs .scrubber .progress,
+.audio .audiojs .scrubber .loaded {
   position: absolute;
   top: 0;
   left: 0;
-  height: 14px;
+  height: 1px;
   width: 0;
-  background: #ccc;
+}
+/* line 119, partials/_audio.scss */
+.audio .audiojs .scrubber .progress {
+  background: #dfdfdf;
   z-index: 1;
-  background-image: 0;
 }
-/* line 125, partials/_audio.scss */
-.audiojs .loaded {
+/* line 122, partials/_audio.scss */
+.audio .audiojs .scrubber .progress:before {
+  content: "";
+  display: block;
+  width: 13px;
+  height: 13px;
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 14px;
-  width: 0;
-  background: #000;
-  background-image: 0;
+  top: -6px;
+  right: 0;
+  background: #b3b3b3;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
 }
 /* line 134, partials/_audio.scss */
-.audiojs .time {
-  float: left;
-  height: 36px;
-  line-height: 36px;
-  border-left: 1px solid #000;
-  color: #ddd;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
-  margin: 0 0 0 6px;
-  padding: 0 6px 0 12px;
+.audio .audiojs .scrubber .loaded {
+  background: #dfdfdf;
+  max-width: 100%;
 }
-/* line 143, partials/_audio.scss */
-.audiojs .time em {
-  color: #f9f9f9;
-  font-style: normal;
-  padding: 0 2px 0 0;
+/* line 140, partials/_audio.scss */
+.audio .audiojs .buttons {
+  width: 200px;
+  height: 100px;
+  position: relative;
+  margin: 30px auto 5px;
+  clear: both;
+  /* Play & Pause */
+  /* Prev & Next */
 }
-/* line 149, partials/_audio.scss */
-.audiojs .error-message {
+/* line 146, partials/_audio.scss */
+.audio .audiojs .buttons .button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  border: 3px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+  -webkit-transition: all 0.15s ease-in;
+  -moz-transition: all 0.15s ease-in;
+  -o-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
+}
+/* line 159, partials/_audio.scss */
+.audio .audiojs .buttons .play-pause .play, .audio .audiojs .buttons .play-pause .pause {
+  width: 90px;
+  height: 90px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 30px;
+  background: #f39039;
+  margin: -45px 0 0 -45px;
+  z-index: 10;
+}
+/* line 168, partials/_audio.scss */
+.audio .audiojs .buttons .play-pause .play:hover, .audio .audiojs .buttons .play-pause .pause:hover {
+  background: #d35400;
+}
+/* line 172, partials/_audio.scss */
+.audio .audiojs .buttons .play-pause .play {
+  display: block;
+  text-indent: 4px;
+}
+/* line 176, partials/_audio.scss */
+.audio .audiojs .buttons .play-pause .pause {
+  display: none;
+}
+/* line 182, partials/_audio.scss */
+.audio .audiojs .buttons .arrows .next, .audio .audiojs .buttons .arrows .prev {
+  display: block;
+  width: 60px;
+  height: 60px;
+  line-height: 55px;
+  font-size: 18px;
+  background: #dbdee1;
+  margin-top: -30px;
+  z-index: 5;
+}
+/* line 191, partials/_audio.scss */
+.audio .audiojs .buttons .arrows .next:hover, .audio .audiojs .buttons .arrows .prev:hover {
+  background: #bdc3c7;
+}
+/* line 195, partials/_audio.scss */
+.audio .audiojs .buttons .arrows .next {
+  margin-left: 35px;
+}
+/* line 198, partials/_audio.scss */
+.audio .audiojs .buttons .arrows .prev {
+  margin-left: -95px;
+}
+/* line 203, partials/_audio.scss */
+.audio .audiojs .error-message {
   float: left;
   display: none;
   height: 36px;
@@ -3817,33 +3923,26 @@ ul.paginate li.current a {
   color: #fff;
   margin: 0 10px;
   text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  -moz-text-overflow: ellipsis;
-  -webkit-text-overflow: ellipsis;
 }
-/* line 163, partials/_audio.scss */
-.audiojs .error-message a {
+/* line 214, partials/_audio.scss */
+.audio .audiojs .error-message a {
   color: #eee;
   text-decoration: none;
   padding-bottom: 1px;
   border-bottom: 1px solid #999;
   white-space: wrap;
 }
-/* line 176, partials/_audio.scss */
-.audiojs.playing .play,
-.audiojs.playing .loading,
-.audiojs.playing .error,
-.audiojs.playing .play,
-.audiojs.playing .error {
-  display: none;
-}
-/* line 181, partials/_audio.scss */
-.audiojs.loading p {
-  display: none;
-}
-/* line 184, partials/_audio.scss */
-.audiojs.loading .loading {
+/* line 223, partials/_audio.scss */
+.audio .audiojs.playing .pause {
   display: block !important;
+}
+/* line 226, partials/_audio.scss */
+.audio .audiojs.playing .play, .audio .audiojs.playing .loading, .audio .audiojs.playing .error {
+  display: none !important;
+}
+/* line 231, partials/_audio.scss */
+.audio .audiojs.loading .loading {
+  display: inline-block !important;
 }
 
 /******************/

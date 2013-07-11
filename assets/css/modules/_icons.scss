@@ -207,10 +207,15 @@
 .icon-block:before                  {content:'\e83f';}
 
 .animate-spin {
-    -webkit-animation: spin 2s infinite linear;
-    -moz-animation: spin 2s infinite linear;
-    -ms-animation: spin 2s infinite linear;
-    -o-animation: spin 2s infinite linear;
-    animation: spin 2s infinite linear;
-    display: inline-block;
+    display: inline-block; 
+    @include animation(spin 2s linear infinite);
 }
+
+@include keyframes(spin) {
+    0% {
+        transform:rotate(0);
+    }
+    100% {
+        transform:rotate(359);
+    }
+ }

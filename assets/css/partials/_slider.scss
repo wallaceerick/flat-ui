@@ -1,12 +1,36 @@
 /******************/
 /* Slider
 /******************/
+
+#slider {
+	padding: 7px;
+	background: $white;
+	position: relative;
+	a.prev, a.next {
+		position: absolute;
+		top: 50%;
+		margin-top: -30px;
+		color: #fff;
+		font-size: 50px;
+		z-index: 100;
+		@include opacity(0.2);
+		@include transition (all 0.2s ease-in);
+		&:hover {
+			@include opacity(1);
+		}
+	}
+	a.prev {
+		left: 10px;
+	}
+	a.next {
+		right: 10px;
+	}
+}
 ul.slider {
 	position: relative;
 	list-style: none;
 	overflow: hidden; 
-	padding: 0;
-	margin: 10px;
+	width: 100%; 
 	li {
 		-webkit-backface-visibility: hidden;
 		position: absolute;
@@ -15,60 +39,65 @@ ul.slider {
 		width: 100%;
 		left: 0;
 		top: 0;
+		z-index: 50;
 		&:first-child {
-			position: relative;
+			position: relative; 
 			display: block;
 			float: left;
 		}
-	}
-	img {
-		display: block;
-		height: auto;
-		float: left;
-		width: 100%;
-		border: 0;
-	}
-	p.caption {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		background: #000;
-		color: #fff;
-		font-size: 15px;
-		padding: 15px 0;
-		text-indent: 20px;
-		width: 100%;
+		img {
+			display: block;
+			height: auto;
+			float: left;
+			width: 100%;
+			border: 0;
+		}
+		.caption {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background: #000;	
+			background: rgba(0, 0, 0, .6); 
+			color: #fff;
+			font-weight: normal;
+			padding: 15px 20px;
+			line-height: 20px;
+			width: 100%;
+			h4 {
+				margin: 0 0 5px -1px;
+				font-size: 30px;
+			}
+			p {
+				font-size: 14px;
+				color: $white-h;
+			}
+		}
 	}
 }
-ul.rslides_tabs {
-	clear: both;
-	padding-left: 10px;
+ul.paginate {
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+	z-index: 100;
 	li {
 		display: block;
 		float: left;
 		margin-right: 1px;
 		a {
-			display: block; 
-			padding: 8px;
-			background: #ccc;
-			color: #fff;
+			display: block;
+			width: 9px;
+			height: 9px;
+			border: 3px solid rgba(255, 255, 255, 0.1);
+			text-indent: -9999px;
+			@include transition (all 0.2s ease-in);
+			@include border-radius(100%);
+			@include box-sizing(content-box);
+			&:hover {
+				border-color: rgba(255, 255, 255, 0.4);
+			}
 		}
-		&.rslides_here a {
-			background: #000;
-		}
-	}
-}
-.callbacks_container a {
-	&.prev {
-		margin-left: 10px;
-		margin-right: 1px;
-	}
-	&.prev, &.next {
-		padding: 10px;
-		background: #ccc;
-		color: #fff;
-		&:hover {
-			background: #000;
+		&.current a {
+			border-color: rgba(255, 255, 255, 1);
 		}
 	}
-}
+} 

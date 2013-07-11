@@ -64,10 +64,13 @@ $(document).ready(function(){
 	
 	//Slider
 	$(".slider").responsiveSlides({
-		auto: false,
+		auto: true,
 		pager: true,
-		speed: 300,
-		maxwidth: 960
+		timeout: 4000,
+		nav: true,
+		speed: 500,
+		prevText: "",
+		nextText: ""
 	});
  
 	//Scrollbar

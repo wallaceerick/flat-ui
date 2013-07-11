@@ -1,45 +1,54 @@
-table.styled {
-	margin: 10px 0;
+table {
 	width: 100%;
-	text-align: left;
+	margin: 20px auto;
+	text-align: center;
 	border-collapse: collapse;
-	font-size: 1.4em;
-	color: #fff!important;
+	font-size: 18px;
+	color: #848484;
+	@include box-sizing(border-box);
 	td {
-		padding: 10px;
-		background: $white;
-		color: $gray-h;
-		border-bottom: 1px solid #fff;
-		@include transition(all 0.2s ease-in);
-	}
-	tr:nth-child(odd) td {
-		background: $white-h;
-	}
-	tr:hover td {
-		background: $blue;
-		color: $white;
+		padding: 15px 0;
+		border-bottom: 2px solid #ebf0f1;
+		@include transition(all 0.15s ease-in);
+		/* Indent Namea */
+		&:nth-child(2) {
+			text-align: left;
+			text-indent: 20px;
+		}
 	}
 	thead {
-		td {
-			background: $blue-h!important;
-			color: $white;
-			&:first-child {
-				@include border-radius(5px 0 0 0);
-			}
-			&:last-child {
-				@include border-radius(0 5px 0 0);
+		background: #fff;
+		tr {
+			td {
+				font-weight: bold;
 			}
 		}
 	}
+	tbody {
+		tr:nth-child(odd) td {
+			background: #f8f9fb;
+		}
+		tr:hover td {
+			background: $green;
+			color: #fff;
+		}
+	}
 	tfoot {
-		td {
-			background: $blue!important;
-			color: $white;
-			&:first-child {
-				@include border-radius(0 0 0 5px);
+		tr {
+			td {
+				background: #efeff1;
+				color: #fff;
 			}
-			&:last-child {
-				@include border-radius(0 0 5px 0);
+		}
+	}
+	/* Outline */
+	&.outline {
+		td { 
+			border: 2px solid #ebf0f1;
+		}
+		tbody {
+			tr:hover td {
+				border-color: $green;
 			}
 		}
 	}

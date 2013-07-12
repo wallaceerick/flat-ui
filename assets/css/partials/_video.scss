@@ -17,6 +17,7 @@
     padding: 0;
     font-size: 10px;
     vertical-align: middle;
+    padding: 20px;
     //display: table-cell;
     .vjs-tech {
         position: absolute;
@@ -33,8 +34,8 @@
         top: 0;
         bottom: 0;
         right: 0;
-        width: 100% !important;
-        height: 100% !important;
+        width: 100%!important;
+        height: 100%!important;
     }
     /* Text Track Styles */
     .vjs-text-track-display {
@@ -64,9 +65,12 @@
 }
  
 /* Fix for Firefox 9 fullscreen (only if it is enabled). Not needed when checking fullScreenEnabled. */
-.video-js:-moz-full-screen { position: absolute; }
+.video-js:-moz-full-screen {
+    position: absolute; 
+}
 .video-js:-webkit-full-screen {
-  width: 100% !important; height: 100% !important;
+    width: 100%!important;
+    height: 100%!important;
 }
 
 /* Fullscreen Styles */
@@ -97,8 +101,9 @@
     }
 }
 
-
-.vjs-tt-cue { display: block; }
+.vjs-tt-cue {
+    display: block;
+}
 
 /* Fading Sytles */
 .vjs-fade-in {
@@ -123,14 +128,15 @@
 /* Skin */
 .vjs-default-skin {
     color: #fff;
-    margin: 20px;
+    font-size:  18px;
+    margin: 10px;
     .vjs-hidden {
         display: none;
-    }
+    } 
 
     /* Slider - Volume and Seek Bar */
     .vjs-slider {
-        padding: 0;
+        padding: 0; 
         outline: 0;
         position: relative;
         cursor: pointer;
@@ -142,6 +148,8 @@
             @include box-shadow(0 0 2em rgba(255, 255, 255, 1));
         }
     }
+
+    /* */
     .vjs-slider-handle {
         position: absolute;
         left: 0;
@@ -167,14 +175,9 @@
         bottom: 0;
         left: 0;
         right: 0;
-        padding: 0;
-        margin: 0;
-        height: 3.0em;
-        background-color: rgb(0, 0, 0);
-        background-color: rgba(7, 40, 50, 0.7);
-        font-style: normal;
-        font-weight: normal;
-        font-family: Arial, sans-serif;
+        height: 50px;
+        background: $orange;
+        border-top: 3px solid $orange-h;
     }
     .vjs-control {
         outline: none;
@@ -183,11 +186,8 @@
         text-align: center;
         margin: 0;
         padding: 0;
-        height: 3.0em;
-        width: 4em;
         &:before {
             font-family: VideoJS;
-            font-size: 1.5em;
             line-height: 2;
             position: absolute;
             top: 0;
@@ -195,57 +195,26 @@
             width: 100%;
             height: 100%;
             text-align: center;
-            text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
         }
-        &:focus:before,
         &:hover:before {
-            text-shadow: 0em 0em 1em rgba(255, 255, 255, 1);
+            color: $orange-h;
         }
     }
-    .vjs-control-text { 
-        border: 0; 
-        clip: rect(0 0 0 0); 
-        height: 1px; 
-        margin: -1px; 
-        overflow: hidden; 
-        padding: 0; 
-        position: absolute; 
-        width: 1px;
-    }
-    /* Play/Pause */
+    /* Play & Pause */
     .vjs-play-control {
-        width: 5em;
+        width: 65px;
+        height: 45px;
         cursor: pointer;
         &:before {
+            padding-top: 5px;
             content: "\e001";
         }
     }
     &.vjs-playing .vjs-play-control:before {
-      content: "\e002";
+      content: "\e002"!important;
     }
 
-    /* Volume/Mute */
-    .vjs-mute-control, .vjs-volume-menu-button {
-        cursor: pointer; 
-        &:before {
-            content: "\e006";
-        }
-    } 
-    .vjs-mute-control.vjs-vol-0, .vjs-volume-menu-button.vjs-vol-0 {
-        &:before  {
-            content: "\e003";
-        }
-    }
-    .vjs-mute-control.vjs-vol-1, .vjs-volume-menu-button.vjs-vol-1 {
-        &:before  {
-            content: "\e004";
-        }
-    }
-    .vjs-mute-control.vjs-vol-2, .vjs-volume-menu-button.vjs-vol-2 {
-        &:before  {
-            content: "\e005";
-        }
-    }
+    /* Volume */
     .vjs-volume-control {
         width: 5em; 
     }
@@ -279,21 +248,26 @@
         width: 6em;
         left: -4em;
     }
+    .vjs-mute-control, .vjs-volume-menu-button {
+        cursor: pointer; 
+        &:before {content: "\e006";}
+    } 
+    .vjs-mute-control.vjs-vol-0, .vjs-volume-menu-button.vjs-vol-0 {
+        &:before  {content: "\e003";}
+    }
+    .vjs-mute-control.vjs-vol-1, .vjs-volume-menu-button.vjs-vol-1 {
+        &:before  {content: "\e004";}
+    }
+    .vjs-mute-control.vjs-vol-2, .vjs-volume-menu-button.vjs-vol-2 {
+        &:before  {content: "\e005";}
+    }
 
     /* Progress */
-    .vjs-progress-control {
-        position: absolute;
-        left: 0;
-        right: 0;
-        width: auto;
-        font-size: 0.3em;
-        height: 1em; 
-        top: -1em;
-        @include transition(top 0.4s, height 0.4s, font-size 0.4s, transform 0.4s);
-        &:hover .vjs-progress-control {
-            font-size: .9em;
-            @include transition(top 0.2s, height 0.2s, font-size 0.2s, transform 0.2s);
-        }
+    .progress {
+        display: block;
+        width: 300px;
+        height: 6px; 
+        background: #ffdb94;
     }
     .vjs-progress-holder { 
       height: 100%;
@@ -327,8 +301,7 @@
 
     /* Time Display */
     .vjs-time-controls {
-        font-size: 1em;
-        line-height: 3em;
+        background: #000;
     }
     .vjs-current-time {
         float: left;
@@ -336,13 +309,12 @@
     .vjs-duration { 
         float: left; 
     }
+    .vjs-time-divider {
+        display: none;
+    }
     .vjs-remaining-time { 
         display: none; 
         float: left; 
-    }
-    .vjs-time-divider { 
-        float: left; 
-        line-height: 3em; 
     }
 
     /* Fullscreen */
@@ -356,6 +328,18 @@
     }
     &.vjs-fullscreen .vjs-fullscreen-control:before {
       content: "\e00b"; /* Exit full screen */
+    }
+
+    /* Hiden Text's */
+    .vjs-control-text { 
+        border: 0; 
+        clip: rect(0 0 0 0); 
+        height: 1px; 
+        margin: -1px; 
+        overflow: hidden; 
+        padding: 0; 
+        position: absolute; 
+        width: 1px;
     }
 
     /* Big Play Button */
@@ -533,46 +517,4 @@
         @include box-shadow(0 0 1em rgba(255, 255, 255, 1));
     }
 
-}
- 
-/* Animation */
-@-moz-keyframes spin {
-    0% {
-        -moz-transform: rotate(0deg);
-    }
-    100% {
-        -moz-transform: rotate(359deg);
-    }
-}
-@-webkit-keyframes spin {
-    0% {
-        -webkit-transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(359deg);
-    }
-}
-@-o-keyframes spin {
-    0% {
-        -o-transform: rotate(0deg);
-    }
-    100% {
-        -o-transform: rotate(359deg);
-    }
-}
-@-ms-keyframes spin {
-    0% {
-        -ms-transform: rotate(0deg);
-    }
-    100% {
-        -ms-transform: rotate(359deg);
-    }
-}
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(359deg);
-    }
 }

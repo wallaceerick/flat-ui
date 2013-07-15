@@ -1050,50 +1050,82 @@ p {
 }
 
 @-webkit-keyframes spin {
-  /* line 215, modules/_icons.scss */
+  /* line 214, modules/_icons.scss */
   0% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
     transform: rotate(0);
   }
 
-  /* line 218, modules/_icons.scss */
+  /* line 217, modules/_icons.scss */
   100% {
-    transform: rotate(359);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 @-moz-keyframes spin {
-  /* line 215, modules/_icons.scss */
+  /* line 214, modules/_icons.scss */
   0% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
     transform: rotate(0);
   }
 
-  /* line 218, modules/_icons.scss */
+  /* line 217, modules/_icons.scss */
   100% {
-    transform: rotate(359);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 @-o-keyframes spin {
-  /* line 215, modules/_icons.scss */
+  /* line 214, modules/_icons.scss */
   0% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
     transform: rotate(0);
   }
 
-  /* line 218, modules/_icons.scss */
+  /* line 217, modules/_icons.scss */
   100% {
-    transform: rotate(359);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 @keyframes spin {
-  /* line 215, modules/_icons.scss */
+  /* line 214, modules/_icons.scss */
   0% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
     transform: rotate(0);
   }
 
-  /* line 218, modules/_icons.scss */
+  /* line 217, modules/_icons.scss */
   100% {
-    transform: rotate(359);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -3615,20 +3647,13 @@ ul.paginate li.current a {
   color: #fff;
 }
 
-/* line 77, partials/_shadowbox.scss */
-#sb-info, #sb-info-inner {
-  height: 20px;
-  line-height: 20px;
-  font-size: 12px;
-}
-
 /* Counter */
-/* line 84, partials/_shadowbox.scss */
+/* line 81, partials/_shadowbox.scss */
 #sb-counter {
   float: left;
   width: 45%;
 }
-/* line 87, partials/_shadowbox.scss */
+/* line 84, partials/_shadowbox.scss */
 #sb-counter a {
   padding: 0 4px 0 0;
   font-size: 20px;
@@ -3636,36 +3661,27 @@ ul.paginate li.current a {
   cursor: pointer;
   color: #000;
 }
-/* line 93, partials/_shadowbox.scss */
+/* line 90, partials/_shadowbox.scss */
 #sb-counter a:hover, #sb-counter a.sb-counter-current {
   color: #f08;
 }
 
 /* Navigation */
-/* line 100, partials/_shadowbox.scss */
-#sb-nav {
-  float: right;
-  height: 16px;
-  padding: 2px 0;
-  width: 45%;
-}
-/* line 105, partials/_shadowbox.scss */
+/* line 98, partials/_shadowbox.scss */
 #sb-nav a {
   display: block;
   float: right;
-  height: 16px;
-  width: 16px;
-  margin-left: 3px;
   cursor: pointer;
-  background-repeat: no-repeat;
+  font-size: 18px;
+  padding: 4px 8px;
+  color: #fff;
+  background: #2ecc71;
 }
-/* line 113, partials/_shadowbox.scss */
-#sb-nav a#sb-nav-play {
-  background-image: url(assets/images/play.png);
-}
-/* line 116, partials/_shadowbox.scss */
-#sb-nav a#sb-nav-pause {
-  background-image: url(assets/images/pause.png);
+/* line 107, partials/_shadowbox.scss */
+#sb-nav a#sb-nav-close {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 /******************/

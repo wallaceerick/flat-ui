@@ -44,13 +44,19 @@ $(document).ready(function(){
 
 	//Shadowbox
 	Shadowbox.init({
-		displayNav: true,
-		displayCounter: true,
-		counterType: "skip"
-
+		overlayOpacity: 0.7,
+	    animSequence: 'hw',
+		displayCounter: true, 
+		displayNav: true, 
+		modal: false,
+		onOpen:function(){
+		},
+		onClose:function(){
+		}, 
+		onFinish:function(){
+		}
 	});
-	/*
-	//onLoad Message
+	/* onLoad Message
 	window.onload = function(){
 		Shadowbox.open({
 	       content:    '<div id="welcome-msg"><p>Welcome to my website!</p></div>',

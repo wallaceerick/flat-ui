@@ -74,10 +74,7 @@
 		}
 	}
 
-	#sb-info, #sb-info-inner{
-		height:20px;
-		line-height:20px;
-		font-size:12px;
+	#sb-info, #sb-info-inner { 
 	}
 
 	/* Counter */
@@ -98,23 +95,23 @@
 
 	/* Navigation */ 
 	#sb-nav{
-		float:right;
-		height:16px;
-		padding:2px 0;
-		width:45%;
 		a {
-			display:block;
-			float:right;
-			height:16px;
-			width:16px;
-			margin-left:3px;
-			cursor:pointer;
-			background-repeat:no-repeat;
+			display: block;
+			float: right;
+			cursor: pointer;
+			font-size: 18px;
+			padding: 4px 8px;
+			color: #fff;
+			background: $green;
+			&#sb-nav-next {}
+			&#sb-nav-close {
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
 			&#sb-nav-play {
-				background-image:url(assets/images/play.png);
 			}
 			&#sb-nav-pause {
-				background-image:url(assets/images/pause.png);
 			}
 		} 
 

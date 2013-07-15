@@ -204,18 +204,17 @@
 .icon-block:before                  {content:'\e83f';}
 .icon-volume-off:before             {content:'\e836';}
 .icon-volume-down:before            {content:'\e837';}
-.icon-volume-up:before              {content:'\e838';} 
+.icon-volume-up:before              {content:'\e838';}
 
 .animate-spin {
     display: inline-block; 
     @include animation(spin 2s linear infinite);
 }
-
 @include keyframes(spin) {
     0% {
-        transform:rotate(0);
+        @include transform(rotate(0));
     }
     100% {
-        transform:rotate(359);
+        @include transform(rotate(360deg));
     }
- }
+}

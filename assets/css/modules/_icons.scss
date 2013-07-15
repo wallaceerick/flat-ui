@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'fontello';
+    font-family: 'Fontello';
     src: font-url('fontello.eot?84638996');
     src: font-url('fontello.eot?84638996#iefix') format('embedded-opentype'),
          font-url('fontello.woff?84638996') format('woff'),
@@ -9,7 +9,7 @@
     font-style: normal;
 }
 [class^="icon-"]:before, [class*=" icon-"]:before {
-    font-family: "Fontello";
+    font-family: "Fontello"!important;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -195,9 +195,6 @@
 .icon-upload:before                 {content:'\e820';}
 .icon-download:before               {content:'\e81f';}
 .icon-camera:before                 {content:'\e80e';}
-.icon-volume-off:before             {content:'\e836';}
-.icon-volume-down:before            {content:'\e837';}
-.icon-volume-up:before              {content:'\e838';}
 .icon-search:before                 {content:'\e808';}
 .icon-lock:before                   {content:'\e818';}
 .icon-lock-open:before              {content:'\e819';}
@@ -205,6 +202,9 @@
 .icon-clock:before                  {content:'\e871';}
 .icon-truck:before                  {content:'\e892';}
 .icon-block:before                  {content:'\e83f';}
+.icon-volume-off:before             {content:'\e836';}
+.icon-volume-down:before            {content:'\e837';}
+.icon-volume-up:before              {content:'\e838';} 
 
 .animate-spin {
     display: inline-block; 

@@ -3,10 +3,19 @@ Flat UI
 
 UI Elements with Flat Design!
 
-[Demonstration](http://wallaceerick.com.br/clientes/flat-ui/) 
+##Features
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+####Dropdown
+####Selectbox
+####Checkboxes & Radio Buttons
+####Input Increment
+####Masked Input
+####Tabs
+####Accordion
+####Modal
+####Tooltip
+####Shadowbox
+####Responsive Slider
+####Scrollbar
+####Video Player
+####Audio Player

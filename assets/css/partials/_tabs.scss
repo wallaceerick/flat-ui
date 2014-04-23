@@ -67,7 +67,7 @@
 		div  {
 			text-align: center;
 			line-height: 200px;
-			font-size: 4em;
+			@include font-size(4);
 			color: #fff;
 		}
 	}

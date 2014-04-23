@@ -21,14 +21,14 @@
 	@include border-radius(5px);
 	@include box-shadow(0 0 10px rgba(0, 0, 0, 0.6));
 	.close-modal {
-		font-size: 15px;
+		@include font-size(1.5);
 		position: absolute;
 		top: 8px;
 		right: 10px;
 		color: $black;
 		cursor: pointer;
 		&:hover {
-			color: $black-h;
+			color: darken($black, 15%);
 		}
 	}
 	/* Sizes */

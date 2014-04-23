@@ -1,3 +1,5 @@
+// Icon Fonts
+
 @font-face {
     font-family: 'Fontello';
     src: font-url('fontello.eot?84638996');
@@ -8,8 +10,10 @@
     font-weight: normal;
     font-style: normal;
 }
-[class^="icon-"]:before, [class*=" icon-"]:before {
-    font-family: "Fontello"!important;
+
+[class^="icon-"]:before, 
+[class*=" icon-"]:before {
+    font-family: 'Fontello'!important;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -21,7 +25,15 @@
     width: 1em; 
     line-height: 1em;
 }
-/* Icons */
+
+// Animated Icon
+.animate-spin {
+    display: inline-block; 
+    @include animation(spin 2s linear infinite);
+}
+
+// Icons
+
 .icon-temperature:before            {content: '\e870';} 
 .icon-celcius:before                {content: '\e85e';}
 .icon-fahrenheit:before             {content: '\e85f';}
@@ -157,64 +169,51 @@
 .icon-ok-squared:before             {content: '\e89a';}
 .icon-down-1:before                 {content: '\e8aa';}
 .icon-up-1:before                   {content: '\e8ad';}
-.icon-right-1:before                {content:'\e8ac';}
-.icon-left-1:before                 {content:'\e8ab';}
-.icon-facebook:before               {content:'\e872';}
-.icon-facebook-rect:before          {content:'\e873';}
-.icon-twitter:before                {content:'\e874';}
-.icon-twitter-bird:before           {content:'\e875';}
-.icon-github-text:before            {content:'\e87b';}
-.icon-github:before                 {content:'\e87a';}
-.icon-googleplus-rect:before        {content:'\e87d';}
-.icon-skype:before                  {content:'\e87c';}
-.icon-vimeo-rect:before             {content:'\e877';}
-.icon-vimeo:before                  {content:'\e876';}
-.icon-tumblr-rect:before            {content:'\e879';}
-.icon-tumblr:before                 {content:'\e878';}
-.icon-linkedin:before               {content:'\e882';}
-.icon-linkedin-rect:before          {content:'\e883';}
-.icon-wordpress:before              {content:'\e881';}
-.icon-instagram:before              {content:'\e880';}
-.icon-instagram-filled:before       {content:'\e87f';}
-.icon-picture:before                {content:'\e80d';}
-.icon-globe:before                  {content:'\e85c';}
-.icon-gift:before                   {content:'\e890';}
-.icon-videocam:before               {content:'\e80f';}
-.icon-video:before                  {content:'\e80c';}
-.icon-award:before                  {content:'\e88d';}
-.icon-thumbs-up:before              {content:'\e81d';}
-.icon-thumbs-down:before            {content:'\e81e';}
-.icon-user:before                   {content:'\e80a';}
-.icon-users:before                  {content:'\e80b';}
-.icon-briefcase:before              {content:'\e891';}
-.icon-folder:before                 {content:'\e825';}
-.icon-folder-open:before            {content:'\e826';}
-.icon-doc:before                    {content:'\e82d';}
-.icon-calendar:before               {content:'\e833';}
-.icon-phone:before                  {content:'\e82f';}
-.icon-upload:before                 {content:'\e820';}
-.icon-download:before               {content:'\e81f';}
-.icon-camera:before                 {content:'\e80e';}
-.icon-search:before                 {content:'\e808';}
-.icon-lock:before                   {content:'\e818';}
-.icon-lock-open:before              {content:'\e819';}
-.icon-link:before                   {content:'\e81c';}
-.icon-clock:before                  {content:'\e871';}
-.icon-truck:before                  {content:'\e892';}
-.icon-block:before                  {content:'\e83f';}
-.icon-volume-off:before             {content:'\e836';}
-.icon-volume-down:before            {content:'\e837';}
-.icon-volume-up:before              {content:'\e838';}
-
-.animate-spin {
-    display: inline-block; 
-    @include animation(spin 2s linear infinite);
-}
-@include keyframes(spin) {
-    0% {
-        @include transform(rotate(0));
-    }
-    100% {
-        @include transform(rotate(360deg));
-    }
-}
+.icon-right-1:before                {content: '\e8ac';}
+.icon-left-1:before                 {content: '\e8ab';}
+.icon-facebook:before               {content: '\e872';}
+.icon-facebook-rect:before          {content: '\e873';}
+.icon-twitter:before                {content: '\e874';}
+.icon-twitter-bird:before           {content: '\e875';}
+.icon-github-text:before            {content: '\e87b';}
+.icon-github:before                 {content: '\e87a';}
+.icon-googleplus-rect:before        {content: '\e87d';}
+.icon-skype:before                  {content: '\e87c';}
+.icon-vimeo-rect:before             {content: '\e877';}
+.icon-vimeo:before                  {content: '\e876';}
+.icon-tumblr-rect:before            {content: '\e879';}
+.icon-tumblr:before                 {content: '\e878';}
+.icon-linkedin:before               {content: '\e882';}
+.icon-linkedin-rect:before          {content: '\e883';}
+.icon-wordpress:before              {content: '\e881';}
+.icon-instagram:before              {content: '\e880';}
+.icon-instagram-filled:before       {content: '\e87f';}
+.icon-picture:before                {content: '\e80d';}
+.icon-globe:before                  {content: '\e85c';}
+.icon-gift:before                   {content: '\e890';}
+.icon-videocam:before               {content: '\e80f';}
+.icon-video:before                  {content: '\e80c';}
+.icon-award:before                  {content: '\e88d';}
+.icon-thumbs-up:before              {content: '\e81d';}
+.icon-thumbs-down:before            {content: '\e81e';}
+.icon-user:before                   {content: '\e80a';}
+.icon-users:before                  {content: '\e80b';}
+.icon-briefcase:before              {content: '\e891';}
+.icon-folder:before                 {content: '\e825';}
+.icon-folder-open:before            {content: '\e826';}
+.icon-doc:before                    {content: '\e82d';}
+.icon-calendar:before               {content: '\e833';}
+.icon-phone:before                  {content: '\e82f';}
+.icon-upload:before                 {content: '\e820';}
+.icon-download:before               {content: '\e81f';}
+.icon-camera:before                 {content: '\e80e';}
+.icon-search:before                 {content: '\e808';}
+.icon-lock:before                   {content: '\e818';}
+.icon-lock-open:before              {content: '\e819';}
+.icon-link:before                   {content: '\e81c';}
+.icon-clock:before                  {content: '\e871';}
+.icon-truck:before                  {content: '\e892';}
+.icon-block:before                  {content: '\e83f';}
+.icon-volume-off:before             {content: '\e836';}
+.icon-volume-down:before            {content: '\e837';}
+.icon-volume-up:before              {content: '\e838';}

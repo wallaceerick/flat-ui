@@ -1,13 +1,13 @@
-
+// Tooltip
 
 .tipsy {
 	position: absolute;
 	font-style: 12px;
 	padding: 5px; 
 	z-index: 9999;
-	font-size: 18px;
+	@include font-size(1.8);
 	.tipsy-inner {
-		background: $black-h;
+		background: darken($black, 15%);
 		color: #fff; 
 		max-width: 200px; 
 		padding: 6px 9px; 
@@ -19,12 +19,12 @@
 		width: 0; 
 		height: 0; 
 		line-height: 0; 
-		border: 5px dashed $black-h;
+		border: 5px dashed darken($black, 15%);
 	}
-	.tipsy-arrow-n 		{border-bottom-color: $black-h;}
-	.tipsy-arrow-s 		{border-top-color: $black-h;}
-	.tipsy-arrow-e 		{border-left-color: $black-h;}
-	.tipsy-arrow-w 		{border-right-color: $black-h;}
+	.tipsy-arrow-n 		{border-bottom-color: darken($black, 15%);}
+	.tipsy-arrow-s 		{border-top-color: darken($black, 15%);}
+	.tipsy-arrow-e 		{border-left-color: darken($black, 15%);}
+	.tipsy-arrow-w 		{border-right-color: darken($black, 15%);}
 }
 .tipsy-n 	.tipsy-arrow 	{top: 0px; left: 50%; margin-left: -5px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent;}
 .tipsy-nw 	.tipsy-arrow 	{top: 0; left: 10px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent}
@@ -49,9 +49,9 @@ ul.tooltips {
 	    float: left; 
 	    margin: 0 15px 15px 0; 
 	    color: #fff;
-	    font-size: 20px;
+	    @include font-size(2);
 	    &:hover {
-	    	background: $blue-h; 
+	    	background: darken($blue, 15%); 
 	    }
 	    &.none {
 	    	background: #fff;
@@ -59,5 +59,3 @@ ul.tooltips {
 	    }
 	}
 }
-
-

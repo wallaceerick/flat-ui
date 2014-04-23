@@ -29,9 +29,7 @@ module.exports = function(grunt){
                         'assets/js/jquery.responsive.slides.min.js',
                         'assets/js/jquery.scrollbar.min.js',
                         'assets/js/jquery.video.min.js',
-                        'assets/js/jquery.audio.min.js',
-                        'assets/js/jquery.datepicker.js',
-                        'assets/js/jquery.typeahead.js',
+                        //'assets/js/jquery.audio.min.js',
                         'assets/js/config.js'
                     ]
                 },

@@ -1,0 +1,19 @@
+// PX to REM
+
+@mixin font-size($sizeValue: 1.6) {
+	font-size: ($sizeValue * 10) + px;
+	font-size: $sizeValue + rem;
+	// Usage: @include font-size(1);
+}
+
+// User Select
+
+@mixin user-select($userValue: none) {
+	-webkit-user-select: $userValue;
+	-khtml-user-select: $userValue;
+	-moz-user-select: $userValue;
+	-ms-user-select: $userValue;
+	user-select: $userValue;
+	// Usage: @include user-select(none);
+}
+

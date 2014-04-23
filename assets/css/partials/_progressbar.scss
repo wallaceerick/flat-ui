@@ -31,31 +31,31 @@
 	}
 	/* Colors */
 	&.black > span {
-		@include background-image(linear-gradient(left top, $black, $black-h));
+		@include background-image(linear-gradient(left top, $black, darken($black, 15%)));
 	}
 	&.blue > span {
-		@include background-image(linear-gradient(left top, $blue, $blue-h));
+		@include background-image(linear-gradient(left top, $blue, darken($blue, 15%)));
 	}
 	&.gray > span {
-		@include background-image(linear-gradient(left top, $gray, $gray-h));
+		@include background-image(linear-gradient(left top, $gray, darken($gray, 15%)));
 	}
 	&.green > span {
-		@include background-image(linear-gradient(left top, $green, $green-h));
+		@include background-image(linear-gradient(left top, $green, darken($green, 15%)));
 	}
 	&.yellow > span {
-		@include background-image(linear-gradient(left top, $yellow, $yellow-h));
+		@include background-image(linear-gradient(left top, $yellow, darken($yellow, 15%)));
 	}
 	&.orange > span {
-		@include background-image(linear-gradient(left top, $orange, $orange-h));
+		@include background-image(linear-gradient(left top, $orange, darken($orange, 15%)));
 	}
 	&.pink > span {
-		@include background-image(linear-gradient(left top, $pink, $pink-h));
+		@include background-image(linear-gradient(left top, $pink, darken($pink, 15%)));
 	}
 	&.purple > span {
-		@include background-image(linear-gradient(left top, $purple, $purple-h));
+		@include background-image(linear-gradient(left top, $purple, darken($purple, 15%)));
 	}
 	&.red > span {
-		@include background-image(linear-gradient(left top, $red, $red-h));
+		@include background-image(linear-gradient(left top, $red, darken($red, 15%)));
 	}
 	/* Sizes */
 	&.medium {

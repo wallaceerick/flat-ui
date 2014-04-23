@@ -1,6 +1,5 @@
-/******************/
-/* Accordion
-/******************/
+// Accordion
+
 .accordion {
 	width: 500px;
 	margin: 0;
@@ -9,16 +8,16 @@
 		display: block;
 		position: relative;
 		margin: 0;
-		font-size: 18px;
+		@include font-size(1.8);
 		color: #fff;
 		padding: 20px 0;
 		text-indent: 15px;
 		background: $red;
-		border-bottom: 1px solid $red-h;
+		border-bottom: 1px solid darken($red, 15%);
 		cursor: pointer;
 		@include transition(all 0.25s ease-in);
 		/*
-		//Rounded Corners
+		// Rounded Corners
 		&:first-child, &.first {
 			@include border-radius(5px 5px 0 0);
 		}
@@ -30,11 +29,11 @@
 		}
 		*/
 		&:hover, &.hover {
-			background: $red-h;
+			background: darken($red, 15%);
 		}
 		&.current {
-			background: $white-h!important;
-			border-color: $white-h!important;
+			background: darken($white, 15%)!important;
+			border-color: darken($white, 15%)!important;
 			i  {
 				@include transform(rotate(90deg));
 			}
@@ -52,7 +51,7 @@
 		height: auto;
 		padding: 10px 15px; 
 		/*
-		//Rounded Corners
+		// Rounded Corners
 		&:last-child, &.last {
 			@include border-radius(0 0 5px 5px);
 			border: 1px solid $gray;
@@ -67,7 +66,7 @@
 			width: 70px;
 			height: 350px;
 			border-bottom: 0;
-			border-right: 1px solid $red-h;
+			border-right: 1px solid darken($red, 15%);
 			span {
 				display: inline-block;
 				width: 300px;
@@ -95,7 +94,7 @@
 		text-align: center;
 		color: #fff;
 		line-height: 160px;
-		font-size: 4em; 
+		@include font-size(4);
 	}
 }
 

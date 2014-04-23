@@ -1,22 +1,22 @@
-/******************/
-/* Inputs, Textareas & Labels
-/******************/
-input, label, textarea {
-	color: $white-h;
+// Inputs, Textareas & Labels
+
+input, 
+label, 
+textarea {
+	color: darken($white, 15%);
 	float: left;
-	outline: none;
-	font-size: 1.4em;
+	@include font-size(1.4);
 	font-weight: normal!important;
 }
 textarea {
 	float: none!important;
 }
 label {
-	color: $gray-h;
+	color: darken($gray, 15%);
 	margin: 0 5px 0 0;
 	padding: 1px 5px 2px;
 	cursor: pointer;
-	font-size: 16px;
+	@include font-size(1.6);
 	padding: 10px 0;
 	&.on-the-top {
 		float: none;
@@ -28,7 +28,7 @@ label {
 	}
 }
 input, textarea {
-	border: 2px solid $white-h;
+	border: 2px solid darken($white, 15%);
 	padding: 11px;
 	@include transition(all 0.35s ease-in);
 	/* Rounded */
@@ -37,8 +37,8 @@ input, textarea {
 	}
 	/* States */
 	&:hover, &.input-hover {
-		color: $gray-h;
-		border-color: $gray-h;
+		color: darken($gray, 15%);
+		border-color: darken($gray, 15%);
 	}
 	&:focus, &.input-focus {
 		color: #5a5f63;
@@ -124,7 +124,7 @@ input {
 		color: #fff;
 		text-align: center;
 		background: #000;
-		font-size: 15px;
+		@include font-size(1.5);
 		@include border-radius(100%);
 	}
 	/* Actions */
@@ -171,7 +171,7 @@ input {
 		position: absolute;
 		top: 2px;
 		right: 5px;
-		background: $white-h;
+		background: darken($white, 15%);
 		z-index: 10;
 		@include border-radius(0 2px 2px 0);
 		@include transition(all 0.35s ease-in);
@@ -179,17 +179,13 @@ input {
 	i {  
 		display: block; 
 		color: #fff; 
-		font-size: 1.6em;
+		@include font-size(1.6);
 		font-style: normal;
 		cursor: pointer;
-		-webkit-user-select: none;
-		-khtml-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
 		position: absolute;
 		right: 5px;
-		z-index: 20; 
+		z-index: 20;
+		@include user-select(none);
 		&.icon-up-dir { 
 			top: 3px;
 		} 
@@ -203,10 +199,10 @@ input {
 	&.hover {
 		input {
 			//5a5f63
-			border-color: $gray-h;
+			border-color: darken($gray, 15%);
 		}
 		span.background {
-			background: $gray-h;
+			background: darken($gray, 15%);
 		}
 	} 
 }

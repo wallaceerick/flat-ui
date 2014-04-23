@@ -129,7 +129,7 @@
 	overflow: hidden;
 	top: 5px;
 	left: 2px;
-	font-size: 11px;
+	@include font-size(1.1);
 	margin: 0 auto;
 	cursor: pointer;
 	text-align: center;
@@ -155,16 +155,13 @@
 	margin-right: 40px; 
 	padding: 20px; 
 	overflow: auto; 
-	background: $purple;
+	background:red;
 	float: left; 
 	p {
-		font-size: 1.4em;
+		@include font-size(1.4);
 		margin-bottom: 15px;
 	}
 	h2, p {
 		color: #fff;
 	}
-}
-#scrollbar-3.scrolled {
-	margin: 0!important;
 }

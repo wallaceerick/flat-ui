@@ -12,7 +12,7 @@
     speak: none;
     display: inline-block;
     width: 1em; 
-    line-height: 1em;
+    line-height: 1em; 
 	margin: 0 5px 5px 0;
 	padding: 0; 
     float: left;
@@ -36,7 +36,7 @@
     /* Label Colors */
     &.black.checked {
     	& + label { 
-	     	color: $black-h;
+	     	color: darken($black, 15%);
 	    } 
     }
     &.blue.checked {
@@ -86,7 +86,7 @@
     	font-family: "Fontello";
 		content: "\e83a";
 		color: #000;
-		font-size: 30px;
+		@include font-size(3);
 	    background-position: 0 0;
 	    &.hover {
 	        background-position: -22px 0;

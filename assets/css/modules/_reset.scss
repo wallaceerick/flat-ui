@@ -1,0 +1,38 @@
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	@include box-sizing(border-box);
+	&:after,
+	&:before {
+		content: "";
+	}
+}
+
+body {
+	font: {
+		family: "Lato", sans-serif;
+		weight: normal;
+		size: 62.5%!important; // 10px
+	}
+	//-webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	line-height: 20px;
+	@include font-size(1.2);
+}
+
+

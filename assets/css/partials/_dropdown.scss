@@ -1,32 +1,32 @@
-/******************/
-/* Dropdown
-/******************/
+// Dropdown
+
 .menu {
 	float: left;
-	background: #eee;
+	background: $silver;
 	/* Default is Horizontal */
-	li {
+	li { 
 		position: relative;
 		white-space: nowrap;
 		@include transition(all 0.15s ease-in);
 		a {
-			font-size: 1.8em;
+			@include font-size(1.8);
 			padding: 25px 20px;
 			display: block;
 			position: relative;
-			color: #848484;
+			color: $gray;
 		}
 	}
-	/* First Level */
+	// First Level
 	> li {
 		float: left;
-		&:hover, &.hover { 
+		&:hover, &.hover {  
 			background: $orange;
 			a {
+				display: block;
 				color: #fff;
 			}
 		}
-		/* Second Level */
+		// Second Level
 		ul {
 			position: absolute;
 			display: none;
@@ -39,24 +39,25 @@
 					background: $red; 
 				}
 				a {
-					font-size: 1.6em;
+					@include font-size(1.6);
 					padding: 15px 20px;
 				}
 			}
-			/* Third Level */
+			// Third Level
 			ul {
 				top: 0;
 				left: 100%;
 				background: $red; 
 				> li {
 					&:hover, &.hover {
-						background: $red-h; 
+						background: darken($red, 10%); 
 					}
 				}
 			}
 		}
 	}
-	/* Vertical */
+
+	// Vertical
 	&.vertical {
 		ul {
 			left: 100%;
@@ -69,7 +70,8 @@
 		  float: none;
 		}
 	}
-	/* Navbar */
+
+	// Navbar
 	&.navbar {
 		position: relative;
 		ul {
@@ -80,6 +82,7 @@
 				left: 0;
 				top: 100%;
 				li {
+					width: 100%;
 					float: left;
 				}
 			}
@@ -91,13 +94,15 @@
 			float: left;
 		}
 	}
-	/* Arrows */
+
+
+	// Arrows 
 	&.arrows {
 		a.dropdown {
 			padding-right: 40px;
 			&:after {
 				font-family: 'Fontello';
-				font-size: 14px;
+				@include font-size(1.4);
 				content: '\e83c';
 				position: absolute;
 				top: 50%;

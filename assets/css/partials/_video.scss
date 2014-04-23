@@ -16,7 +16,7 @@
     padding: 0;
     margin: 0;
     color: #fff;
-    font-size:  18px;
+    @include font-size(1.8);
     /* Not Used Files */
     .vjs-hidden,
     .vjs-chapters-button,
@@ -72,8 +72,7 @@
         height: 100%;
         @include border-radius(5px);
         img {
-            
-    @include border-radius(5px);
+            @include border-radius(5px);
         }
     }
     /* Big Play Button */
@@ -88,7 +87,7 @@
         cursor: pointer;
         background: $orange;
         &:hover {
-            background: $orange-h;
+            background: darken($orange, 15%);
         } 
     }
     /* Loading  */
@@ -97,7 +96,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        font-size: 5em;
+        @include font-size(5);
         line-height: 1;
         width: 1em;
         height: 1em;
@@ -111,7 +110,7 @@
         cursor: pointer;
         margin: 0;
         padding: 0;
-        font-size: 18px; 
+        @include font-size(1.8);
         position: absolute;
         top: 3px;
         height: 45px;
@@ -125,7 +124,7 @@
             text-align: center;
         }
         &:hover:before {
-            color: $orange-h;
+            color: darken($orange, 15%);
         }
     }
     /* Control Bar */
@@ -137,7 +136,7 @@
         right: 0;
         height: 50px;
         background: $orange;
-        border-top: 3px solid $orange-h;
+        border-top: 3px solid darken($orange, 15%);
     }
     /* Play & Pause */
     .vjs-play-control {
@@ -180,7 +179,7 @@
         top: 0;
     }
     .vjs-play-progress {
-        background: $orange-h;
+        background: darken($orange, 15%);
     }
     .vjs-load-progress {
         background: #fff;
@@ -191,7 +190,7 @@
         top: -4px;
         width: 15px;
         height: 15px;
-        background: $orange-h;
+        background: darken($orange, 15%);
         @include border-radius(100%);
     }
     /* Volume */
@@ -199,7 +198,7 @@
         position: absolute;
         top: 3px;
         right: 95px;
-        font-size: 18px; 
+        @include font-size(1.8);
         font-family: "Fontello"!important;
         &:before {
             content: "\e838";
@@ -220,7 +219,7 @@
         position: absolute;
         top: 3px;
         right: 35px;
-        font-size: 18px; 
+        @include font-size(1.8);
     }
     .vjs-menu {
         display: none;
@@ -228,7 +227,7 @@
         bottom: 5px;
         right: -80px;
         width: 150px;
-        background: $orange-h;
+        background: darken($orange, 15%);
         &:after {
             position: absolute;
             bottom: -8px;
@@ -239,7 +238,7 @@
             height: 0; 
             border-left: 8px solid transparent;
             border-right: 8px solid transparent; 
-            border-top: 8px solid $orange-h;
+            border-top: 8px solid darken($orange, 15%);
         }
         ul {
             display: block; 
@@ -248,7 +247,7 @@
                 margin: 0;
                 outline: 0!important;
                 padding: 10px 0; 
-                font-size: 15px;
+                @include font-size(1.5);
                 font-weight: normal;
                 text-align: center;
                 text-transform: capitalize;
@@ -258,7 +257,7 @@
                 }
                 &.vjs-selected {
                     background: #fff;
-                    color: $orange-h;
+                    color: darken($orange, 15%);
                 }
             } 
         }

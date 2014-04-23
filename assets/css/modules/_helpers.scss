@@ -1,0 +1,55 @@
+// Helpers
+
+.hide-text {
+	display: block;
+	text-indent: -9999px;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.block {
+	display: block;
+}
+
+.clear {
+	clear: both;
+}
+
+// Colors
+
+.black 			{color: $black;}
+.blue 			{color: $blue;}
+.gray 			{color: $gray;}
+.green 			{color: $green;}
+.yellow 		{color: $yellow;}
+.lime 			{color: $lime;}
+.maroon 		{color: $maroon;}
+.orange  		{color: $orange;}
+.pink 			{color: $pink;}
+.purple 		{color: $purple;}
+.red 			{color: $red;}
+.silver 		{color: $silver;}
+.white 			{color: $white;}
+
+// Backgrounds
+
+.bg-black 		{background-color: $black;}
+.bg-blue 		{background-color: $blue;}
+.bg-gray 		{background-color: $gray;}
+.bg-green   	{background-color: $green;}
+.bg-yellow  	{background-color: $yellow;}
+.bg-lime 		{background-color: $lime;}
+.bg-maroon 		{background-color: $maroon;}
+.bg-orange  	{background-color: $orange;}
+.bg-pink  		{background-color: $pink;}
+.bg-purple 		{background-color: $purple;}
+.bg-red 		{background-color: $red;}
+.bg-silver  	{background-color: $silver;}
+.bg-white 		{background-color: $white;}
+

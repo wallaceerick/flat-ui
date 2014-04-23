@@ -1,61 +1,41 @@
-/************************************************************************
-*   
-*	FLAT  UI
-*  
-*	Author:			Wallace Erick
-*	Date:			05 May 2013
-*	Web:			http://www.wallaceerick.com.br/
-*	Email:			wallace_erick@hotmail.com
-*	Last Modified:	20 Jun 2013
-*
-*************************************************************************/
+// Font
+@import url("http://fonts.googleapis.com/css?family=Lato:400,600,8300");
 
-@import url("http://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,400italic,300");
-
-/******************/
-/* Required
-/******************/
-
+// Library
 @import "compass";
+@import 'gridle/gridle';
 
-/******************/
-/* Modules
-/******************/
+// Mixins
+@import "mixins/animation";
+@import "mixins/others";
 
-@import "modules/mixins";
+// Modules
+@import "modules/variables";
+@import "modules/animation";
+@import "modules/reset";
+@import "modules/helpers";
+@import "modules/icons"; 
 @import "modules/base";
-@import "modules/colors";
-@import "modules/icons";
 
-/******************/
-/* Partials
-/******************/
-
-@import "partials/dropdown";
-@import "partials/buttons";
-@import "partials/input";
-@import "partials/check";
-@import "partials/select";
-@import "partials/tabs";
+// Partials
 @import "partials/accordion";
+@import "partials/audio";
+@import "partials/buttons";
+@import "partials/check";
+//@import "partials/datepicker";
+@import "partials/dropdown";
+@import "partials/input";
 @import "partials/modal";
-@import "partials/tooltip";
 @import "partials/pagination";
 @import "partials/progressbar";
-@import "partials/table";
-@import "partials/slider";
 @import "partials/scrollbar";
+@import "partials/select";
 @import "partials/shadowbox";
-@import "partials/audio";
+@import "partials/slider";
+@import "partials/table";
+@import "partials/tabs";
+@import "partials/tooltip";
 @import "partials/video";
-//@import "partials/datepicker";
-
-
-
-
-
-
-
 
 
 

@@ -1,8 +1,8 @@
-// PX to REM
+// PX to EM
 
 @mixin font-size($sizeValue: 1.6) {
 	font-size: ($sizeValue * 10) + px;
-	font-size: $sizeValue + rem;
+	font-size: $sizeValue + em;
 	// Usage: @include font-size(1);
 }
 

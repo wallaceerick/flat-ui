@@ -29,7 +29,7 @@ module.exports = function(grunt){
                         'assets/js/jquery.responsive.slides.min.js',
                         'assets/js/jquery.scrollbar.min.js',
                         'assets/js/jquery.video.min.js',
-                        //'assets/js/jquery.audio.min.js',
+                        'assets/js/jquery.audio.min.js',
                         'assets/js/config.js'
                     ]
                 },
@@ -54,6 +54,18 @@ module.exports = function(grunt){
                     specify:        'assets/css/*.scss',
                     banner:         '/*\n***********************\nFlat UI: Style CSS\nLast Update: <%= grunt.template.today("dd-mm-yyyy") %>\nAuthor: Wallace Erick\nAuthor URL: http://www.wallaceerick.com.br/\n***********************\n*/'
                 }
+            }
+        },
+
+        // Remove Ununsed CSS
+        uncss: {
+            dist: {
+                files: {
+                    'assets/css/style.css': ['*.html']
+                }
+            },
+            options: {
+                compress: true
             }
         },
 
@@ -93,7 +105,8 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
-    grunt.loadNpmTasks('grunt-contrib-watch'); 
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-uncss');
 
     //Tarefas que serão Executadas
     grunt.registerTask('default', 
@@ -103,6 +116,7 @@ module.exports = function(grunt){
         ]
     );
     grunt.registerTask('w', ['watch']); 
-    grunt.registerTask('i', ['imagemin']); 
+    grunt.registerTask('i', ['imagemin']);
+    grunt.registerTask('u', ['uncss']);
     
 };

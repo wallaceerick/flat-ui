@@ -10,7 +10,7 @@ $(document).ready(function(){
 		radioClass: 'radio black',
 		labelHover: true
 	});
-
+ 
 	//Tabs
 	$.tabs();
 
@@ -18,7 +18,8 @@ $(document).ready(function(){
 	$.accordion();
 
 	//Select
-	$('select').selectbox();
+	//$('select').selectbox();
+	$('select.customized').customSelect();
 
 	//Progressbar Animation
 	$(".progressbar > span").each(function() {

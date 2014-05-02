@@ -1,7 +1,7 @@
-/******************/
-/* Checkboxes & Radio Buttons
-/******************/
-.check, .radio {
+// Checkboxes & Radio Buttons
+
+.check, 
+.radio {
     font-family: "Fontello";
     font-style: normal;
     font-weight: normal;
@@ -18,13 +18,13 @@
     float: left;
     width: 20px; 
     height: 20px;
-    background-image: url('../images/check.png');
-    background-repeat: no-repeat;
+    background: url('../images/check.png') 0 0 no-repeat;
     border: none;
     cursor: pointer;
     & + label { 
     	padding: 0!important;
     	margin: 0 20px 10px 0!important;
+		@include font-size(0.875);
 	} 
     &.disabled { 
     	cursor: not-allowed;
@@ -33,7 +33,8 @@
 	    	color: $gray!important;
 	    } 
     }
-    /* Label Colors */
+    
+    // Labels
     &.black.checked {
     	& + label { 
 	     	color: darken($black, 15%);
@@ -80,13 +81,14 @@
 	    } 
     }
 }
-/* Checkboxes */
+
+
+// Checkboxes
 .check {
 	&.black {
     	font-family: "Fontello";
 		content: "\e83a";
 		color: #000;
-		@include font-size(3);
 	    background-position: 0 0;
 	    &.hover {
 	        background-position: -22px 0;
@@ -224,7 +226,8 @@
 	    }
 	}
 }
-/* Radio Buttons */
+
+// Radio Buttons
 .radio {
 	&.black {
 	    background-position: -110px 0;

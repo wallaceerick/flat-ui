@@ -5,8 +5,8 @@ label,
 textarea {
 	color: darken($white, 15%);
 	float: left;
-	@include font-size(1.4);
 	font-weight: normal!important;
+	@include font-size(0.875);
 }
 textarea {
 	float: none!important;
@@ -16,7 +16,7 @@ label {
 	margin: 0 5px 0 0;
 	padding: 1px 5px 2px;
 	cursor: pointer;
-	@include font-size(1.6);
+	@include font-size(0.875);
 	padding: 10px 0;
 	&.on-the-top {
 		float: none;

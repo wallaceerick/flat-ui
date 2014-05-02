@@ -9,7 +9,7 @@
 		white-space: nowrap;
 		@include transition(all 0.15s ease-in);
 		a {
-			@include font-size(1.8);
+			@include font-size(1.125);
 			padding: 25px 20px;
 			display: block;
 			position: relative;
@@ -39,7 +39,7 @@
 					background: $red; 
 				}
 				a {
-					@include font-size(1.6);
+					@include font-size(1);
 					padding: 15px 20px;
 				}
 			}
@@ -102,7 +102,7 @@
 			padding-right: 40px;
 			&:after {
 				font-family: 'Fontello';
-				@include font-size(1.4);
+				@include font-size(1);
 				content: '\e83c';
 				position: absolute;
 				top: 50%;

@@ -1,102 +1,20 @@
-// Selects
-
-.select {
-	width: 220px; 
-	height: 60px;
-	@include font-size(1.4);
-	font-weight: bold;
-	position: relative;
-	outline: none;
-	.selector {
-		background: #fff;
-		border: 2px solid darken($white, 15%);
-		color: darken($white, 15%);
-		display: block;
-		width: 100%;
-		height: 40px;
-		line-height: 36px;
-		text-indent: 15px;
-		position: absolute;
-		top: 0;
-		left: 0; 
-		overflow: hidden;
-		z-index: 10;
-		@include border-radius(4px);
-		@include transition(all 0.25s ease-in);
-		&.focus, &.open {
-			color: #fff;
-			border: 2px solid $orange;
-			background: $orange;
-		}
+.customSelect {
+	width: 250px;
+	background-color: $purple;
+	color: $white;
+	padding: 10px 15px;
+	@include font-size(1);
+	&.changed {
 	}
-	i {
-		display: block;
-		width: 13px!important;
-		height: 19px!important;
-		line-height: 0px!important;
-		text-indent: -2px!important;
-		overflow: hidden;
-		color: darken($white, 15%);
-		@include font-size(2);
-		position: absolute;
-		top: 11px;
-		right: 11px;
-		z-index: 15;
-		@include transition(all 0.25s ease-in);
-		&.open, &.focus {
-			color: #fff;
-		}
-		&.open {
-			@include transform(rotate(-90deg));
-		}
-	}
-	ul.options {
-		background: $orange;
-		list-style: none;
-		font-weight: normal;
-		left: 0;
-		margin: 41px 0 0 0;
-		padding: 5px;
-		position: absolute;
-		top: 0!important;
-		width: 100%;
-		z-index: 5;
-		overflow-y: auto;
-		@include border-radius(4px);
-		li {
-			color: #fff;
-			margin-bottom: 1px;
-			a {
-				background: #fff;
-				color: #000;
-				display: block;
-				outline: none;
-				padding: 7px;
-				&:hover, &:focus, &.focus{
-					color: #fff;
-					background: #000;
-				}
-			}
-			&.last a {
-				border-bottom: none;
-			}
-			.disabled {
-				cursor: not-allowed;
-				color: $gray;
-				background: $white;
-				display: block;
-				padding: 7px;
-			}
-			.group {
-				color: $orange;
-				background: #fff;
-				display: block;
-				font-weight: bold;
-				padding: 10px;
-			}
-			.sub {
-				text-indent: 10px;
-			}
-		}
-	}
+}
+.customSelectInner {
+	width: 100%!important;
+	background: image-url('select-arrow.png') no-repeat center right;
+}
+.customSelectHover{
+	background-color: darken($purple, 10%);
+}
+.customSelectFocus {
+}
+.customSelectOpen {
 }

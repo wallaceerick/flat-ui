@@ -10,27 +10,27 @@ module.exports = function(grunt){
                 mangle: false
             },
             //Cria um Arquivo
-            global: {
+            dist: {
                 files: {
                     //Arquivo de Destino
                     'assets/js/application.min.js': [
                         //Arquivos Inclusos 
-                        'assets/js/jquery-1.8.3.min.js',
-                        'assets/js/jquery.dropdown.js',
-                        'assets/js/jquery.selectbox.min.js',
-                        'assets/js/jquery.increment.js',
-                        'assets/js/jquery.icheck.min.js',
-                        'assets/js/jquery.tabs.js',
-                        'assets/js/jquery.accordion.js',
-                        'assets/js/jquery.maskedinput.min.js',
-                        'assets/js/jquery.modal.js',
-                        'assets/js/jquery.tipsy.js',
-                        'assets/js/jquery.shadowbox.min.js',
-                        'assets/js/jquery.responsive.slides.min.js',
-                        'assets/js/jquery.scrollbar.min.js',
-                        'assets/js/jquery.video.min.js',
-                        'assets/js/jquery.audio.min.js',
-                        'assets/js/config.js'
+                        'assets/js/_jquery.js',
+                        'assets/js/_dropdown.js',
+                        'assets/js/_select.js',
+                        'assets/js/_increment.js',
+                        'assets/js/_icheck.min.js',
+                        'assets/js/_tabs.js',
+                        'assets/js/_accordion.js',
+                        'assets/js/_maskedinput.min.js',
+                        'assets/js/_modal.js',
+                        'assets/js/_tipsy.js',
+                        'assets/js/_shadowbox.min.js',
+                        'assets/js/_responsive.slides.min.js',
+                        'assets/js/_scrollbar.min.js',
+                        'assets/js/_video.min.js',
+                        //'assets/js/jquery.audio.min.js',
+                        'assets/js/_config.js'
                     ]
                 },
                 options: {
@@ -57,15 +57,21 @@ module.exports = function(grunt){
             }
         },
 
-        // Remove Ununsed CSS
-        uncss: {
-            dist: {
-                files: {
-                    'assets/css/style.css': ['*.html']
-                }
-            },
+        rev: {
             options: {
-                compress: true
+                encoding: 'utf8',
+                algorithm: 'md5',
+                length: 20
+            },
+            assets: {
+                files: [{
+                    src: [
+                        //'assets/images/**/*.{jpg,jpeg,gif,png}',
+                        //'assets/fonts/*.{eot,svg,ttf,woff}',
+                        'assets/js/application.min.js',
+                        'assets/css/style.css'
+                    ]
+                }]
             }
         },
 
@@ -106,7 +112,7 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-uncss');
+    grunt.loadNpmTasks('grunt-rev');
 
     //Tarefas que serão Executadas
     grunt.registerTask('default', 
@@ -117,6 +123,6 @@ module.exports = function(grunt){
     );
     grunt.registerTask('w', ['watch']); 
     grunt.registerTask('i', ['imagemin']);
-    grunt.registerTask('u', ['uncss']);
+    grunt.registerTask('r', ['rev']);
     
 };

@@ -23,6 +23,7 @@
     "grunt-contrib-imagemin": "~0.1.4",
     "grunt-htmlcompressor": "~0.1.8",
     "grunt-replace": "~0.7.7",
-    "grunt-uncss": "~0.3.3"
+    "grunt-uncss": "~0.3.3",
+    "grunt-rev": "~0.1.0"
   }
 }

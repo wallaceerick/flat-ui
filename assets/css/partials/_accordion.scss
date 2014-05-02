@@ -3,7 +3,9 @@
 .accordion {
 	width: 500px;
 	margin: 0;
-	background: #eeeeee;
+	.hide {
+		display: none;
+	}
 	h3 {
 		display: block;
 		position: relative;
@@ -61,6 +63,9 @@
 
 	&.vertical {
 		overflow: hidden;
+		&.multiple {
+			width: auto;
+		}
 		h3 {
 			float: left;
 			width: 70px;
@@ -93,6 +98,7 @@
 		height: 165px;
 		text-align: center;
 		color: #fff;
+		background: #eeeeee;
 		line-height: 160px;
 		@include font-size(4);
 	}
